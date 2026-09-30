@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.n7.simplePDL/src-gen" creationIcons="false"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/fr.n7.simplePDL/src-gen" creationIcons="false"
     editDirectory="/fr.n7.simplePDL.edit/src-gen" editorDirectory="/fr.n7.simplePDL.editor/src-gen"
     modelPluginID="fr.n7.simplePDL" modelName="SimplePDL" rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container"
     codeFormatting="true" importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0"
@@ -8,5 +9,43 @@
   <foreignModel>simplePDL.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="SimplePDL" basePackage="fr.n7" disposableProviderFactory="true"
-      ecorePackage="simplePDL.ecore#/"/>
+      ecorePackage="simplePDL.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="simplePDL.ecore#//WorkSequenceType">
+      <genEnumLiterals ecoreEnumLiteral="simplePDL.ecore#//WorkSequenceType/startToStart"/>
+      <genEnumLiterals ecoreEnumLiteral="simplePDL.ecore#//WorkSequenceType/finishToStart"/>
+      <genEnumLiterals ecoreEnumLiteral="simplePDL.ecore#//WorkSequenceType/startToFinish"/>
+      <genEnumLiterals ecoreEnumLiteral="simplePDL.ecore#//WorkSequenceType/finishToFinish"/>
+    </genEnums>
+    <genClasses ecoreClass="simplePDL.ecore#//Process">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplePDL.ecore#//Process/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference simplePDL.ecore#//Process/processElements"/>
+    </genClasses>
+    <genClasses ecoreClass="simplePDL.ecore#//WorkDefinition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplePDL.ecore#//WorkDefinition/linksToPredecessors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplePDL.ecore#//WorkDefinition/linksToSuccessors"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplePDL.ecore#//WorkDefinition/linkToRessource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplePDL.ecore#//WorkDefinition/name"/>
+    </genClasses>
+    <genClasses ecoreClass="simplePDL.ecore#//WorkSequence">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplePDL.ecore#//WorkSequence/linkType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplePDL.ecore#//WorkSequence/predecessor"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplePDL.ecore#//WorkSequence/successor"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="simplePDL.ecore#//ProcessElement">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference simplePDL.ecore#//ProcessElement/process"/>
+    </genClasses>
+    <genClasses ecoreClass="simplePDL.ecore#//Guidance">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplePDL.ecore#//Guidance/elements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplePDL.ecore#//Guidance/text"/>
+    </genClasses>
+    <genClasses ecoreClass="simplePDL.ecore#//Ressources">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplePDL.ecore#//Ressources/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplePDL.ecore#//Ressources/quantityAvailable"/>
+    </genClasses>
+    <genClasses ecoreClass="simplePDL.ecore#//RessourceLink">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplePDL.ecore#//RessourceLink/ressource"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplePDL.ecore#//RessourceLink/quantity"/>
+      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference simplePDL.ecore#//RessourceLink/workDefinition"/>
+    </genClasses>
+  </genPackages>
 </genmodel:GenModel>

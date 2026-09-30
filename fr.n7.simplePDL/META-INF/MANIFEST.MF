@@ -1,7 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
-Bundle-Name: fr.n7.simplePDL
-Bundle-SymbolicName: fr.n7.simplePDL; singleton:=true
+Bundle-Name: %pluginName
+Bundle-SymbolicName: fr.n7.simplePDL;singleton:=true
+Automatic-Module-Name: fr.n7.simplePDL
 Bundle-Version: 0.1.0.qualifier
+Bundle-ClassPath: .
+Bundle-Vendor: %providerName
+Bundle-Localization: plugin
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: fr.n7.simplePDL,
+ fr.n7.simplePDL.impl,
+ fr.n7.simplePDL.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
+Bundle-ActivationPolicy: lazy
