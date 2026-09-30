@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated simplePDL -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="fr.n7.simplePDL.presentation.SimplePDLModelWizardID"
+            name="%_UI_SimplePDLModelWizard_label"
+            class="fr.n7.simplePDL.presentation.SimplePDLModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/SimplePDLModelFile.gif">
+         <description>%_UI_SimplePDLModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated simplePDL -->
+      <editor
+            id="fr.n7.simplePDL.presentation.SimplePDLEditorID"
+            name="%_UI_SimplePDLEditor_label"
+            icon="icons/full/obj16/SimplePDLModelFile.gif"
+            extensions="simplepdl"
+            class="fr.n7.simplePDL.presentation.SimplePDLEditor"
+            contributorClass="fr.n7.simplePDL.presentation.SimplePDLActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>

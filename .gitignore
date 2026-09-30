@@ -28,3 +28,6 @@ features/
 plugins/
 **/bin/
 .metadata/
+
+# ignore macos .DS_Store generated files
+**/.DS_Store
