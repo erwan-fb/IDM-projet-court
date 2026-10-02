@@ -3,7 +3,9 @@
 package fr.n7.simplePDL.provider;
 
 import fr.n7.simplePDL.RessourceLink;
+import fr.n7.simplePDL.Ressources;
 import fr.n7.simplePDL.SimplePDLPackage;
+import fr.n7.simplePDL.WorkDefinition;
 
 import java.util.Collection;
 import java.util.List;
@@ -132,12 +134,16 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		RessourceLink ressourceLink = (RessourceLink) object;
-		return getString("_UI_RessourceLink_type") + " " + ressourceLink.getQuantity();
+		WorkDefinition requester = ressourceLink.getWorkDefinition();
+		Ressources ressource = ressourceLink.getRessource();
+		String nameRequester = (requester == null ? "?" : requester.getName());
+		String nameRessource = (ressource == null ? "?" : ressource.getName());
+		return getString("_UI_RessourceLink_type") + " " + nameRequester + " --> " + nameRessource + " : " + ressourceLink.getQuantity();
 	}
 
 	/**
