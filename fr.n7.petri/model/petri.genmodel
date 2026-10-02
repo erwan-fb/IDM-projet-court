@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/fr.n7.petri/src-gen" modelPluginID="petri" modelName="petri"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" importerID="org.eclipse.emf.importer.ecore"
+    complianceLevel="25.0" copyrightFields="false" operationReflection="true" importOrganizing="true">
+  <foreignModel>petri.ecore</foreignModel>
+  <genPackages prefix="petri" disposableProviderFactory="true" ecorePackage="petri.ecore#/">
+    <genClasses ecoreClass="petri.ecore#//Places">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Places/jetons"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Places/nom"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//Transitions">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Transitions/nom"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petri.ecore#//Transitions/intervalle_temps"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//ArcsPonderesEntrants">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//ArcsPonderesEntrants/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//ArcsPonderesEntrants/transition"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//ArcsPonderesSortants">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//ArcsPonderesSortants/transition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//ArcsPonderesSortants/destination"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="petri.ecore#//ArcsPonderes">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//ArcsPonderes/ponderation"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//ReseauPetri">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petri.ecore#//ReseauPetri/elements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//ReseauPetri/nom"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//Composants"/>
+    <genClasses ecoreClass="petri.ecore#//ArcLectureSeule"/>
+    <genClasses ecoreClass="petri.ecore#//Temps">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Temps/tempsMinimum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Temps/tempsMaximum"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
