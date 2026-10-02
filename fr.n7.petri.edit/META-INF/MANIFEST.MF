@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: petri.edit;singleton:=true
-Automatic-Module-Name: petri.edit
+Bundle-SymbolicName: fr.n7.petri.edit;singleton:=true
+Automatic-Module-Name: fr.n7.petri.edit
 Bundle-Version: 1.0.0.qualifier
 Bundle-ClassPath: .
-Bundle-Activator: Petri.provider.petriEditPlugin$Implementation
+Bundle-Activator: fr.n7.petri.provider.PetriEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-25
-Export-Package: Petri.provider
+Export-Package: fr.n7.petri.provider
 Require-Bundle: org.eclipse.core.runtime,
- petri;visibility:=reexport,
+ fr.n7.petri;visibility:=reexport,
  org.eclipse.emf.edit;visibility:=reexport
 Bundle-ActivationPolicy: lazy

@@ -7,11 +7,11 @@
 <plugin>
 
    <extension point="org.eclipse.emf.ecore.generated_package">
-      <!-- @generated Petri -->
+      <!-- @generated petri -->
       <package
             uri="http://petri"
-            class="Petri.PetriPackage"
-            genModel="model/Petri.genmodel"/>
+            class="fr.n7.petri.PetriPackage"
+            genModel="model/petri.genmodel"/>
    </extension>
 
 </plugin>

@@ -12,9 +12,9 @@
             id="org.eclipse.emf.ecore.Wizard.category.ID"
             name="%_UI_Wizard_category"/>
       <wizard
-            id="Petri.presentation.PetriModelWizardID"
+            id="fr.n7.petri.presentation.PetriModelWizardID"
             name="%_UI_PetriModelWizard_label"
-            class="Petri.presentation.PetriModelWizard"
+            class="fr.n7.petri.presentation.PetriModelWizard"
             category="org.eclipse.emf.ecore.Wizard.category.ID"
             icon="icons/full/obj16/PetriModelFile.gif">
          <description>%_UI_PetriModelWizard_description</description>
@@ -25,12 +25,12 @@
    <extension point="org.eclipse.ui.editors">
       <!-- @generated Petri -->
       <editor
-            id="Petri.presentation.PetriEditorID"
+            id="fr.n7.petri.presentation.PetriEditorID"
             name="%_UI_PetriEditor_label"
             icon="icons/full/obj16/PetriModelFile.gif"
             extensions="petri"
-            class="Petri.presentation.PetriEditor"
-            contributorClass="Petri.presentation.PetriActionBarContributor">
+            class="fr.n7.petri.presentation.PetriEditor"
+            contributorClass="fr.n7.petri.presentation.PetriActionBarContributor">
       </editor>
    </extension>
 

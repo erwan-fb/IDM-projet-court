@@ -10,7 +10,7 @@
       <!-- @generated Petri -->
       <factory
             uri="http://petri"
-            class="Petri.provider.PetriItemProviderAdapterFactory"
+            class="fr.n7.petri.provider.PetriItemProviderAdapterFactory"
             supportedTypes=
               "org.eclipse.emf.edit.provider.IEditingDomainItemProvider
                org.eclipse.emf.edit.provider.IStructuredItemContentProvider

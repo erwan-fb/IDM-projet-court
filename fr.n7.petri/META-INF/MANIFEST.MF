@@ -1,16 +1,16 @@
 Manifest-Version: 1.0
 Bundle-ManifestVersion: 2
 Bundle-Name: %pluginName
-Bundle-SymbolicName: petri;singleton:=true
-Automatic-Module-Name: petri
+Bundle-SymbolicName: fr.n7.petri;singleton:=true
+Automatic-Module-Name: fr.n7.petri
 Bundle-Version: 0.1.0.qualifier
 Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-25
-Export-Package: Petri,
- Petri.impl,
- Petri.util
+Bundle-RequiredExecutionEnvironment: JavaSE-17
+Export-Package: fr.n7.petri,
+ fr.n7.petri.impl,
+ fr.n7.petri.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime
 Bundle-ActivationPolicy: lazy
