@@ -43,7 +43,7 @@ public class Convert {
 			Resource source = null;
 			try { // gerer les erreurs si jamais le ficher n'existe pas par exemple (ou fichier mal formé)
 				source = resSet.getResource(sourceURI, true);
-			} catch (RuntimeException _) {
+			} catch (RuntimeException e) {
 				System.out.println("An error occured while opening the file " + args[0]);
 			}
 			

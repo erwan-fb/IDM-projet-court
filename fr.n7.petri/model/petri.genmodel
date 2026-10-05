@@ -4,7 +4,7 @@
     modelDirectory="/fr.n7.petri/src-gen" creationIcons="false" editDirectory="/fr.n7.petri.edit/src-gen"
     editorDirectory="/fr.n7.petri.editor/src-gen" modelPluginID="fr.n7.petri" modelName="Petri"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
-    importerID="org.eclipse.emf.importer.ecore" complianceLevel="25.0" copyrightFields="false"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="17.0" copyrightFields="false"
     operationReflection="true" importOrganizing="true" pluginKey="Petri">
   <foreignModel>petri.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>

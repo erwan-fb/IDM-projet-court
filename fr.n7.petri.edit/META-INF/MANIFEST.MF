@@ -8,7 +8,7 @@ Bundle-ClassPath: .
 Bundle-Activator: fr.n7.petri.provider.PetriEditPlugin$Implementation
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
-Bundle-RequiredExecutionEnvironment: JavaSE-25
+Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: fr.n7.petri.provider
 Require-Bundle: org.eclipse.core.runtime,
  fr.n7.petri;visibility:=reexport,

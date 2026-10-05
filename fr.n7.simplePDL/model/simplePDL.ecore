@@ -18,7 +18,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="linksToSuccessors" upperBound="-1"
         eType="#//WorkSequence" eOpposite="#//WorkSequence/predecessor"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="linkToRessource" upperBound="-1"
-        eType="#//RessourceLink" eOpposite="#//RessourceLink/workDefinition"/>
+        eType="#//RessourceLink" eOpposite="#//RessourceLink/workDefinitionAssociate"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="WorkSequence" eSuperTypes="#//ProcessElement">
@@ -47,7 +47,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="ressource" lowerBound="1"
         eType="#//Ressources"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="workDefinition" lowerBound="1"
-        eType="#//WorkDefinition" changeable="false" eOpposite="#//WorkDefinition/linkToRessource"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="workDefinitionAssociate"
+        lowerBound="1" eType="#//WorkDefinition" eOpposite="#//WorkDefinition/linkToRessource"/>
   </eClassifiers>
 </ecore:EPackage>

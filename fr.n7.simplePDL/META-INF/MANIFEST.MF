@@ -13,6 +13,6 @@ Export-Package: fr.n7.simplePDL,
  fr.n7.simplePDL.util
 Require-Bundle: org.eclipse.emf.ecore;visibility:=reexport,
  org.eclipse.core.runtime,
- org.eclipse.emf.ecore.xmi;bundle-version="[2.41.0,3.0.0)",
+ org.eclipse.emf.ecore.xmi;bundle-version="[2.35.0,3.0.0)",
  fr.n7.petri;bundle-version="[0.1.0,1.0.0)"
 Bundle-ActivationPolicy: lazy
