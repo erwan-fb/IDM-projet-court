@@ -564,7 +564,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 		initEReference(getRessourceLink_Ressource(), this.getRessources(), null, "ressource", null, 1, 1,
 				RessourceLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRessourceLink_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, RessourceLink.class,
+		initEAttribute(getRessourceLink_Quantity(), ecorePackage.getEInt(), "quantity", null, 1, 1, RessourceLink.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getRessourceLink_WorkDefinitionAssociate(), this.getWorkDefinition(),
 				this.getWorkDefinition_LinkToRessource(), "workDefinitionAssociate", null, 1, 1, RessourceLink.class,

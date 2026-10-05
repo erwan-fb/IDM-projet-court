@@ -50,7 +50,7 @@ public interface RessourceLink extends ProcessElement {
 	 * @return the value of the '<em>Quantity</em>' attribute.
 	 * @see #setQuantity(int)
 	 * @see fr.n7.simplePDL.SimplePDLPackage#getRessourceLink_Quantity()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	int getQuantity();

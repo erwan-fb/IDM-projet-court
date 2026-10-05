@@ -5,6 +5,8 @@ import org.eclipse.emf.ecore.resource.Resource;
 
 import fr.n7.simplePDL.Guidance;
 import fr.n7.simplePDL.ProcessElement;
+import fr.n7.simplePDL.RessourceLink;
+import fr.n7.simplePDL.Ressources;
 import fr.n7.simplePDL.SimplePDLPackage;
 import fr.n7.simplePDL.WorkDefinition;
 import fr.n7.simplePDL.WorkSequence;
@@ -154,6 +156,35 @@ public class SimplePDLValidator extends SimplePDLSwitch<Boolean> {
 				"Une Guidance ne doit pas avoir un texte vide.");
 		return null;
 	}
+	
+	
+	/**
+	 * Méthode appelée lorsque l'objet visité est une Ressources.
+	 * @param object élément visité
+	 * @return résultat de validation (null ici, ce qui permet de poursuivre la visite
+	 * vers les classes parentes, le cas échéant)
+	 */
+	@Override
+	public Boolean caseRessources(Ressources object) {
+		this.result.recordIfFailed(
+				object.getName() != null || object.getName().matches(IDENT_REGEX), 
+				object, 
+				"Le nom de la Ressource ne respecte pas les conventions Java");
+		return null;
+	}
+
+	/**
+	 * Méthode appelée lorsque l'objet visité est une RessourceLink.
+	 * @param object élément visité
+	 * @return résultat de validation (null ici, ce qui permet de poursuivre la visite
+	 * vers les classes parentes, le cas échéant)
+	 */
+	@Override
+	public Boolean caseRessourceLink(RessourceLink object) {
+		return null;
+	}
+	
+	
 
 	/**
 	 * Cas par défaut, lorsque l'objet visité ne correspond pas à un des autres cas.

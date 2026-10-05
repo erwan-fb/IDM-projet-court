@@ -46,7 +46,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="RessourceLink" eSuperTypes="#//ProcessElement">
     <eStructuralFeatures xsi:type="ecore:EReference" name="ressource" lowerBound="1"
         eType="#//Ressources"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" lowerBound="1"
+        eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="workDefinitionAssociate"
         lowerBound="1" eType="#//WorkDefinition" eOpposite="#//WorkDefinition/linkToRessource"/>
   </eClassifiers>
