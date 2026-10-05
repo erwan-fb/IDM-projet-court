@@ -2,7 +2,7 @@
  */
 package fr.n7.petri.provider;
 
-import fr.n7.petri.ArcPondede;
+import fr.n7.petri.ArcPondere;
 import fr.n7.petri.PetriPackage;
 
 import java.util.Collection;
@@ -17,19 +17,19 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link fr.n7.petri.ArcPondede} object.
+ * This is the item provider adapter for a {@link fr.n7.petri.ArcPondere} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class ArcPondedeItemProvider extends ComposantsItemProvider {
+public class ArcPondereItemProvider extends ComposantsItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ArcPondedeItemProvider(AdapterFactory adapterFactory) {
+	public ArcPondereItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -58,22 +58,22 @@ public class ArcPondedeItemProvider extends ComposantsItemProvider {
 	protected void addPonderationPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ArcPondede_ponderation_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ArcPondede_ponderation_feature",
-								"_UI_ArcPondede_type"),
-						PetriPackage.Literals.ARC_PONDEDE__PONDERATION, true, false, false,
+						getResourceLocator(), getString("_UI_ArcPondere_ponderation_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_ArcPondere_ponderation_feature",
+								"_UI_ArcPondere_type"),
+						PetriPackage.Literals.ARC_PONDERE__PONDERATION, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This returns ArcPondede.gif.
+	 * This returns ArcPondere.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/ArcPondede"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/ArcPondere"));
 	}
 
 	/**
@@ -94,8 +94,8 @@ public class ArcPondedeItemProvider extends ComposantsItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		ArcPondede arcPondede = (ArcPondede) object;
-		return getString("_UI_ArcPondede_type") + " " + arcPondede.getPonderation();
+		ArcPondere arcPondere = (ArcPondere) object;
+		return getString("_UI_ArcPondere_type") + " " + arcPondere.getPonderation();
 	}
 
 	/**
@@ -109,8 +109,8 @@ public class ArcPondedeItemProvider extends ComposantsItemProvider {
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(ArcPondede.class)) {
-		case PetriPackage.ARC_PONDEDE__PONDERATION:
+		switch (notification.getFeatureID(ArcPondere.class)) {
+		case PetriPackage.ARC_PONDERE__PONDERATION:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

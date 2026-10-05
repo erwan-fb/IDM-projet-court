@@ -98,11 +98,11 @@ public class PetriSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case PetriPackage.ARC_PONDEDE: {
-			ArcPondede arcPondede = (ArcPondede) theEObject;
-			T result = caseArcPondede(arcPondede);
+		case PetriPackage.ARC_PONDERE: {
+			ArcPondere arcPondere = (ArcPondere) theEObject;
+			T result = caseArcPondere(arcPondere);
 			if (result == null)
-				result = caseComposants(arcPondede);
+				result = caseComposants(arcPondere);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -111,7 +111,7 @@ public class PetriSwitch<T> extends Switch<T> {
 			ArcPondereEntrant arcPondereEntrant = (ArcPondereEntrant) theEObject;
 			T result = caseArcPondereEntrant(arcPondereEntrant);
 			if (result == null)
-				result = caseArcPondede(arcPondereEntrant);
+				result = caseArcPondere(arcPondereEntrant);
 			if (result == null)
 				result = caseComposants(arcPondereEntrant);
 			if (result == null)
@@ -122,7 +122,7 @@ public class PetriSwitch<T> extends Switch<T> {
 			ArcPondereSortant arcPondereSortant = (ArcPondereSortant) theEObject;
 			T result = caseArcPondereSortant(arcPondereSortant);
 			if (result == null)
-				result = caseArcPondede(arcPondereSortant);
+				result = caseArcPondere(arcPondereSortant);
 			if (result == null)
 				result = caseComposants(arcPondereSortant);
 			if (result == null)
@@ -135,7 +135,7 @@ public class PetriSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseArcPondereEntrant(arcLectureSeule);
 			if (result == null)
-				result = caseArcPondede(arcLectureSeule);
+				result = caseArcPondere(arcLectureSeule);
 			if (result == null)
 				result = caseComposants(arcLectureSeule);
 			if (result == null)
@@ -215,17 +215,17 @@ public class PetriSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Arc Pondede</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Arc Pondere</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Arc Pondede</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Arc Pondere</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseArcPondede(ArcPondede object) {
+	public T caseArcPondere(ArcPondere object) {
 		return null;
 	}
 

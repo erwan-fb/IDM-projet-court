@@ -19,7 +19,7 @@ package fr.n7.petri;
  * @model
  * @generated
  */
-public interface ArcPondereSortant extends ArcPondede {
+public interface ArcPondereSortant extends ArcPondere {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
 	 * <!-- begin-user-doc -->

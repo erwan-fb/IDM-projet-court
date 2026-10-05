@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class ArcPondereEntrantImpl extends ArcPondedeImpl implements ArcPondereEntrant {
+public class ArcPondereEntrantImpl extends ArcPondereImpl implements ArcPondereEntrant {
 	/**
 	 * The cached value of the '{@link #getSource() <em>Source</em>}' reference.
 	 * <!-- begin-user-doc -->

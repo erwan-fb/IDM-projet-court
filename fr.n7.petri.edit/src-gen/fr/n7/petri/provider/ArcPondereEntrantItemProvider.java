@@ -20,7 +20,7 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ArcPondereEntrantItemProvider extends ArcPondedeItemProvider {
+public class ArcPondereEntrantItemProvider extends ArcPondereItemProvider {
 	/**
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->

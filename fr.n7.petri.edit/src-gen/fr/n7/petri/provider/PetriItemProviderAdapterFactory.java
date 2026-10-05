@@ -165,26 +165,26 @@ public class PetriItemProviderAdapterFactory extends PetriAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.n7.petri.ArcPondede} instances.
+	 * This keeps track of the one adapter used for all {@link fr.n7.petri.ArcPondere} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ArcPondedeItemProvider arcPondedeItemProvider;
+	protected ArcPondereItemProvider arcPondereItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.n7.petri.ArcPondede}.
+	 * This creates an adapter for a {@link fr.n7.petri.ArcPondere}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createArcPondedeAdapter() {
-		if (arcPondedeItemProvider == null) {
-			arcPondedeItemProvider = new ArcPondedeItemProvider(this);
+	public Adapter createArcPondereAdapter() {
+		if (arcPondereItemProvider == null) {
+			arcPondereItemProvider = new ArcPondereItemProvider(this);
 		}
 
-		return arcPondedeItemProvider;
+		return arcPondereItemProvider;
 	}
 
 	/**
@@ -392,8 +392,8 @@ public class PetriItemProviderAdapterFactory extends PetriAdapterFactory
 			placeItemProvider.dispose();
 		if (transitionItemProvider != null)
 			transitionItemProvider.dispose();
-		if (arcPondedeItemProvider != null)
-			arcPondedeItemProvider.dispose();
+		if (arcPondereItemProvider != null)
+			arcPondereItemProvider.dispose();
 		if (arcPondereEntrantItemProvider != null)
 			arcPondereEntrantItemProvider.dispose();
 		if (arcPondereSortantItemProvider != null)

@@ -87,8 +87,8 @@ public class PetriAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseArcPondede(ArcPondede object) {
-			return createArcPondedeAdapter();
+		public Adapter caseArcPondere(ArcPondere object) {
+			return createArcPondereAdapter();
 		}
 
 		@Override
@@ -187,16 +187,16 @@ public class PetriAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.n7.petri.ArcPondede <em>Arc Pondede</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.n7.petri.ArcPondere <em>Arc Pondere</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.n7.petri.ArcPondede
+	 * @see fr.n7.petri.ArcPondere
 	 * @generated
 	 */
-	public Adapter createArcPondedeAdapter() {
+	public Adapter createArcPondereAdapter() {
 		return null;
 	}
 

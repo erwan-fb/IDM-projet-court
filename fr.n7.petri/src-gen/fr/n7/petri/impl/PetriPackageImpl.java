@@ -3,7 +3,7 @@
 package fr.n7.petri.impl;
 
 import fr.n7.petri.ArcLectureSeule;
-import fr.n7.petri.ArcPondede;
+import fr.n7.petri.ArcPondere;
 import fr.n7.petri.ArcPondereEntrant;
 import fr.n7.petri.ArcPondereSortant;
 import fr.n7.petri.Composants;
@@ -61,7 +61,7 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass arcPondedeEClass = null;
+	private EClass arcPondereEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -261,8 +261,8 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getArcPondede() {
-		return arcPondedeEClass;
+	public EClass getArcPondere() {
+		return arcPondereEClass;
 	}
 
 	/**
@@ -271,8 +271,8 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 	 * @generated
 	 */
 	@Override
-	public EAttribute getArcPondede_Ponderation() {
-		return (EAttribute) arcPondedeEClass.getEStructuralFeatures().get(0);
+	public EAttribute getArcPondere_Ponderation() {
+		return (EAttribute) arcPondereEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -419,8 +419,8 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		createEAttribute(transitionEClass, TRANSITION__NOM);
 		createEReference(transitionEClass, TRANSITION__INTERVALLE_TEMPS);
 
-		arcPondedeEClass = createEClass(ARC_PONDEDE);
-		createEAttribute(arcPondedeEClass, ARC_PONDEDE__PONDERATION);
+		arcPondereEClass = createEClass(ARC_PONDERE);
+		createEAttribute(arcPondereEClass, ARC_PONDERE__PONDERATION);
 
 		arcPondereEntrantEClass = createEClass(ARC_PONDERE_ENTRANT);
 		createEReference(arcPondereEntrantEClass, ARC_PONDERE_ENTRANT__SOURCE);
@@ -468,9 +468,9 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		// Add supertypes to classes
 		placeEClass.getESuperTypes().add(this.getComposants());
 		transitionEClass.getESuperTypes().add(this.getComposants());
-		arcPondedeEClass.getESuperTypes().add(this.getComposants());
-		arcPondereEntrantEClass.getESuperTypes().add(this.getArcPondede());
-		arcPondereSortantEClass.getESuperTypes().add(this.getArcPondede());
+		arcPondereEClass.getESuperTypes().add(this.getComposants());
+		arcPondereEntrantEClass.getESuperTypes().add(this.getArcPondere());
+		arcPondereSortantEClass.getESuperTypes().add(this.getArcPondere());
 		arcLectureSeuleEClass.getESuperTypes().add(this.getArcPondereEntrant());
 
 		// Initialize classes, features, and operations; add parameters
@@ -499,9 +499,9 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 				Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(arcPondedeEClass, ArcPondede.class, "ArcPondede", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(arcPondereEClass, ArcPondere.class, "ArcPondere", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getArcPondede_Ponderation(), ecorePackage.getEInt(), "ponderation", null, 1, 1, ArcPondede.class,
+		initEAttribute(getArcPondere_Ponderation(), ecorePackage.getEInt(), "ponderation", null, 1, 1, ArcPondere.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arcPondereEntrantEClass, ArcPondereEntrant.class, "ArcPondereEntrant", !IS_ABSTRACT, !IS_INTERFACE,

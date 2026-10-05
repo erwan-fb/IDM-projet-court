@@ -223,14 +223,14 @@ public interface PetriPackage extends EPackage {
 	int TRANSITION_OPERATION_COUNT = COMPOSANTS_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link fr.n7.petri.impl.ArcPondedeImpl <em>Arc Pondede</em>}' class.
+	 * The meta object id for the '{@link fr.n7.petri.impl.ArcPondereImpl <em>Arc Pondere</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.n7.petri.impl.ArcPondedeImpl
-	 * @see fr.n7.petri.impl.PetriPackageImpl#getArcPondede()
+	 * @see fr.n7.petri.impl.ArcPondereImpl
+	 * @see fr.n7.petri.impl.PetriPackageImpl#getArcPondere()
 	 * @generated
 	 */
-	int ARC_PONDEDE = 4;
+	int ARC_PONDERE = 4;
 
 	/**
 	 * The feature id for the '<em><b>Ponderation</b></em>' attribute.
@@ -239,25 +239,25 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDEDE__PONDERATION = COMPOSANTS_FEATURE_COUNT + 0;
+	int ARC_PONDERE__PONDERATION = COMPOSANTS_FEATURE_COUNT + 0;
 
 	/**
-	 * The number of structural features of the '<em>Arc Pondede</em>' class.
+	 * The number of structural features of the '<em>Arc Pondere</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDEDE_FEATURE_COUNT = COMPOSANTS_FEATURE_COUNT + 1;
+	int ARC_PONDERE_FEATURE_COUNT = COMPOSANTS_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of operations of the '<em>Arc Pondede</em>' class.
+	 * The number of operations of the '<em>Arc Pondere</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDEDE_OPERATION_COUNT = COMPOSANTS_OPERATION_COUNT + 0;
+	int ARC_PONDERE_OPERATION_COUNT = COMPOSANTS_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.n7.petri.impl.ArcPondereEntrantImpl <em>Arc Pondere Entrant</em>}' class.
@@ -276,7 +276,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_ENTRANT__PONDERATION = ARC_PONDEDE__PONDERATION;
+	int ARC_PONDERE_ENTRANT__PONDERATION = ARC_PONDERE__PONDERATION;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -285,7 +285,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_ENTRANT__SOURCE = ARC_PONDEDE_FEATURE_COUNT + 0;
+	int ARC_PONDERE_ENTRANT__SOURCE = ARC_PONDERE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Destination</b></em>' reference.
@@ -294,7 +294,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_ENTRANT__DESTINATION = ARC_PONDEDE_FEATURE_COUNT + 1;
+	int ARC_PONDERE_ENTRANT__DESTINATION = ARC_PONDERE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Arc Pondere Entrant</em>' class.
@@ -303,7 +303,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_ENTRANT_FEATURE_COUNT = ARC_PONDEDE_FEATURE_COUNT + 2;
+	int ARC_PONDERE_ENTRANT_FEATURE_COUNT = ARC_PONDERE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Arc Pondere Entrant</em>' class.
@@ -312,7 +312,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_ENTRANT_OPERATION_COUNT = ARC_PONDEDE_OPERATION_COUNT + 0;
+	int ARC_PONDERE_ENTRANT_OPERATION_COUNT = ARC_PONDERE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.n7.petri.impl.ArcPondereSortantImpl <em>Arc Pondere Sortant</em>}' class.
@@ -331,7 +331,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_SORTANT__PONDERATION = ARC_PONDEDE__PONDERATION;
+	int ARC_PONDERE_SORTANT__PONDERATION = ARC_PONDERE__PONDERATION;
 
 	/**
 	 * The feature id for the '<em><b>Source</b></em>' reference.
@@ -340,7 +340,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_SORTANT__SOURCE = ARC_PONDEDE_FEATURE_COUNT + 0;
+	int ARC_PONDERE_SORTANT__SOURCE = ARC_PONDERE_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Destination</b></em>' reference.
@@ -349,7 +349,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_SORTANT__DESTINATION = ARC_PONDEDE_FEATURE_COUNT + 1;
+	int ARC_PONDERE_SORTANT__DESTINATION = ARC_PONDERE_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Arc Pondere Sortant</em>' class.
@@ -358,7 +358,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_SORTANT_FEATURE_COUNT = ARC_PONDEDE_FEATURE_COUNT + 2;
+	int ARC_PONDERE_SORTANT_FEATURE_COUNT = ARC_PONDERE_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Arc Pondere Sortant</em>' class.
@@ -367,7 +367,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_SORTANT_OPERATION_COUNT = ARC_PONDEDE_OPERATION_COUNT + 0;
+	int ARC_PONDERE_SORTANT_OPERATION_COUNT = ARC_PONDERE_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.n7.petri.impl.ArcLectureSeuleImpl <em>Arc Lecture Seule</em>}' class.
@@ -577,25 +577,25 @@ public interface PetriPackage extends EPackage {
 	EReference getTransition_IntervalleTemps();
 
 	/**
-	 * Returns the meta object for class '{@link fr.n7.petri.ArcPondede <em>Arc Pondede</em>}'.
+	 * Returns the meta object for class '{@link fr.n7.petri.ArcPondere <em>Arc Pondere</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Arc Pondede</em>'.
-	 * @see fr.n7.petri.ArcPondede
+	 * @return the meta object for class '<em>Arc Pondere</em>'.
+	 * @see fr.n7.petri.ArcPondere
 	 * @generated
 	 */
-	EClass getArcPondede();
+	EClass getArcPondere();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fr.n7.petri.ArcPondede#getPonderation <em>Ponderation</em>}'.
+	 * Returns the meta object for the attribute '{@link fr.n7.petri.ArcPondere#getPonderation <em>Ponderation</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Ponderation</em>'.
-	 * @see fr.n7.petri.ArcPondede#getPonderation()
-	 * @see #getArcPondede()
+	 * @see fr.n7.petri.ArcPondere#getPonderation()
+	 * @see #getArcPondere()
 	 * @generated
 	 */
-	EAttribute getArcPondede_Ponderation();
+	EAttribute getArcPondere_Ponderation();
 
 	/**
 	 * Returns the meta object for class '{@link fr.n7.petri.ArcPondereEntrant <em>Arc Pondere Entrant</em>}'.
@@ -815,14 +815,14 @@ public interface PetriPackage extends EPackage {
 		EReference TRANSITION__INTERVALLE_TEMPS = eINSTANCE.getTransition_IntervalleTemps();
 
 		/**
-		 * The meta object literal for the '{@link fr.n7.petri.impl.ArcPondedeImpl <em>Arc Pondede</em>}' class.
+		 * The meta object literal for the '{@link fr.n7.petri.impl.ArcPondereImpl <em>Arc Pondere</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fr.n7.petri.impl.ArcPondedeImpl
-		 * @see fr.n7.petri.impl.PetriPackageImpl#getArcPondede()
+		 * @see fr.n7.petri.impl.ArcPondereImpl
+		 * @see fr.n7.petri.impl.PetriPackageImpl#getArcPondere()
 		 * @generated
 		 */
-		EClass ARC_PONDEDE = eINSTANCE.getArcPondede();
+		EClass ARC_PONDERE = eINSTANCE.getArcPondere();
 
 		/**
 		 * The meta object literal for the '<em><b>Ponderation</b></em>' attribute feature.
@@ -830,7 +830,7 @@ public interface PetriPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute ARC_PONDEDE__PONDERATION = eINSTANCE.getArcPondede_Ponderation();
+		EAttribute ARC_PONDERE__PONDERATION = eINSTANCE.getArcPondere_Ponderation();
 
 		/**
 		 * The meta object literal for the '{@link fr.n7.petri.impl.ArcPondereEntrantImpl <em>Arc Pondere Entrant</em>}' class.

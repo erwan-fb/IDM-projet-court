@@ -2,7 +2,7 @@
  */
 package fr.n7.petri.impl;
 
-import fr.n7.petri.ArcPondede;
+import fr.n7.petri.ArcPondere;
 import fr.n7.petri.PetriPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -13,18 +13,18 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Arc Pondede</b></em>'.
+ * An implementation of the model object '<em><b>Arc Pondere</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.n7.petri.impl.ArcPondedeImpl#getPonderation <em>Ponderation</em>}</li>
+ *   <li>{@link fr.n7.petri.impl.ArcPondereImpl#getPonderation <em>Ponderation</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ArcPondedeImpl extends ComposantsImpl implements ArcPondede {
+public class ArcPondereImpl extends ComposantsImpl implements ArcPondere {
 	/**
 	 * The default value of the '{@link #getPonderation() <em>Ponderation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -50,7 +50,7 @@ public class ArcPondedeImpl extends ComposantsImpl implements ArcPondede {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ArcPondedeImpl() {
+	protected ArcPondereImpl() {
 		super();
 	}
 
@@ -61,7 +61,7 @@ public class ArcPondedeImpl extends ComposantsImpl implements ArcPondede {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return PetriPackage.Literals.ARC_PONDEDE;
+		return PetriPackage.Literals.ARC_PONDERE;
 	}
 
 	/**
@@ -84,7 +84,7 @@ public class ArcPondedeImpl extends ComposantsImpl implements ArcPondede {
 		int oldPonderation = ponderation;
 		ponderation = newPonderation;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.ARC_PONDEDE__PONDERATION, oldPonderation,
+			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.ARC_PONDERE__PONDERATION, oldPonderation,
 					ponderation));
 	}
 
@@ -96,7 +96,7 @@ public class ArcPondedeImpl extends ComposantsImpl implements ArcPondede {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case PetriPackage.ARC_PONDEDE__PONDERATION:
+		case PetriPackage.ARC_PONDERE__PONDERATION:
 			return getPonderation();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -110,7 +110,7 @@ public class ArcPondedeImpl extends ComposantsImpl implements ArcPondede {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case PetriPackage.ARC_PONDEDE__PONDERATION:
+		case PetriPackage.ARC_PONDERE__PONDERATION:
 			setPonderation((Integer) newValue);
 			return;
 		}
@@ -125,7 +125,7 @@ public class ArcPondedeImpl extends ComposantsImpl implements ArcPondede {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case PetriPackage.ARC_PONDEDE__PONDERATION:
+		case PetriPackage.ARC_PONDERE__PONDERATION:
 			setPonderation(PONDERATION_EDEFAULT);
 			return;
 		}
@@ -140,7 +140,7 @@ public class ArcPondedeImpl extends ComposantsImpl implements ArcPondede {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case PetriPackage.ARC_PONDEDE__PONDERATION:
+		case PetriPackage.ARC_PONDERE__PONDERATION:
 			return ponderation != PONDERATION_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -163,4 +163,4 @@ public class ArcPondedeImpl extends ComposantsImpl implements ArcPondede {
 		return result.toString();
 	}
 
-} //ArcPondedeImpl
+} //ArcPondereImpl

@@ -58,13 +58,13 @@ public interface PetriFactory extends EFactory {
 	Transition createTransition();
 
 	/**
-	 * Returns a new object of class '<em>Arc Pondede</em>'.
+	 * Returns a new object of class '<em>Arc Pondere</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Arc Pondede</em>'.
+	 * @return a new object of class '<em>Arc Pondere</em>'.
 	 * @generated
 	 */
-	ArcPondede createArcPondede();
+	ArcPondere createArcPondere();
 
 	/**
 	 * Returns a new object of class '<em>Arc Pondere Entrant</em>'.
