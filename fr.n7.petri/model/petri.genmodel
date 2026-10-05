@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/fr.n7.petri/src-gen" creationIcons="false" editDirectory="/fr.n7.petri.edit/src-gen"
+    editorDirectory="/fr.n7.petri.editor/src-gen" modelPluginID="fr.n7.petri" modelName="Petri"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="25.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true" pluginKey="Petri">
+  <foreignModel>petri.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Petri" basePackage="fr.n7" disposableProviderFactory="true"
+      fileExtensions="petri" ecorePackage="petri.ecore#/">
+    <genClasses ecoreClass="petri.ecore#//ReseauPetri">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//ReseauPetri/elements"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//ReseauPetri/nom"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//Composants"/>
+    <genClasses ecoreClass="petri.ecore#//Place">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Place/jetons"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Place/nom"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//Transition">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Transition/nom"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//Transition/intervalleTemps"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//ArcPondede">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//ArcPondede/ponderation"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//ArcPondereEntrant">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//ArcPondereEntrant/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//ArcPondereEntrant/destination"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//ArcPondereSortant">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//ArcPondereSortant/source"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//ArcPondereSortant/destination"/>
+    </genClasses>
+    <genClasses ecoreClass="petri.ecore#//ArcLectureSeule"/>
+    <genClasses ecoreClass="petri.ecore#//Temps">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Temps/tempsMinimum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Temps/tempsMaximum"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
