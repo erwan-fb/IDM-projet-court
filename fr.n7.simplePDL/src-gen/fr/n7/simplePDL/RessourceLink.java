@@ -13,7 +13,7 @@ package fr.n7.simplePDL;
  * <ul>
  *   <li>{@link fr.n7.simplePDL.RessourceLink#getRessource <em>Ressource</em>}</li>
  *   <li>{@link fr.n7.simplePDL.RessourceLink#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link fr.n7.simplePDL.RessourceLink#getWorkDefinition <em>Work Definition</em>}</li>
+ *   <li>{@link fr.n7.simplePDL.RessourceLink#getWorkDefinitionAssociate <em>Work Definition Associate</em>}</li>
  * </ul>
  *
  * @see fr.n7.simplePDL.SimplePDLPackage#getRessourceLink()
@@ -66,16 +66,27 @@ public interface RessourceLink extends ProcessElement {
 	void setQuantity(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Work Definition</b></em>' reference.
+	 * Returns the value of the '<em><b>Work Definition Associate</b></em>' reference.
 	 * It is bidirectional and its opposite is '{@link fr.n7.simplePDL.WorkDefinition#getLinkToRessource <em>Link To Ressource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Work Definition</em>' reference.
-	 * @see fr.n7.simplePDL.SimplePDLPackage#getRessourceLink_WorkDefinition()
+	 * @return the value of the '<em>Work Definition Associate</em>' reference.
+	 * @see #setWorkDefinitionAssociate(WorkDefinition)
+	 * @see fr.n7.simplePDL.SimplePDLPackage#getRessourceLink_WorkDefinitionAssociate()
 	 * @see fr.n7.simplePDL.WorkDefinition#getLinkToRessource
-	 * @model opposite="linkToRessource" required="true" changeable="false"
+	 * @model opposite="linkToRessource" required="true"
 	 * @generated
 	 */
-	WorkDefinition getWorkDefinition();
+	WorkDefinition getWorkDefinitionAssociate();
+
+	/**
+	 * Sets the value of the '{@link fr.n7.simplePDL.RessourceLink#getWorkDefinitionAssociate <em>Work Definition Associate</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Work Definition Associate</em>' reference.
+	 * @see #getWorkDefinitionAssociate()
+	 * @generated
+	 */
+	void setWorkDefinitionAssociate(WorkDefinition value);
 
 } // RessourceLink

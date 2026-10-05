@@ -45,7 +45,7 @@
     <genClasses ecoreClass="simplePDL.ecore#//RessourceLink">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplePDL.ecore#//RessourceLink/ressource"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplePDL.ecore#//RessourceLink/quantity"/>
-      <genFeatures property="Readonly" notify="false" createChild="false" ecoreFeature="ecore:EReference simplePDL.ecore#//RessourceLink/workDefinition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplePDL.ecore#//RessourceLink/workDefinitionAssociate"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

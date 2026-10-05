@@ -29,7 +29,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  *   <li>{@link fr.n7.simplePDL.impl.RessourceLinkImpl#getProcess <em>Process</em>}</li>
  *   <li>{@link fr.n7.simplePDL.impl.RessourceLinkImpl#getRessource <em>Ressource</em>}</li>
  *   <li>{@link fr.n7.simplePDL.impl.RessourceLinkImpl#getQuantity <em>Quantity</em>}</li>
- *   <li>{@link fr.n7.simplePDL.impl.RessourceLinkImpl#getWorkDefinition <em>Work Definition</em>}</li>
+ *   <li>{@link fr.n7.simplePDL.impl.RessourceLinkImpl#getWorkDefinitionAssociate <em>Work Definition Associate</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,14 +66,14 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 	protected int quantity = QUANTITY_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getWorkDefinition() <em>Work Definition</em>}' reference.
+	 * The cached value of the '{@link #getWorkDefinitionAssociate() <em>Work Definition Associate</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getWorkDefinition()
+	 * @see #getWorkDefinitionAssociate()
 	 * @generated
 	 * @ordered
 	 */
-	protected WorkDefinition workDefinition;
+	protected WorkDefinition workDefinitionAssociate;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -213,17 +213,18 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public WorkDefinition getWorkDefinition() {
-		if (workDefinition != null && workDefinition.eIsProxy()) {
-			InternalEObject oldWorkDefinition = (InternalEObject) workDefinition;
-			workDefinition = (WorkDefinition) eResolveProxy(oldWorkDefinition);
-			if (workDefinition != oldWorkDefinition) {
+	public WorkDefinition getWorkDefinitionAssociate() {
+		if (workDefinitionAssociate != null && workDefinitionAssociate.eIsProxy()) {
+			InternalEObject oldWorkDefinitionAssociate = (InternalEObject) workDefinitionAssociate;
+			workDefinitionAssociate = (WorkDefinition) eResolveProxy(oldWorkDefinitionAssociate);
+			if (workDefinitionAssociate != oldWorkDefinitionAssociate) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION, oldWorkDefinition, workDefinition));
+							SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE, oldWorkDefinitionAssociate,
+							workDefinitionAssociate));
 			}
 		}
-		return workDefinition;
+		return workDefinitionAssociate;
 	}
 
 	/**
@@ -231,8 +232,8 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public WorkDefinition basicGetWorkDefinition() {
-		return workDefinition;
+	public WorkDefinition basicGetWorkDefinitionAssociate() {
+		return workDefinitionAssociate;
 	}
 
 	/**
@@ -240,12 +241,14 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public NotificationChain basicSetWorkDefinition(WorkDefinition newWorkDefinition, NotificationChain msgs) {
-		WorkDefinition oldWorkDefinition = workDefinition;
-		workDefinition = newWorkDefinition;
+	public NotificationChain basicSetWorkDefinitionAssociate(WorkDefinition newWorkDefinitionAssociate,
+			NotificationChain msgs) {
+		WorkDefinition oldWorkDefinitionAssociate = workDefinitionAssociate;
+		workDefinitionAssociate = newWorkDefinitionAssociate;
 		if (eNotificationRequired()) {
 			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
-					SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION, oldWorkDefinition, newWorkDefinition);
+					SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE, oldWorkDefinitionAssociate,
+					newWorkDefinitionAssociate);
 			if (msgs == null)
 				msgs = notification;
 			else
@@ -260,17 +263,41 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
+	public void setWorkDefinitionAssociate(WorkDefinition newWorkDefinitionAssociate) {
+		if (newWorkDefinitionAssociate != workDefinitionAssociate) {
+			NotificationChain msgs = null;
+			if (workDefinitionAssociate != null)
+				msgs = ((InternalEObject) workDefinitionAssociate).eInverseRemove(this,
+						SimplePDLPackage.WORK_DEFINITION__LINK_TO_RESSOURCE, WorkDefinition.class, msgs);
+			if (newWorkDefinitionAssociate != null)
+				msgs = ((InternalEObject) newWorkDefinitionAssociate).eInverseAdd(this,
+						SimplePDLPackage.WORK_DEFINITION__LINK_TO_RESSOURCE, WorkDefinition.class, msgs);
+			msgs = basicSetWorkDefinitionAssociate(newWorkDefinitionAssociate, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET,
+					SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE, newWorkDefinitionAssociate,
+					newWorkDefinitionAssociate));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
 		case SimplePDLPackage.RESSOURCE_LINK__PROCESS:
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			return basicSetProcess((fr.n7.simplePDL.Process) otherEnd, msgs);
-		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION:
-			if (workDefinition != null)
-				msgs = ((InternalEObject) workDefinition).eInverseRemove(this,
+		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE:
+			if (workDefinitionAssociate != null)
+				msgs = ((InternalEObject) workDefinitionAssociate).eInverseRemove(this,
 						SimplePDLPackage.WORK_DEFINITION__LINK_TO_RESSOURCE, WorkDefinition.class, msgs);
-			return basicSetWorkDefinition((WorkDefinition) otherEnd, msgs);
+			return basicSetWorkDefinitionAssociate((WorkDefinition) otherEnd, msgs);
 		}
 		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
@@ -285,8 +312,8 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 		switch (featureID) {
 		case SimplePDLPackage.RESSOURCE_LINK__PROCESS:
 			return basicSetProcess(null, msgs);
-		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION:
-			return basicSetWorkDefinition(null, msgs);
+		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE:
+			return basicSetWorkDefinitionAssociate(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -322,10 +349,10 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 			return basicGetRessource();
 		case SimplePDLPackage.RESSOURCE_LINK__QUANTITY:
 			return getQuantity();
-		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION:
+		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE:
 			if (resolve)
-				return getWorkDefinition();
-			return basicGetWorkDefinition();
+				return getWorkDefinitionAssociate();
+			return basicGetWorkDefinitionAssociate();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -346,6 +373,9 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 			return;
 		case SimplePDLPackage.RESSOURCE_LINK__QUANTITY:
 			setQuantity((Integer) newValue);
+			return;
+		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE:
+			setWorkDefinitionAssociate((WorkDefinition) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -368,6 +398,9 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 		case SimplePDLPackage.RESSOURCE_LINK__QUANTITY:
 			setQuantity(QUANTITY_EDEFAULT);
 			return;
+		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE:
+			setWorkDefinitionAssociate((WorkDefinition) null);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -386,8 +419,8 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 			return ressource != null;
 		case SimplePDLPackage.RESSOURCE_LINK__QUANTITY:
 			return quantity != QUANTITY_EDEFAULT;
-		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION:
-			return workDefinition != null;
+		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE:
+			return workDefinitionAssociate != null;
 		}
 		return super.eIsSet(featureID);
 	}

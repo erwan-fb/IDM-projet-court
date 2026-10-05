@@ -57,7 +57,7 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 
 			addRessourcePropertyDescriptor(object);
 			addQuantityPropertyDescriptor(object);
-			addWorkDefinitionPropertyDescriptor(object);
+			addWorkDefinitionAssociatePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -94,19 +94,19 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	}
 
 	/**
-	 * This adds a property descriptor for the Work Definition feature.
+	 * This adds a property descriptor for the Work Definition Associate feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addWorkDefinitionPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_RessourceLink_workDefinition_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_RessourceLink_workDefinition_feature",
-								"_UI_RessourceLink_type"),
-						SimplePDLPackage.Literals.RESSOURCE_LINK__WORK_DEFINITION, false, false, false, null, null,
-						null));
+	protected void addWorkDefinitionAssociatePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add(createItemPropertyDescriptor(
+				((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(), getResourceLocator(),
+				getString("_UI_RessourceLink_workDefinitionAssociate_feature"),
+				getString("_UI_PropertyDescriptor_description", "_UI_RessourceLink_workDefinitionAssociate_feature",
+						"_UI_RessourceLink_type"),
+				SimplePDLPackage.Literals.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE, true, false, true, null, null,
+				null));
 	}
 
 	/**
@@ -139,11 +139,12 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	@Override
 	public String getText(Object object) {
 		RessourceLink ressourceLink = (RessourceLink) object;
-		WorkDefinition requester = ressourceLink.getWorkDefinition();
+		WorkDefinition requester = ressourceLink.getWorkDefinitionAssociate();
 		Ressources ressource = ressourceLink.getRessource();
 		String nameRequester = (requester == null ? "?" : requester.getName());
 		String nameRessource = (ressource == null ? "?" : ressource.getName());
-		return getString("_UI_RessourceLink_type") + " " + nameRequester + " --> " + nameRessource + " : " + ressourceLink.getQuantity();
+		return getString("_UI_RessourceLink_type") + " " + nameRequester + " --> " + nameRessource + " : "
+				+ ressourceLink.getQuantity();
 	}
 
 	/**

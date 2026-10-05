@@ -3,7 +3,6 @@
 package fr.n7.simplePDL.provider;
 
 import fr.n7.simplePDL.SimplePDLPackage;
-import fr.n7.simplePDL.WorkDefinition;
 import fr.n7.simplePDL.WorkSequence;
 import fr.n7.simplePDL.WorkSequenceType;
 
@@ -142,9 +141,8 @@ public class WorkSequenceItemProvider extends ItemProviderAdapter implements IEd
 		String label = "--" + (labelValue == null ? "?" : labelValue.toString()) + "-->";
 		String previous = ws.getPredecessor() == null ? "?" : ws.getPredecessor().getName();
 		String next = ws.getSuccessor() == null ? "?" : ws.getSuccessor().getName();
-		return label == null || label.length() == 0 ?
-		getString("_UI_WorkSequence_type") :
-		getString("_UI_WorkSequence_type") + " " + previous + " " + label + " " + next;
+		return label == null || label.length() == 0 ? getString("_UI_WorkSequence_type")
+				: getString("_UI_WorkSequence_type") + " " + previous + " " + label + " " + next;
 	}
 
 	/**

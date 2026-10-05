@@ -196,7 +196,7 @@ public class WorkDefinitionImpl extends MinimalEObjectImpl.Container implements 
 		if (linkToRessource == null) {
 			linkToRessource = new EObjectWithInverseResolvingEList<RessourceLink>(RessourceLink.class, this,
 					SimplePDLPackage.WORK_DEFINITION__LINK_TO_RESSOURCE,
-					SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION);
+					SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE);
 		}
 		return linkToRessource;
 	}

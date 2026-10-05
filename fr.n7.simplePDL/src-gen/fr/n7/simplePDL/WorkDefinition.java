@@ -55,13 +55,13 @@ public interface WorkDefinition extends ProcessElement {
 	/**
 	 * Returns the value of the '<em><b>Link To Ressource</b></em>' reference list.
 	 * The list contents are of type {@link fr.n7.simplePDL.RessourceLink}.
-	 * It is bidirectional and its opposite is '{@link fr.n7.simplePDL.RessourceLink#getWorkDefinition <em>Work Definition</em>}'.
+	 * It is bidirectional and its opposite is '{@link fr.n7.simplePDL.RessourceLink#getWorkDefinitionAssociate <em>Work Definition Associate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Link To Ressource</em>' reference list.
 	 * @see fr.n7.simplePDL.SimplePDLPackage#getWorkDefinition_LinkToRessource()
-	 * @see fr.n7.simplePDL.RessourceLink#getWorkDefinition
-	 * @model opposite="workDefinition"
+	 * @see fr.n7.simplePDL.RessourceLink#getWorkDefinitionAssociate
+	 * @model opposite="workDefinitionAssociate"
 	 * @generated
 	 */
 	EList<RessourceLink> getLinkToRessource();

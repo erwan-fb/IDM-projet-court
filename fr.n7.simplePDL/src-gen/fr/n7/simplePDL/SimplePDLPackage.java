@@ -425,13 +425,13 @@ public interface SimplePDLPackage extends EPackage {
 	int RESSOURCE_LINK__QUANTITY = PROCESS_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The feature id for the '<em><b>Work Definition</b></em>' reference.
+	 * The feature id for the '<em><b>Work Definition Associate</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESSOURCE_LINK__WORK_DEFINITION = PROCESS_ELEMENT_FEATURE_COUNT + 2;
+	int RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE = PROCESS_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of structural features of the '<em>Ressource Link</em>' class.
@@ -708,15 +708,15 @@ public interface SimplePDLPackage extends EPackage {
 	EAttribute getRessourceLink_Quantity();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.n7.simplePDL.RessourceLink#getWorkDefinition <em>Work Definition</em>}'.
+	 * Returns the meta object for the reference '{@link fr.n7.simplePDL.RessourceLink#getWorkDefinitionAssociate <em>Work Definition Associate</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Work Definition</em>'.
-	 * @see fr.n7.simplePDL.RessourceLink#getWorkDefinition()
+	 * @return the meta object for the reference '<em>Work Definition Associate</em>'.
+	 * @see fr.n7.simplePDL.RessourceLink#getWorkDefinitionAssociate()
 	 * @see #getRessourceLink()
 	 * @generated
 	 */
-	EReference getRessourceLink_WorkDefinition();
+	EReference getRessourceLink_WorkDefinitionAssociate();
 
 	/**
 	 * Returns the meta object for enum '{@link fr.n7.simplePDL.WorkSequenceType <em>Work Sequence Type</em>}'.
@@ -950,12 +950,12 @@ public interface SimplePDLPackage extends EPackage {
 		EAttribute RESSOURCE_LINK__QUANTITY = eINSTANCE.getRessourceLink_Quantity();
 
 		/**
-		 * The meta object literal for the '<em><b>Work Definition</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Work Definition Associate</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESSOURCE_LINK__WORK_DEFINITION = eINSTANCE.getRessourceLink_WorkDefinition();
+		EReference RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE = eINSTANCE.getRessourceLink_WorkDefinitionAssociate();
 
 		/**
 		 * The meta object literal for the '{@link fr.n7.simplePDL.WorkSequenceType <em>Work Sequence Type</em>}' enum.

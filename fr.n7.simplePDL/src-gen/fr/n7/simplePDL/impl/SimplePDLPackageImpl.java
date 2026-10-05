@@ -383,7 +383,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	 * @generated
 	 */
 	@Override
-	public EReference getRessourceLink_WorkDefinition() {
+	public EReference getRessourceLink_WorkDefinitionAssociate() {
 		return (EReference) ressourceLinkEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -456,7 +456,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 		ressourceLinkEClass = createEClass(RESSOURCE_LINK);
 		createEReference(ressourceLinkEClass, RESSOURCE_LINK__RESSOURCE);
 		createEAttribute(ressourceLinkEClass, RESSOURCE_LINK__QUANTITY);
-		createEReference(ressourceLinkEClass, RESSOURCE_LINK__WORK_DEFINITION);
+		createEReference(ressourceLinkEClass, RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE);
 
 		// Create enums
 		workSequenceTypeEEnum = createEEnum(WORK_SEQUENCE_TYPE);
@@ -517,7 +517,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getWorkDefinition_LinkToRessource(), this.getRessourceLink(),
-				this.getRessourceLink_WorkDefinition(), "linkToRessource", null, 0, -1, WorkDefinition.class,
+				this.getRessourceLink_WorkDefinitionAssociate(), "linkToRessource", null, 0, -1, WorkDefinition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getWorkDefinition_Name(), ecorePackage.getEString(), "name", null, 1, 1, WorkDefinition.class,
@@ -566,9 +566,9 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRessourceLink_Quantity(), ecorePackage.getEInt(), "quantity", null, 0, 1, RessourceLink.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getRessourceLink_WorkDefinition(), this.getWorkDefinition(),
-				this.getWorkDefinition_LinkToRessource(), "workDefinition", null, 1, 1, RessourceLink.class,
-				!IS_TRANSIENT, !IS_VOLATILE, !IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+		initEReference(getRessourceLink_WorkDefinitionAssociate(), this.getWorkDefinition(),
+				this.getWorkDefinition_LinkToRessource(), "workDefinitionAssociate", null, 1, 1, RessourceLink.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
