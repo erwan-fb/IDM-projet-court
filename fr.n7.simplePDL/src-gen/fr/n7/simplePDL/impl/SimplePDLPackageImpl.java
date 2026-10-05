@@ -555,7 +555,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getRessources_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ressources.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRessources_QuantityAvailable(), ecorePackage.getEInt(), "quantityAvailable", null, 0, -1,
+		initEAttribute(getRessources_QuantityAvailable(), ecorePackage.getEInt(), "quantityAvailable", null, 1, 1,
 				Ressources.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 

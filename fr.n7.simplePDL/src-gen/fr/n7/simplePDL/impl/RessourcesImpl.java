@@ -4,21 +4,13 @@ package fr.n7.simplePDL.impl;
 
 import fr.n7.simplePDL.Ressources;
 import fr.n7.simplePDL.SimplePDLPackage;
-
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EDataTypeUniqueEList;
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
@@ -58,14 +50,24 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getQuantityAvailable() <em>Quantity Available</em>}' attribute list.
+	 * The default value of the '{@link #getQuantityAvailable() <em>Quantity Available</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getQuantityAvailable()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Integer> quantityAvailable;
+	protected static final int QUANTITY_AVAILABLE_EDEFAULT = 0;
+
+	/**
+	 * The cached value of the '{@link #getQuantityAvailable() <em>Quantity Available</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getQuantityAvailable()
+	 * @generated
+	 * @ordered
+	 */
+	protected int quantityAvailable = QUANTITY_AVAILABLE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -162,12 +164,22 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	 * @generated
 	 */
 	@Override
-	public EList<Integer> getQuantityAvailable() {
-		if (quantityAvailable == null) {
-			quantityAvailable = new EDataTypeUniqueEList<Integer>(Integer.class, this,
-					SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE);
-		}
+	public int getQuantityAvailable() {
 		return quantityAvailable;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setQuantityAvailable(int newQuantityAvailable) {
+		int oldQuantityAvailable = quantityAvailable;
+		quantityAvailable = newQuantityAvailable;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE,
+					oldQuantityAvailable, quantityAvailable));
 	}
 
 	/**
@@ -249,8 +261,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 			setName((String) newValue);
 			return;
 		case SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE:
-			getQuantityAvailable().clear();
-			getQuantityAvailable().addAll((Collection<? extends Integer>) newValue);
+			setQuantityAvailable((Integer) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -271,7 +282,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 			setName(NAME_EDEFAULT);
 			return;
 		case SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE:
-			getQuantityAvailable().clear();
+			setQuantityAvailable(QUANTITY_AVAILABLE_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -290,7 +301,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 		case SimplePDLPackage.RESSOURCES__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		case SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE:
-			return quantityAvailable != null && !quantityAvailable.isEmpty();
+			return quantityAvailable != QUANTITY_AVAILABLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}

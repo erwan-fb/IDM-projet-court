@@ -2,8 +2,6 @@
  */
 package fr.n7.simplePDL;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Ressources</b></em>'.
@@ -45,15 +43,25 @@ public interface Ressources extends ProcessElement {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Quantity Available</b></em>' attribute list.
-	 * The list contents are of type {@link java.lang.Integer}.
+	 * Returns the value of the '<em><b>Quantity Available</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Quantity Available</em>' attribute list.
+	 * @return the value of the '<em>Quantity Available</em>' attribute.
+	 * @see #setQuantityAvailable(int)
 	 * @see fr.n7.simplePDL.SimplePDLPackage#getRessources_QuantityAvailable()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
-	EList<Integer> getQuantityAvailable();
+	int getQuantityAvailable();
+
+	/**
+	 * Sets the value of the '{@link fr.n7.simplePDL.Ressources#getQuantityAvailable <em>Quantity Available</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Quantity Available</em>' attribute.
+	 * @see #getQuantityAvailable()
+	 * @generated
+	 */
+	void setQuantityAvailable(int value);
 
 } // Ressources

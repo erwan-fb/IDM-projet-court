@@ -361,7 +361,7 @@ public interface SimplePDLPackage extends EPackage {
 	int RESSOURCES__NAME = PROCESS_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Quantity Available</b></em>' attribute list.
+	 * The feature id for the '<em><b>Quantity Available</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -665,10 +665,10 @@ public interface SimplePDLPackage extends EPackage {
 	EAttribute getRessources_Name();
 
 	/**
-	 * Returns the meta object for the attribute list '{@link fr.n7.simplePDL.Ressources#getQuantityAvailable <em>Quantity Available</em>}'.
+	 * Returns the meta object for the attribute '{@link fr.n7.simplePDL.Ressources#getQuantityAvailable <em>Quantity Available</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute list '<em>Quantity Available</em>'.
+	 * @return the meta object for the attribute '<em>Quantity Available</em>'.
 	 * @see fr.n7.simplePDL.Ressources#getQuantityAvailable()
 	 * @see #getRessources()
 	 * @generated
@@ -916,7 +916,7 @@ public interface SimplePDLPackage extends EPackage {
 		EAttribute RESSOURCES__NAME = eINSTANCE.getRessources_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Quantity Available</b></em>' attribute list feature.
+		 * The meta object literal for the '<em><b>Quantity Available</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
