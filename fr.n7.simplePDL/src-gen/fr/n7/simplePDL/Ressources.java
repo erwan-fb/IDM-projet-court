@@ -27,7 +27,7 @@ public interface Ressources extends ProcessElement {
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see fr.n7.simplePDL.SimplePDLPackage#getRessources_Name()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getName();
