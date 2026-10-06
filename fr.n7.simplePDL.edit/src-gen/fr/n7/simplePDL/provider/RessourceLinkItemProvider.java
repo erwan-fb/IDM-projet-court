@@ -159,6 +159,8 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RessourceLink.class)) {
+		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE:
+		case SimplePDLPackage.RESSOURCE_LINK__RESSOURCE:
 		case SimplePDLPackage.RESSOURCE_LINK__QUANTITY:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

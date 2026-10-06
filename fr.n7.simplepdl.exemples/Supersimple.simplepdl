@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <simplePDL:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplePDL="http://simplepdl" name="test">
-  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.2" name="1"/>
-  <processElements xsi:type="simplePDL:WorkDefinition" linksToSuccessors="//@processElements.2" name="4"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.2" name="7"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToSuccessors="//@processElements.2" linkToRessource="//@processElements.4" name="4"/>
   <processElements xsi:type="simplePDL:WorkSequence" predecessor="//@processElements.1" successor="//@processElements.0"/>
+  <processElements xsi:type="simplePDL:Ressources" name="djhfgfgjgj"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.3" quantity="3" workDefinitionAssociate="//@processElements.1"/>
 </simplePDL:Process>

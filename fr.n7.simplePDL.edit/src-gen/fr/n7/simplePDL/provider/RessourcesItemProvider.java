@@ -121,8 +121,9 @@ public class RessourcesItemProvider extends ItemProviderAdapter implements IEdit
 	@Override
 	public String getText(Object object) {
 		String label = ((Ressources) object).getName();
+		int quantity = ((Ressources) object).getQuantityAvailable();
 		return label == null || label.length() == 0 ? getString("_UI_Ressources_type")
-				: getString("_UI_Ressources_type") + " " + label;
+				: getString("_UI_Ressources_type") + " " + label + " : " + quantity;
 	}
 
 	/**
