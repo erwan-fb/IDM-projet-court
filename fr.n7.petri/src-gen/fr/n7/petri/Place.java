@@ -19,7 +19,7 @@ package fr.n7.petri;
  * @model
  * @generated
  */
-public interface Place extends Composants {
+public interface Place extends Composant {
 	/**
 	 * Returns the value of the '<em><b>Jetons</b></em>' attribute.
 	 * <!-- begin-user-doc -->

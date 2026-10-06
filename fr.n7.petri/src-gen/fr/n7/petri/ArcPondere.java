@@ -18,7 +18,7 @@ package fr.n7.petri;
  * @model
  * @generated
  */
-public interface ArcPondere extends Composants {
+public interface ArcPondere extends Composant {
 	/**
 	 * Returns the value of the '<em><b>Ponderation</b></em>' attribute.
 	 * <!-- begin-user-doc -->

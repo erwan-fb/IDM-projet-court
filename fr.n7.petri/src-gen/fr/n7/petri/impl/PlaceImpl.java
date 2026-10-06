@@ -10,6 +10,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
@@ -25,7 +26,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *
  * @generated
  */
-public class PlaceImpl extends ComposantsImpl implements Place {
+public class PlaceImpl extends MinimalEObjectImpl.Container implements Place {
 	/**
 	 * The default value of the '{@link #getJetons() <em>Jetons</em>}' attribute.
 	 * <!-- begin-user-doc -->

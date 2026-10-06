@@ -77,11 +77,13 @@ public class Convert {
 			
 			// Création du réseau de petri
 			ReseauPetri petri = petriMaker.createReseauPetri();
-			
 			petri.setNom(process.getName());
 			
-			// Ajouter les process
+			// Ajout du réseau de petri fini au fichier
+			destination.getContents().add(petri);
 			
+			
+			// Ajouter les process
 			for (var processElement : process.getProcessElements()) {
 				if (processElement instanceof WorkDefinition workDefinition) {
 					// creation des objets
@@ -134,17 +136,17 @@ public class Convert {
 					idlePlace.setJetons(1);
 					
 					// Ajouter tous les éléments créés dans le reseau petri
-					petri.getElements().add(idlePlace);
-					petri.getElements().add(startedPlace);
-					petri.getElements().add(runningPlace);
-					petri.getElements().add(endedPlace);
-					petri.getElements().add(start);
-					petri.getElements().add(end);
-					petri.getElements().add(idleToStart);
-					petri.getElements().add(startToStarted);
-					petri.getElements().add(startToRunning);
-					petri.getElements().add(runningToEnd);
-					petri.getElements().add(endToEnded);
+					petri.getComposants().add(idlePlace);
+					petri.getComposants().add(startedPlace);
+					petri.getComposants().add(runningPlace);
+					petri.getComposants().add(endedPlace);
+					petri.getComposants().add(start);
+					petri.getComposants().add(end);
+					petri.getComposants().add(idleToStart);
+					petri.getComposants().add(startToStarted);
+					petri.getComposants().add(startToRunning);
+					petri.getComposants().add(runningToEnd);
+					petri.getComposants().add(endToEnded);
 					
 					// ajouter tous les éléments a la ressource
 					destination.getContents().add(idlePlace);
@@ -180,7 +182,7 @@ public class Convert {
 					arc.setPonderation(1);
 					
 					// Création des liens pour l'arc
-					petri.getElements().forEach((elem) -> {
+					petri.getComposants().forEach((elem) -> {
 						// Ajout de la source
 						if (elem instanceof Place place) {
 							if ((firstIsStart && place.getNom().equals(sourceName + "_started")) || (!firstIsStart && place.getNom().equals(sourceName + "_endeded"))) {
@@ -197,14 +199,11 @@ public class Convert {
 					});
 					
 					// ajouter au reseau de petri
-					petri.getElements().add(arc);
+					petri.getComposants().add(arc);
 					destination.getContents().add(arc);
 					
 				}
 			}
-			
-			// Ajout du réseau de petri fini au fichier
-			destination.getContents().add(petri);
 			
 			// Sauvegarder le fichier 
 		    try {

@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.EObject;
 public interface ReseauPetri extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Composants</b></em>' containment reference list.
-	 * The list contents are of type {@link fr.n7.petri.Composants}.
+	 * The list contents are of type {@link fr.n7.petri.Composant}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Composants</em>' containment reference list.
@@ -34,7 +34,7 @@ public interface ReseauPetri extends EObject {
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Composants> getComposants();
+	EList<Composant> getComposants();
 
 	/**
 	 * Returns the value of the '<em><b>Nom</b></em>' attribute.

@@ -103,32 +103,32 @@ public interface PetriPackage extends EPackage {
 	int RESEAU_PETRI_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link fr.n7.petri.impl.ComposantsImpl <em>Composants</em>}' class.
+	 * The meta object id for the '{@link fr.n7.petri.Composant <em>Composant</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.n7.petri.impl.ComposantsImpl
-	 * @see fr.n7.petri.impl.PetriPackageImpl#getComposants()
+	 * @see fr.n7.petri.Composant
+	 * @see fr.n7.petri.impl.PetriPackageImpl#getComposant()
 	 * @generated
 	 */
-	int COMPOSANTS = 1;
+	int COMPOSANT = 1;
 
 	/**
-	 * The number of structural features of the '<em>Composants</em>' class.
+	 * The number of structural features of the '<em>Composant</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSANTS_FEATURE_COUNT = 0;
+	int COMPOSANT_FEATURE_COUNT = 0;
 
 	/**
-	 * The number of operations of the '<em>Composants</em>' class.
+	 * The number of operations of the '<em>Composant</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSANTS_OPERATION_COUNT = 0;
+	int COMPOSANT_OPERATION_COUNT = 0;
 
 	/**
 	 * The meta object id for the '{@link fr.n7.petri.impl.PlaceImpl <em>Place</em>}' class.
@@ -147,7 +147,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE__JETONS = COMPOSANTS_FEATURE_COUNT + 0;
+	int PLACE__JETONS = COMPOSANT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
@@ -156,7 +156,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE__NOM = COMPOSANTS_FEATURE_COUNT + 1;
+	int PLACE__NOM = COMPOSANT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Place</em>' class.
@@ -165,7 +165,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE_FEATURE_COUNT = COMPOSANTS_FEATURE_COUNT + 2;
+	int PLACE_FEATURE_COUNT = COMPOSANT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Place</em>' class.
@@ -174,7 +174,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int PLACE_OPERATION_COUNT = COMPOSANTS_OPERATION_COUNT + 0;
+	int PLACE_OPERATION_COUNT = COMPOSANT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.n7.petri.impl.TransitionImpl <em>Transition</em>}' class.
@@ -193,7 +193,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__NOM = COMPOSANTS_FEATURE_COUNT + 0;
+	int TRANSITION__NOM = COMPOSANT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Intervalle Temps</b></em>' reference.
@@ -202,7 +202,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION__INTERVALLE_TEMPS = COMPOSANTS_FEATURE_COUNT + 1;
+	int TRANSITION__INTERVALLE_TEMPS = COMPOSANT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
@@ -211,7 +211,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = COMPOSANTS_FEATURE_COUNT + 2;
+	int TRANSITION_FEATURE_COUNT = COMPOSANT_FEATURE_COUNT + 2;
 
 	/**
 	 * The number of operations of the '<em>Transition</em>' class.
@@ -220,7 +220,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_OPERATION_COUNT = COMPOSANTS_OPERATION_COUNT + 0;
+	int TRANSITION_OPERATION_COUNT = COMPOSANT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.n7.petri.impl.ArcPondereImpl <em>Arc Pondere</em>}' class.
@@ -239,7 +239,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE__PONDERATION = COMPOSANTS_FEATURE_COUNT + 0;
+	int ARC_PONDERE__PONDERATION = COMPOSANT_FEATURE_COUNT + 0;
 
 	/**
 	 * The number of structural features of the '<em>Arc Pondere</em>' class.
@@ -248,7 +248,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_FEATURE_COUNT = COMPOSANTS_FEATURE_COUNT + 1;
+	int ARC_PONDERE_FEATURE_COUNT = COMPOSANT_FEATURE_COUNT + 1;
 
 	/**
 	 * The number of operations of the '<em>Arc Pondere</em>' class.
@@ -257,7 +257,7 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ARC_PONDERE_OPERATION_COUNT = COMPOSANTS_OPERATION_COUNT + 0;
+	int ARC_PONDERE_OPERATION_COUNT = COMPOSANT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.n7.petri.impl.ArcPondereEntrantImpl <em>Arc Pondere Entrant</em>}' class.
@@ -503,14 +503,14 @@ public interface PetriPackage extends EPackage {
 	EAttribute getReseauPetri_Nom();
 
 	/**
-	 * Returns the meta object for class '{@link fr.n7.petri.Composants <em>Composants</em>}'.
+	 * Returns the meta object for class '{@link fr.n7.petri.Composant <em>Composant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Composants</em>'.
-	 * @see fr.n7.petri.Composants
+	 * @return the meta object for class '<em>Composant</em>'.
+	 * @see fr.n7.petri.Composant
 	 * @generated
 	 */
-	EClass getComposants();
+	EClass getComposant();
 
 	/**
 	 * Returns the meta object for class '{@link fr.n7.petri.Place <em>Place</em>}'.
@@ -753,14 +753,14 @@ public interface PetriPackage extends EPackage {
 		EAttribute RESEAU_PETRI__NOM = eINSTANCE.getReseauPetri_Nom();
 
 		/**
-		 * The meta object literal for the '{@link fr.n7.petri.impl.ComposantsImpl <em>Composants</em>}' class.
+		 * The meta object literal for the '{@link fr.n7.petri.Composant <em>Composant</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fr.n7.petri.impl.ComposantsImpl
-		 * @see fr.n7.petri.impl.PetriPackageImpl#getComposants()
+		 * @see fr.n7.petri.Composant
+		 * @see fr.n7.petri.impl.PetriPackageImpl#getComposant()
 		 * @generated
 		 */
-		EClass COMPOSANTS = eINSTANCE.getComposants();
+		EClass COMPOSANT = eINSTANCE.getComposant();
 
 		/**
 		 * The meta object literal for the '{@link fr.n7.petri.impl.PlaceImpl <em>Place</em>}' class.

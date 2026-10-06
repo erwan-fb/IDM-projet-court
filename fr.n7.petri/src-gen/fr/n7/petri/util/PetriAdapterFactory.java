@@ -72,8 +72,8 @@ public class PetriAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseComposants(Composants object) {
-			return createComposantsAdapter();
+		public Adapter caseComposant(Composant object) {
+			return createComposantAdapter();
 		}
 
 		@Override
@@ -145,16 +145,16 @@ public class PetriAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.n7.petri.Composants <em>Composants</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.n7.petri.Composant <em>Composant</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.n7.petri.Composants
+	 * @see fr.n7.petri.Composant
 	 * @generated
 	 */
-	public Adapter createComposantsAdapter() {
+	public Adapter createComposantAdapter() {
 		return null;
 	}
 

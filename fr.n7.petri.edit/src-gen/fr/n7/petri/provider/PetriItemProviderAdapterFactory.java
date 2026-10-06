@@ -96,29 +96,6 @@ public class PetriItemProviderAdapterFactory extends PetriAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.n7.petri.Composants} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected ComposantsItemProvider composantsItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link fr.n7.petri.Composants}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createComposantsAdapter() {
-		if (composantsItemProvider == null) {
-			composantsItemProvider = new ComposantsItemProvider(this);
-		}
-
-		return composantsItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link fr.n7.petri.Place} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -386,8 +363,6 @@ public class PetriItemProviderAdapterFactory extends PetriAdapterFactory
 	public void dispose() {
 		if (reseauPetriItemProvider != null)
 			reseauPetriItemProvider.dispose();
-		if (composantsItemProvider != null)
-			composantsItemProvider.dispose();
 		if (placeItemProvider != null)
 			placeItemProvider.dispose();
 		if (transitionItemProvider != null)

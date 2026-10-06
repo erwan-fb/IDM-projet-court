@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="ASCII"?>
-<petri:ReseauPetri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petri="http://petri" nom="test">
-  <elements xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@elements.8" destination="//@elements.10"/>
-  <elements xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@elements.6" destination="//@elements.9"/>
-  <elements xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@elements.10" destination="//@elements.5"/>
-  <elements xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@elements.10" destination="//@elements.6"/>
-  <elements xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@elements.9" destination="//@elements.7"/>
-  <elements xsi:type="petri:Place" nom="test_started"/>
-  <elements xsi:type="petri:Place" nom="test_running"/>
-  <elements xsi:type="petri:Place" nom="test_ended"/>
-  <elements xsi:type="petri:Place" jetons="1" nom="test_idle"/>
-  <elements xsi:type="petri:Transition" nom="test_end"/>
-  <elements xsi:type="petri:Transition" nom="test_start"/>
-</petri:ReseauPetri>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:petri="http://petri">
+  <petri:ReseauPetri nom="test"/>
+  <petri:Place jetons="1" nom="test_idle"/>
+  <petri:Place nom="test_started"/>
+  <petri:Place nom="test_running"/>
+  <petri:Place nom="test_ended"/>
+  <petri:Transition nom="test_start"/>
+  <petri:Transition nom="test_end"/>
+  <petri:ArcPondereEntrant ponderation="1" source="/1" destination="/5"/>
+  <petri:ArcPondereSortant ponderation="1" source="/5" destination="/2"/>
+  <petri:ArcPondereSortant ponderation="1" source="/5" destination="/3"/>
+  <petri:ArcPondereEntrant ponderation="1" source="/3" destination="/6"/>
+  <petri:ArcPondereSortant ponderation="1" source="/6" destination="/4"/>
+</xmi:XMI>
