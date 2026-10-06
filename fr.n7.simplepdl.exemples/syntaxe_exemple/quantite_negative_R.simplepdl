@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplePDL:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplePDL="http://simplepdl" name="BienNommerProcess">
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToSuccessors="//@processElements.3" linkToRessource="//@processElements.8" name="BienNommerWD1"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.5 //@processElements.3" linksToSuccessors="//@processElements.4" linkToRessource="//@processElements.9" name="BienNommerWD2"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.4" linksToSuccessors="//@processElements.5" name="BienNommerWD3"/>
+  <processElements xsi:type="simplePDL:WorkSequence" predecessor="//@processElements.0" successor="//@processElements.1"/>
+  <processElements xsi:type="simplePDL:WorkSequence" predecessor="//@processElements.1" successor="//@processElements.2"/>
+  <processElements xsi:type="simplePDL:WorkSequence" linkType="startToFinish" predecessor="//@processElements.2" successor="//@processElements.1"/>
+  <processElements xsi:type="simplePDL:Guidance" elements="//@processElements.3" text="Bien remplit"/>
+  <processElements xsi:type="simplePDL:Ressources" name="BienNommerR1" quantityAvailable="-2"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.7" quantity="1" workDefinitionAssociate="//@processElements.0"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.7" quantity="2" workDefinitionAssociate="//@processElements.1"/>
+</simplePDL:Process>
