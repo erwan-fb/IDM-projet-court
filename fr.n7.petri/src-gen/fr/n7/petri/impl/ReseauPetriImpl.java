@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.n7.petri.impl.ReseauPetriImpl#getElements <em>Elements</em>}</li>
+ *   <li>{@link fr.n7.petri.impl.ReseauPetriImpl#getComposants <em>Composants</em>}</li>
  *   <li>{@link fr.n7.petri.impl.ReseauPetriImpl#getNom <em>Nom</em>}</li>
  * </ul>
  *
@@ -38,14 +38,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements ReseauPetri {
 	/**
-	 * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
+	 * The cached value of the '{@link #getComposants() <em>Composants</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getElements()
+	 * @see #getComposants()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Composants> elements;
+	protected EList<Composants> composants;
 
 	/**
 	 * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
@@ -92,12 +92,12 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 */
 	@Override
-	public EList<Composants> getElements() {
-		if (elements == null) {
-			elements = new EObjectContainmentEList<Composants>(Composants.class, this,
-					PetriPackage.RESEAU_PETRI__ELEMENTS);
+	public EList<Composants> getComposants() {
+		if (composants == null) {
+			composants = new EObjectContainmentEList<Composants>(Composants.class, this,
+					PetriPackage.RESEAU_PETRI__COMPOSANTS);
 		}
-		return elements;
+		return composants;
 	}
 
 	/**
@@ -131,8 +131,8 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case PetriPackage.RESEAU_PETRI__ELEMENTS:
-			return ((InternalEList<?>) getElements()).basicRemove(otherEnd, msgs);
+		case PetriPackage.RESEAU_PETRI__COMPOSANTS:
+			return ((InternalEList<?>) getComposants()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -145,8 +145,8 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case PetriPackage.RESEAU_PETRI__ELEMENTS:
-			return getElements();
+		case PetriPackage.RESEAU_PETRI__COMPOSANTS:
+			return getComposants();
 		case PetriPackage.RESEAU_PETRI__NOM:
 			return getNom();
 		}
@@ -162,9 +162,9 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case PetriPackage.RESEAU_PETRI__ELEMENTS:
-			getElements().clear();
-			getElements().addAll((Collection<? extends Composants>) newValue);
+		case PetriPackage.RESEAU_PETRI__COMPOSANTS:
+			getComposants().clear();
+			getComposants().addAll((Collection<? extends Composants>) newValue);
 			return;
 		case PetriPackage.RESEAU_PETRI__NOM:
 			setNom((String) newValue);
@@ -181,8 +181,8 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case PetriPackage.RESEAU_PETRI__ELEMENTS:
-			getElements().clear();
+		case PetriPackage.RESEAU_PETRI__COMPOSANTS:
+			getComposants().clear();
 			return;
 		case PetriPackage.RESEAU_PETRI__NOM:
 			setNom(NOM_EDEFAULT);
@@ -199,8 +199,8 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case PetriPackage.RESEAU_PETRI__ELEMENTS:
-			return elements != null && !elements.isEmpty();
+		case PetriPackage.RESEAU_PETRI__COMPOSANTS:
+			return composants != null && !composants.isEmpty();
 		case PetriPackage.RESEAU_PETRI__NOM:
 			return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
 		}

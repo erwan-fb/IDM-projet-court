@@ -67,13 +67,13 @@ public interface PetriPackage extends EPackage {
 	int RESEAU_PETRI = 0;
 
 	/**
-	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Composants</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESEAU_PETRI__ELEMENTS = 0;
+	int RESEAU_PETRI__COMPOSANTS = 0;
 
 	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
@@ -481,15 +481,15 @@ public interface PetriPackage extends EPackage {
 	EClass getReseauPetri();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link fr.n7.petri.ReseauPetri#getElements <em>Elements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.n7.petri.ReseauPetri#getComposants <em>Composants</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Elements</em>'.
-	 * @see fr.n7.petri.ReseauPetri#getElements()
+	 * @return the meta object for the containment reference list '<em>Composants</em>'.
+	 * @see fr.n7.petri.ReseauPetri#getComposants()
 	 * @see #getReseauPetri()
 	 * @generated
 	 */
-	EReference getReseauPetri_Elements();
+	EReference getReseauPetri_Composants();
 
 	/**
 	 * Returns the meta object for the attribute '{@link fr.n7.petri.ReseauPetri#getNom <em>Nom</em>}'.
@@ -737,12 +737,12 @@ public interface PetriPackage extends EPackage {
 		EClass RESEAU_PETRI = eINSTANCE.getReseauPetri();
 
 		/**
-		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Composants</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESEAU_PETRI__ELEMENTS = eINSTANCE.getReseauPetri_Elements();
+		EReference RESEAU_PETRI__COMPOSANTS = eINSTANCE.getReseauPetri_Composants();
 
 		/**
 		 * The meta object literal for the '<em><b>Nom</b></em>' attribute feature.

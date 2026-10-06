@@ -2,6 +2,7 @@
  */
 package fr.n7.petri.provider;
 
+import fr.n7.petri.PetriFactory;
 import fr.n7.petri.PetriPackage;
 import fr.n7.petri.ReseauPetri;
 
@@ -13,6 +14,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -53,25 +55,9 @@ public class ReseauPetriItemProvider extends ItemProviderAdapter implements IEdi
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addElementsPropertyDescriptor(object);
 			addNomPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
-	}
-
-	/**
-	 * This adds a property descriptor for the Elements feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addElementsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_ReseauPetri_elements_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_ReseauPetri_elements_feature",
-								"_UI_ReseauPetri_type"),
-						PetriPackage.Literals.RESEAU_PETRI__ELEMENTS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -88,6 +74,36 @@ public class ReseauPetriItemProvider extends ItemProviderAdapter implements IEdi
 								"_UI_ReseauPetri_type"),
 						PetriPackage.Literals.RESEAU_PETRI__NOM, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -139,6 +155,9 @@ public class ReseauPetriItemProvider extends ItemProviderAdapter implements IEdi
 		case PetriPackage.RESEAU_PETRI__NOM:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
+		case PetriPackage.RESEAU_PETRI__COMPOSANTS:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+			return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -153,6 +172,27 @@ public class ReseauPetriItemProvider extends ItemProviderAdapter implements IEdi
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,
+				PetriFactory.eINSTANCE.createComposants()));
+
+		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,
+				PetriFactory.eINSTANCE.createPlace()));
+
+		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,
+				PetriFactory.eINSTANCE.createTransition()));
+
+		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,
+				PetriFactory.eINSTANCE.createArcPondere()));
+
+		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,
+				PetriFactory.eINSTANCE.createArcPondereEntrant()));
+
+		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,
+				PetriFactory.eINSTANCE.createArcPondereSortant()));
+
+		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,
+				PetriFactory.eINSTANCE.createArcLectureSeule()));
 	}
 
 	/**

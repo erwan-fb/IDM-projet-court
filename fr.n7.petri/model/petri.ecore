@@ -2,21 +2,21 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="petri" nsURI="http://petri" nsPrefix="petri">
   <eClassifiers xsi:type="ecore:EClass" name="ReseauPetri">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
-        eType="#//Composants" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composants" upperBound="-1"
+        eType="#//Composant" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Composants"/>
-  <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//Composants">
+  <eClassifiers xsi:type="ecore:EClass" name="Composant" abstract="true" interface="true"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Place" eSuperTypes="#//Composant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="jetons" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="#//Composants">
+  <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="#//Composant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="intervalleTemps" eType="#//Temps"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="ArcPondere" eSuperTypes="#//Composants">
+  <eClassifiers xsi:type="ecore:EClass" name="ArcPondere" eSuperTypes="#//Composant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ponderation" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>

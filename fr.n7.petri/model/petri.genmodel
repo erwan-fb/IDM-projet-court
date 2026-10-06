@@ -11,7 +11,7 @@
   <genPackages prefix="Petri" basePackage="fr.n7" disposableProviderFactory="true"
       fileExtensions="petri" ecorePackage="petri.ecore#/">
     <genClasses ecoreClass="petri.ecore#//ReseauPetri">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//ReseauPetri/elements"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petri.ecore#//ReseauPetri/composants"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//ReseauPetri/nom"/>
     </genClasses>
     <genClasses ecoreClass="petri.ecore#//Composants"/>

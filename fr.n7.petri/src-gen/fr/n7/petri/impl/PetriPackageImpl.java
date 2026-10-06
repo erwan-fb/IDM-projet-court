@@ -171,7 +171,7 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 	 * @generated
 	 */
 	@Override
-	public EReference getReseauPetri_Elements() {
+	public EReference getReseauPetri_Composants() {
 		return (EReference) reseauPetriEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -406,7 +406,7 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 
 		// Create classes and their features
 		reseauPetriEClass = createEClass(RESEAU_PETRI);
-		createEReference(reseauPetriEClass, RESEAU_PETRI__ELEMENTS);
+		createEReference(reseauPetriEClass, RESEAU_PETRI__COMPOSANTS);
 		createEAttribute(reseauPetriEClass, RESEAU_PETRI__NOM);
 
 		composantsEClass = createEClass(COMPOSANTS);
@@ -476,10 +476,10 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(reseauPetriEClass, ReseauPetri.class, "ReseauPetri", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReseauPetri_Elements(), this.getComposants(), null, "elements", null, 0, -1,
+		initEReference(getReseauPetri_Composants(), this.getComposants(), null, "composants", null, 0, -1,
 				ReseauPetri.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getReseauPetri_Nom(), ecorePackage.getEString(), "nom", null, 0, 1, ReseauPetri.class,
+		initEAttribute(getReseauPetri_Nom(), ecorePackage.getEString(), "nom", null, 1, 1, ReseauPetri.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(composantsEClass, Composants.class, "Composants", !IS_ABSTRACT, !IS_INTERFACE,

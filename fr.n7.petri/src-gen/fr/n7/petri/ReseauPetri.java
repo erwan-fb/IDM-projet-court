@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.n7.petri.ReseauPetri#getElements <em>Elements</em>}</li>
+ *   <li>{@link fr.n7.petri.ReseauPetri#getComposants <em>Composants</em>}</li>
  *   <li>{@link fr.n7.petri.ReseauPetri#getNom <em>Nom</em>}</li>
  * </ul>
  *
@@ -25,16 +25,16 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ReseauPetri extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
+	 * Returns the value of the '<em><b>Composants</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.n7.petri.Composants}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Elements</em>' containment reference list.
-	 * @see fr.n7.petri.PetriPackage#getReseauPetri_Elements()
+	 * @return the value of the '<em>Composants</em>' containment reference list.
+	 * @see fr.n7.petri.PetriPackage#getReseauPetri_Composants()
 	 * @model containment="true"
 	 * @generated
 	 */
-	EList<Composants> getElements();
+	EList<Composants> getComposants();
 
 	/**
 	 * Returns the value of the '<em><b>Nom</b></em>' attribute.
@@ -43,7 +43,7 @@ public interface ReseauPetri extends EObject {
 	 * @return the value of the '<em>Nom</em>' attribute.
 	 * @see #setNom(String)
 	 * @see fr.n7.petri.PetriPackage#getReseauPetri_Nom()
-	 * @model
+	 * @model required="true"
 	 * @generated
 	 */
 	String getNom();
