@@ -14,7 +14,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petri.ecore#//ReseauPetri/composants"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//ReseauPetri/nom"/>
     </genClasses>
-    <genClasses ecoreClass="petri.ecore#//Composants"/>
+    <genClasses ecoreClass="petri.ecore#//Composant"/>
     <genClasses ecoreClass="petri.ecore#//Place">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Place/jetons"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Place/nom"/>

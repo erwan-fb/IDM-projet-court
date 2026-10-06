@@ -15,6 +15,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.util.ResourceLocator;
 
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -172,9 +173,6 @@ public class ReseauPetriItemProvider extends ItemProviderAdapter implements IEdi
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,
-				PetriFactory.eINSTANCE.createComposants()));
 
 		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,
 				PetriFactory.eINSTANCE.createPlace()));

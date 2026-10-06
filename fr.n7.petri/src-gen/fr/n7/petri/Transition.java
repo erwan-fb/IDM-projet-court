@@ -19,7 +19,7 @@ package fr.n7.petri;
  * @model
  * @generated
  */
-public interface Transition extends Composants {
+public interface Transition extends Composant {
 	/**
 	 * Returns the value of the '<em><b>Nom</b></em>' attribute.
 	 * <!-- begin-user-doc -->

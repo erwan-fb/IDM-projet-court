@@ -2,20 +2,20 @@
  */
 package fr.n7.petri.impl;
 
-import fr.n7.petri.Composants;
+import fr.n7.petri.Composant;
 import fr.n7.petri.PetriPackage;
 import fr.n7.petri.ReseauPetri;
 
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
-
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
@@ -45,7 +45,7 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Composants> composants;
+	protected EList<Composant> composants;
 
 	/**
 	 * The default value of the '{@link #getNom() <em>Nom</em>}' attribute.
@@ -92,9 +92,9 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 	 * @generated
 	 */
 	@Override
-	public EList<Composants> getComposants() {
+	public EList<Composant> getComposants() {
 		if (composants == null) {
-			composants = new EObjectContainmentEList<Composants>(Composants.class, this,
+			composants = new EObjectContainmentEList<Composant>(Composant.class, this,
 					PetriPackage.RESEAU_PETRI__COMPOSANTS);
 		}
 		return composants;
@@ -164,7 +164,7 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 		switch (featureID) {
 		case PetriPackage.RESEAU_PETRI__COMPOSANTS:
 			getComposants().clear();
-			getComposants().addAll((Collection<? extends Composants>) newValue);
+			getComposants().addAll((Collection<? extends Composant>) newValue);
 			return;
 		case PetriPackage.RESEAU_PETRI__NOM:
 			setNom((String) newValue);

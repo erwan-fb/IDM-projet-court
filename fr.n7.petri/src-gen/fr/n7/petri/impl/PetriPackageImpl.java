@@ -6,7 +6,7 @@ import fr.n7.petri.ArcLectureSeule;
 import fr.n7.petri.ArcPondere;
 import fr.n7.petri.ArcPondereEntrant;
 import fr.n7.petri.ArcPondereSortant;
-import fr.n7.petri.Composants;
+import fr.n7.petri.Composant;
 import fr.n7.petri.PetriFactory;
 import fr.n7.petri.PetriPackage;
 import fr.n7.petri.Place;
@@ -40,7 +40,7 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass composantsEClass = null;
+	private EClass composantEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -191,8 +191,8 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 	 * @generated
 	 */
 	@Override
-	public EClass getComposants() {
-		return composantsEClass;
+	public EClass getComposant() {
+		return composantEClass;
 	}
 
 	/**
@@ -409,7 +409,7 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		createEReference(reseauPetriEClass, RESEAU_PETRI__COMPOSANTS);
 		createEAttribute(reseauPetriEClass, RESEAU_PETRI__NOM);
 
-		composantsEClass = createEClass(COMPOSANTS);
+		composantEClass = createEClass(COMPOSANT);
 
 		placeEClass = createEClass(PLACE);
 		createEAttribute(placeEClass, PLACE__JETONS);
@@ -466,9 +466,9 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		// Set bounds for type parameters
 
 		// Add supertypes to classes
-		placeEClass.getESuperTypes().add(this.getComposants());
-		transitionEClass.getESuperTypes().add(this.getComposants());
-		arcPondereEClass.getESuperTypes().add(this.getComposants());
+		placeEClass.getESuperTypes().add(this.getComposant());
+		transitionEClass.getESuperTypes().add(this.getComposant());
+		arcPondereEClass.getESuperTypes().add(this.getComposant());
 		arcPondereEntrantEClass.getESuperTypes().add(this.getArcPondere());
 		arcPondereSortantEClass.getESuperTypes().add(this.getArcPondere());
 		arcLectureSeuleEClass.getESuperTypes().add(this.getArcPondereEntrant());
@@ -476,13 +476,13 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(reseauPetriEClass, ReseauPetri.class, "ReseauPetri", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReseauPetri_Composants(), this.getComposants(), null, "composants", null, 0, -1,
+		initEReference(getReseauPetri_Composants(), this.getComposant(), null, "composants", null, 0, -1,
 				ReseauPetri.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getReseauPetri_Nom(), ecorePackage.getEString(), "nom", null, 1, 1, ReseauPetri.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(composantsEClass, Composants.class, "Composants", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(composantEClass, Composant.class, "Composant", IS_ABSTRACT, IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);

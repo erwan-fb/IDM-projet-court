@@ -73,9 +73,9 @@ public class PetriSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case PetriPackage.COMPOSANTS: {
-			Composants composants = (Composants) theEObject;
-			T result = caseComposants(composants);
+		case PetriPackage.COMPOSANT: {
+			Composant composant = (Composant) theEObject;
+			T result = caseComposant(composant);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -84,7 +84,7 @@ public class PetriSwitch<T> extends Switch<T> {
 			Place place = (Place) theEObject;
 			T result = casePlace(place);
 			if (result == null)
-				result = caseComposants(place);
+				result = caseComposant(place);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -93,7 +93,7 @@ public class PetriSwitch<T> extends Switch<T> {
 			Transition transition = (Transition) theEObject;
 			T result = caseTransition(transition);
 			if (result == null)
-				result = caseComposants(transition);
+				result = caseComposant(transition);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -102,7 +102,7 @@ public class PetriSwitch<T> extends Switch<T> {
 			ArcPondere arcPondere = (ArcPondere) theEObject;
 			T result = caseArcPondere(arcPondere);
 			if (result == null)
-				result = caseComposants(arcPondere);
+				result = caseComposant(arcPondere);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -113,7 +113,7 @@ public class PetriSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseArcPondere(arcPondereEntrant);
 			if (result == null)
-				result = caseComposants(arcPondereEntrant);
+				result = caseComposant(arcPondereEntrant);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -124,7 +124,7 @@ public class PetriSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseArcPondere(arcPondereSortant);
 			if (result == null)
-				result = caseComposants(arcPondereSortant);
+				result = caseComposant(arcPondereSortant);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -137,7 +137,7 @@ public class PetriSwitch<T> extends Switch<T> {
 			if (result == null)
 				result = caseArcPondere(arcLectureSeule);
 			if (result == null)
-				result = caseComposants(arcLectureSeule);
+				result = caseComposant(arcLectureSeule);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -170,17 +170,17 @@ public class PetriSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Composants</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Composant</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Composants</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Composant</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseComposants(Composants object) {
+	public T caseComposant(Composant object) {
 		return null;
 	}
 

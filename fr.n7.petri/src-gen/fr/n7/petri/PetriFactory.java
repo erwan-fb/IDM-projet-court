@@ -31,15 +31,6 @@ public interface PetriFactory extends EFactory {
 	ReseauPetri createReseauPetri();
 
 	/**
-	 * Returns a new object of class '<em>Composants</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Composants</em>'.
-	 * @generated
-	 */
-	Composants createComposants();
-
-	/**
 	 * Returns a new object of class '<em>Place</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

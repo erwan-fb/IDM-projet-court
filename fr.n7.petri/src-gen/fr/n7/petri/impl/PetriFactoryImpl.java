@@ -57,8 +57,6 @@ public class PetriFactoryImpl extends EFactoryImpl implements PetriFactory {
 		switch (eClass.getClassifierID()) {
 		case PetriPackage.RESEAU_PETRI:
 			return createReseauPetri();
-		case PetriPackage.COMPOSANTS:
-			return createComposants();
 		case PetriPackage.PLACE:
 			return createPlace();
 		case PetriPackage.TRANSITION:
@@ -87,17 +85,6 @@ public class PetriFactoryImpl extends EFactoryImpl implements PetriFactory {
 	public ReseauPetri createReseauPetri() {
 		ReseauPetriImpl reseauPetri = new ReseauPetriImpl();
 		return reseauPetri;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Composants createComposants() {
-		ComposantsImpl composants = new ComposantsImpl();
-		return composants;
 	}
 
 	/**
