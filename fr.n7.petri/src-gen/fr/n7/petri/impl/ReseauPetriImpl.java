@@ -10,14 +10,17 @@ import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -35,7 +38,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements ReseauPetri {
 	/**
-	 * The cached value of the '{@link #getElements() <em>Elements</em>}' reference list.
+	 * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getElements()
@@ -91,7 +94,7 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public EList<Composants> getElements() {
 		if (elements == null) {
-			elements = new EObjectResolvingEList<Composants>(Composants.class, this,
+			elements = new EObjectContainmentEList<Composants>(Composants.class, this,
 					PetriPackage.RESEAU_PETRI__ELEMENTS);
 		}
 		return elements;
@@ -118,6 +121,20 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 		nom = newNom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.RESEAU_PETRI__NOM, oldNom, nom));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case PetriPackage.RESEAU_PETRI__ELEMENTS:
+			return ((InternalEList<?>) getElements()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

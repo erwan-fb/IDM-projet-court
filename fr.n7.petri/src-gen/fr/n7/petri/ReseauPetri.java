@@ -25,13 +25,13 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface ReseauPetri extends EObject {
 	/**
-	 * Returns the value of the '<em><b>Elements</b></em>' reference list.
+	 * Returns the value of the '<em><b>Elements</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.n7.petri.Composants}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Elements</em>' reference list.
+	 * @return the value of the '<em>Elements</em>' containment reference list.
 	 * @see fr.n7.petri.PetriPackage#getReseauPetri_Elements()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Composants> getElements();

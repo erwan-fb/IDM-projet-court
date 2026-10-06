@@ -67,7 +67,7 @@ public interface PetriPackage extends EPackage {
 	int RESEAU_PETRI = 0;
 
 	/**
-	 * The feature id for the '<em><b>Elements</b></em>' reference list.
+	 * The feature id for the '<em><b>Elements</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -481,10 +481,10 @@ public interface PetriPackage extends EPackage {
 	EClass getReseauPetri();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fr.n7.petri.ReseauPetri#getElements <em>Elements</em>}'.
+	 * Returns the meta object for the containment reference list '{@link fr.n7.petri.ReseauPetri#getElements <em>Elements</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Elements</em>'.
+	 * @return the meta object for the containment reference list '<em>Elements</em>'.
 	 * @see fr.n7.petri.ReseauPetri#getElements()
 	 * @see #getReseauPetri()
 	 * @generated
@@ -737,7 +737,7 @@ public interface PetriPackage extends EPackage {
 		EClass RESEAU_PETRI = eINSTANCE.getReseauPetri();
 
 		/**
-		 * The meta object literal for the '<em><b>Elements</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Elements</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

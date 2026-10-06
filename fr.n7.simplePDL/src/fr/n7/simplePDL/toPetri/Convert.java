@@ -13,6 +13,7 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceFactoryImpl;
 import fr.n7.petri.*;
 import fr.n7.petri.PetriFactory;
 import fr.n7.simplePDL.Process;
+import fr.n7.simplePDL.SimplePDLPackage;
 import fr.n7.simplePDL.WorkDefinition;
 import fr.n7.simplePDL.WorkSequence;
 import fr.n7.simplePDL.WorkSequenceType;
@@ -22,16 +23,23 @@ public class Convert {
 	// arg 1 = fichier xmi pdl source
 	// arg 2 = fichier xmi petri destination
 	public static void main(String[] args) {
+		System.out.println("=====================Conversion simplePDL vers Petri=====================");
 		if (args.length != 2) {
 			System.out.println(
 					"Attend 2 arguments: le fichier xmi source pour le pdl puis le fichier xmi destination pour le petri");
 		} else {
+			// load the URIs for java to recognize
+			SimplePDLPackage simplePDLPackage = SimplePDLPackage.eINSTANCE;
+			PetriPackage petriPackage = PetriPackage.eINSTANCE;
+			
+			PetriFactory petriMaker = PetriFactory.eINSTANCE;
 			
 			// Enregistrer l'extension ".xmi" comme devant être ouverte à
 			// l'aide d'un objet "XMIResourceFactoryImpl"
 			Resource.Factory.Registry reg = Resource.Factory.Registry.INSTANCE;
 			Map<String, Object> m = reg.getExtensionToFactoryMap();
-			m.put("xmi", new XMIResourceFactoryImpl());
+			m.put("simplepdl", new XMIResourceFactoryImpl());
+			m.put("petri", new XMIResourceFactoryImpl());
 			
 			// Créer un objet resourceSetImpl qui contiendra une ressource EMF (notre modèle)
 			ResourceSet resSetSource = new ResourceSetImpl();
@@ -41,7 +49,9 @@ public class Convert {
 			// Récupération du premier fichier : simplepdl
 			URI sourceURI = URI.createURI(args[0]);
 			Resource source = null;
+			source = resSetSource.getResource(sourceURI, true);
 			try { // gerer les erreurs si jamais le ficher n'existe pas par exemple (ou fichier mal formé)
+				
 			} catch (RuntimeException e) {
 				System.out.println("An error occured while opening the file " + args[0]);
 			}
@@ -51,19 +61,27 @@ public class Convert {
 			URI destURI = URI.createURI(args[1]);
 			Resource destination = resSetDestination.createResource(destURI);
 			
-			if (source == null || destination == null) return;
+			if (source == null) {
+				System.out.println("Le fichier source n'existe pas");
+				return;
+			}
+			
+			if (destination == null) {
+				System.out.println("Le fichier destination a eu un probleme a sa creation");
+				return;
+			}
 			
 			
 			// Récupérer la racine du simplepdl
 			Process process = (Process) source.getContents().get(0);
 			
 			// Création du réseau de petri
-			PetriFactory petriMaker = PetriFactory.eINSTANCE;
 			ReseauPetri petri = petriMaker.createReseauPetri();
 			
 			petri.setNom(process.getName());
 			
 			// Ajouter les process
+			
 			for (var processElement : process.getProcessElements()) {
 				if (processElement instanceof WorkDefinition workDefinition) {
 					// creation des objets
@@ -127,6 +145,19 @@ public class Convert {
 					petri.getElements().add(startToRunning);
 					petri.getElements().add(runningToEnd);
 					petri.getElements().add(endToEnded);
+					
+					// ajouter tous les éléments a la ressource
+					destination.getContents().add(idlePlace);
+					destination.getContents().add(startedPlace);
+					destination.getContents().add(runningPlace);
+					destination.getContents().add(endedPlace);
+					destination.getContents().add(start);
+					destination.getContents().add(end);
+					destination.getContents().add(idleToStart);
+					destination.getContents().add(startToStarted);
+					destination.getContents().add(startToRunning);
+					destination.getContents().add(runningToEnd);
+					destination.getContents().add(endToEnded);
 				}
 			}
 			
@@ -167,6 +198,7 @@ public class Convert {
 					
 					// ajouter au reseau de petri
 					petri.getElements().add(arc);
+					destination.getContents().add(arc);
 					
 				}
 			}
