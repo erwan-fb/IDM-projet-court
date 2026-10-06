@@ -31,3 +31,6 @@ plugins/
 
 # ignore macos .DS_Store generated files
 **/.DS_Store
+
+# bin files eclipse
+**/bin/**
