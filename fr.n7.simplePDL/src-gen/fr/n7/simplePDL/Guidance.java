@@ -2,8 +2,6 @@
  */
 package fr.n7.simplePDL;
 
-import org.eclipse.emf.common.util.EList;
-
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Guidance</b></em>'.
@@ -13,7 +11,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.n7.simplePDL.Guidance#getElements <em>Elements</em>}</li>
+ *   <li>{@link fr.n7.simplePDL.Guidance#getElement <em>Element</em>}</li>
  *   <li>{@link fr.n7.simplePDL.Guidance#getText <em>Text</em>}</li>
  * </ul>
  *
@@ -23,16 +21,26 @@ import org.eclipse.emf.common.util.EList;
  */
 public interface Guidance extends ProcessElement {
 	/**
-	 * Returns the value of the '<em><b>Elements</b></em>' reference list.
-	 * The list contents are of type {@link fr.n7.simplePDL.ProcessElement}.
+	 * Returns the value of the '<em><b>Element</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Elements</em>' reference list.
-	 * @see fr.n7.simplePDL.SimplePDLPackage#getGuidance_Elements()
+	 * @return the value of the '<em>Element</em>' reference.
+	 * @see #setElement(ProcessElement)
+	 * @see fr.n7.simplePDL.SimplePDLPackage#getGuidance_Element()
 	 * @model
 	 * @generated
 	 */
-	EList<ProcessElement> getElements();
+	ProcessElement getElement();
+
+	/**
+	 * Sets the value of the '{@link fr.n7.simplePDL.Guidance#getElement <em>Element</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Element</em>' reference.
+	 * @see #getElement()
+	 * @generated
+	 */
+	void setElement(ProcessElement value);
 
 	/**
 	 * Returns the value of the '<em><b>Text</b></em>' attribute.

@@ -303,7 +303,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	 * @generated
 	 */
 	@Override
-	public EReference getGuidance_Elements() {
+	public EReference getGuidance_Element() {
 		return (EReference) guidanceEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -446,7 +446,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 		createEReference(processElementEClass, PROCESS_ELEMENT__PROCESS);
 
 		guidanceEClass = createEClass(GUIDANCE);
-		createEReference(guidanceEClass, GUIDANCE__ELEMENTS);
+		createEReference(guidanceEClass, GUIDANCE__ELEMENT);
 		createEAttribute(guidanceEClass, GUIDANCE__TEXT);
 
 		ressourcesEClass = createEClass(RESSOURCES);
@@ -545,7 +545,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 
 		initEClass(guidanceEClass, Guidance.class, "Guidance", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGuidance_Elements(), this.getProcessElement(), null, "elements", null, 0, -1, Guidance.class,
+		initEReference(getGuidance_Element(), this.getProcessElement(), null, "element", null, 0, 1, Guidance.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGuidance_Text(), ecorePackage.getEString(), "text", null, 1, 1, Guidance.class, !IS_TRANSIENT,

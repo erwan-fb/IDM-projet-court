@@ -297,13 +297,13 @@ public interface SimplePDLPackage extends EPackage {
 	int GUIDANCE__PROCESS = PROCESS_ELEMENT__PROCESS;
 
 	/**
-	 * The feature id for the '<em><b>Elements</b></em>' reference list.
+	 * The feature id for the '<em><b>Element</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int GUIDANCE__ELEMENTS = PROCESS_ELEMENT_FEATURE_COUNT + 0;
+	int GUIDANCE__ELEMENT = PROCESS_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Text</b></em>' attribute.
@@ -622,15 +622,15 @@ public interface SimplePDLPackage extends EPackage {
 	EClass getGuidance();
 
 	/**
-	 * Returns the meta object for the reference list '{@link fr.n7.simplePDL.Guidance#getElements <em>Elements</em>}'.
+	 * Returns the meta object for the reference '{@link fr.n7.simplePDL.Guidance#getElement <em>Element</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Elements</em>'.
-	 * @see fr.n7.simplePDL.Guidance#getElements()
+	 * @return the meta object for the reference '<em>Element</em>'.
+	 * @see fr.n7.simplePDL.Guidance#getElement()
 	 * @see #getGuidance()
 	 * @generated
 	 */
-	EReference getGuidance_Elements();
+	EReference getGuidance_Element();
 
 	/**
 	 * Returns the meta object for the attribute '{@link fr.n7.simplePDL.Guidance#getText <em>Text</em>}'.
@@ -882,12 +882,12 @@ public interface SimplePDLPackage extends EPackage {
 		EClass GUIDANCE = eINSTANCE.getGuidance();
 
 		/**
-		 * The meta object literal for the '<em><b>Elements</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Element</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference GUIDANCE__ELEMENTS = eINSTANCE.getGuidance_Elements();
+		EReference GUIDANCE__ELEMENT = eINSTANCE.getGuidance_Element();
 
 		/**
 		 * The meta object literal for the '<em><b>Text</b></em>' attribute feature.
