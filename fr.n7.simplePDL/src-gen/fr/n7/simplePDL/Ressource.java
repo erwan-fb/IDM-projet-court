@@ -11,8 +11,9 @@ package fr.n7.simplePDL;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.n7.simplePDL.Ressource#getName <em>Name</em>}</li>
- *   <li>{@link fr.n7.simplePDL.Ressource#getQuantityAvailable <em>Quantity Available</em>}</li>
+ * <li>{@link fr.n7.simplePDL.Ressource#getName <em>Name</em>}</li>
+ * <li>{@link fr.n7.simplePDL.Ressource#getQuantityAvailable <em>Quantity
+ * Available</em>}</li>
  * </ul>
  *
  * @see fr.n7.simplePDL.SimplePDLPackage#getRessource()
@@ -24,6 +25,7 @@ public interface Ressource extends ProcessElement {
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
 	 * @see fr.n7.simplePDL.SimplePDLPackage#getRessource_Name()
@@ -33,9 +35,11 @@ public interface Ressource extends ProcessElement {
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link fr.n7.simplePDL.Ressource#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link fr.n7.simplePDL.Ressource#getName
+	 * <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Name</em>' attribute.
 	 * @see #getName()
 	 * @generated
@@ -46,6 +50,7 @@ public interface Ressource extends ProcessElement {
 	 * Returns the value of the '<em><b>Quantity Available</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @return the value of the '<em>Quantity Available</em>' attribute.
 	 * @see #setQuantityAvailable(int)
 	 * @see fr.n7.simplePDL.SimplePDLPackage#getRessource_QuantityAvailable()
@@ -55,9 +60,11 @@ public interface Ressource extends ProcessElement {
 	int getQuantityAvailable();
 
 	/**
-	 * Sets the value of the '{@link fr.n7.simplePDL.Ressource#getQuantityAvailable <em>Quantity Available</em>}' attribute.
+	 * Sets the value of the '{@link fr.n7.simplePDL.Ressource#getQuantityAvailable
+	 * <em>Quantity Available</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @param value the new value of the '<em>Quantity Available</em>' attribute.
 	 * @see #getQuantityAvailable()
 	 * @generated

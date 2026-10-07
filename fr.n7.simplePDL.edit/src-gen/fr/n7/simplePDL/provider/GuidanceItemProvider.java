@@ -3,7 +3,12 @@
 package fr.n7.simplePDL.provider;
 
 import fr.n7.simplePDL.Guidance;
+import fr.n7.simplePDL.ProcessElement;
+import fr.n7.simplePDL.RessourceLink;
+import fr.n7.simplePDL.Ressources;
 import fr.n7.simplePDL.SimplePDLPackage;
+import fr.n7.simplePDL.WorkDefinition;
+import fr.n7.simplePDL.WorkSequence;
 
 import java.util.Collection;
 import java.util.List;
@@ -53,25 +58,25 @@ public class GuidanceItemProvider extends ItemProviderAdapter implements IEditin
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addElementsPropertyDescriptor(object);
+			addElementPropertyDescriptor(object);
 			addTextPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Elements feature.
+	 * This adds a property descriptor for the Element feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addElementsPropertyDescriptor(Object object) {
+	protected void addElementPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Guidance_elements_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Guidance_elements_feature",
+						getResourceLocator(), getString("_UI_Guidance_element_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Guidance_element_feature",
 								"_UI_Guidance_type"),
-						SimplePDLPackage.Literals.GUIDANCE__ELEMENTS, true, false, true, null, null, null));
+						SimplePDLPackage.Literals.GUIDANCE__ELEMENT, true, false, true, null, null, null));
 	}
 
 	/**
@@ -115,13 +120,33 @@ public class GuidanceItemProvider extends ItemProviderAdapter implements IEditin
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		String label = ((Guidance) object).getText();
+		ProcessElement element = ((Guidance) object).getElement();
+
+		String radicalLabel = " linked to ";
+		String elementLabel;
+		if (element == null) {
+			elementLabel = "";
+		} else if (element instanceof WorkDefinition) {
+			elementLabel = radicalLabel + "[" + ((WorkDefinition) element).getName();
+		} else if (element instanceof Ressources) {
+			elementLabel = radicalLabel + "[" + ((Ressources) element).getName();
+		} else if (element instanceof WorkSequence) {
+			elementLabel = radicalLabel + "a [WorkSequence";
+		} else if (element instanceof Guidance) {
+			elementLabel = radicalLabel + "an other [Guidance";
+		} else if (element instanceof RessourceLink) {
+			elementLabel = radicalLabel + "a [RessourceLink";
+		} else {
+			throw new RuntimeException("Type Impossible");
+		}
+
 		return label == null || label.length() == 0 ? getString("_UI_Guidance_type")
-				: getString("_UI_Guidance_type") + " " + label;
+				: getString("_UI_Guidance_type") + elementLabel + "] whith text = \"" + label + "\"";
 	}
 
 	/**
@@ -129,13 +154,14 @@ public class GuidanceItemProvider extends ItemProviderAdapter implements IEditin
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Guidance.class)) {
+		case SimplePDLPackage.GUIDANCE__ELEMENT:
 		case SimplePDLPackage.GUIDANCE__TEXT:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;

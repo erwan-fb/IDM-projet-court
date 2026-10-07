@@ -24,12 +24,14 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * <!-- begin-user-doc -->
  * An implementation of the model <b>Package</b>.
  * <!-- end-user-doc -->
+ * 
  * @generated
  */
 public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private EClass processEClass = null;
@@ -37,6 +39,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private EClass workDefinitionEClass = null;
@@ -44,6 +47,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private EClass workSequenceEClass = null;
@@ -51,6 +55,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private EClass processElementEClass = null;
@@ -58,6 +63,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private EClass guidanceEClass = null;
@@ -65,6 +71,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private EClass ressourceEClass = null;
@@ -72,6 +79,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private EClass ressourceLinkEClass = null;
@@ -79,20 +87,24 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private EEnum workSequenceTypeEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
-	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
+	 * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the
+	 * package
 	 * package URI value.
-	 * <p>Note: the correct way to create the package is via the static
+	 * <p>
+	 * Note: the correct way to create the package is via the static
 	 * factory method {@link #init init()}, which also performs
 	 * initialization of the package, or returns the registered package,
 	 * if one already exists.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
 	 * @see fr.n7.simplePDL.SimplePDLPackage#eNS_URI
 	 * @see #init()
@@ -105,17 +117,23 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private static boolean isInited = false;
 
 	/**
-	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
+	 * Creates, registers, and initializes the <b>Package</b> for this model, and
+	 * for any others upon which it depends.
 	 *
-	 * <p>This method is used to initialize {@link SimplePDLPackage#eINSTANCE} when that field is accessed.
-	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
+	 * <p>
+	 * This method is used to initialize {@link SimplePDLPackage#eINSTANCE} when
+	 * that field is accessed.
+	 * Clients should not invoke it directly. Instead, they should simply access
+	 * that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @see #eNS_URI
 	 * @see #createPackageContents()
 	 * @see #initializePackageContents()
@@ -150,6 +168,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -160,6 +179,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -170,6 +190,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -180,6 +201,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -190,6 +212,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -200,6 +223,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -210,6 +234,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -220,6 +245,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -230,6 +256,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -240,6 +267,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -250,6 +278,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -260,6 +289,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -270,6 +300,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -280,6 +311,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -290,6 +322,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -300,16 +333,18 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
-	public EReference getGuidance_Elements() {
+	public EReference getGuidance_Element() {
 		return (EReference) guidanceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -320,6 +355,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -330,6 +366,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -340,6 +377,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -350,6 +388,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -360,6 +399,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -370,6 +410,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -380,6 +421,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -390,6 +432,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -400,6 +443,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	@Override
@@ -410,15 +454,17 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private boolean isCreated = false;
 
 	/**
-	 * Creates the meta-model objects for the package.  This method is
+	 * Creates the meta-model objects for the package. This method is
 	 * guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void createPackageContents() {
@@ -446,7 +492,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 		createEReference(processElementEClass, PROCESS_ELEMENT__PROCESS);
 
 		guidanceEClass = createEClass(GUIDANCE);
-		createEReference(guidanceEClass, GUIDANCE__ELEMENTS);
+		createEReference(guidanceEClass, GUIDANCE__ELEMENT);
 		createEAttribute(guidanceEClass, GUIDANCE__TEXT);
 
 		ressourceEClass = createEClass(RESSOURCE);
@@ -465,15 +511,17 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	private boolean isInitialized = false;
 
 	/**
-	 * Complete the initialization of the package and its meta-model.  This
+	 * Complete the initialization of the package and its meta-model. This
 	 * method is guarded to have no affect on any invocation but its first.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
+	 * 
 	 * @generated
 	 */
 	public void initializePackageContents() {
@@ -545,7 +593,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 
 		initEClass(guidanceEClass, Guidance.class, "Guidance", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getGuidance_Elements(), this.getProcessElement(), null, "elements", null, 0, -1, Guidance.class,
+		initEReference(getGuidance_Element(), this.getProcessElement(), null, "element", null, 0, 1, Guidance.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getGuidance_Text(), ecorePackage.getEString(), "text", null, 1, 1, Guidance.class, !IS_TRANSIENT,
@@ -553,7 +601,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 
 		initEClass(ressourceEClass, Ressource.class, "Ressource", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRessource_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ressource.class,
+		initEAttribute(getRessource_Name(), ecorePackage.getEString(), "name", null, 1, 1, Ressource.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRessource_QuantityAvailable(), ecorePackage.getEInt(), "quantityAvailable", null, 1, 1,
 				Ressource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
@@ -582,4 +630,4 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 		createResource(eNS_URI);
 	}
 
-} //SimplePDLPackageImpl
+} // SimplePDLPackageImpl

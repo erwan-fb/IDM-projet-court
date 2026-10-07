@@ -35,7 +35,7 @@
       <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference simplePDL.ecore#//ProcessElement/process"/>
     </genClasses>
     <genClasses ecoreClass="simplePDL.ecore#//Guidance">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplePDL.ecore#//Guidance/elements"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference simplePDL.ecore#//Guidance/element"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute simplePDL.ecore#//Guidance/text"/>
     </genClasses>
     <genClasses ecoreClass="simplePDL.ecore#//Ressource">

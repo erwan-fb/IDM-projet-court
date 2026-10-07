@@ -18,19 +18,19 @@
   <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter la farine"/>
   <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter l'eau"/>
   <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter le levain"/>
-  <processElements xsi:type="simplePDL:Ressources" name="Farine" quantityAvailable="1000"/>
-  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.18" quantity="1000" workDefinitionAssociate="//@processElements.0"/>
-  <processElements xsi:type="simplePDL:Ressources" name="Eau" quantityAvailable="1000"/>
-  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.20" quantity="1000" workDefinitionAssociate="//@processElements.0"/>
-  <processElements xsi:type="simplePDL:Ressources" name="Levain" quantityAvailable="1"/>
-  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.18" quantity="1" workDefinitionAssociate="//@processElements.0"/>
-  <processElements xsi:type="simplePDL:Ressources" name="Robot" quantityAvailable="1"/>
-  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.24" quantity="1" workDefinitionAssociate="//@processElements.0"/>
-  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.24" quantity="1" workDefinitionAssociate="//@processElements.1"/>
-  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.24" quantity="1" workDefinitionAssociate="//@processElements.4"/>
-  <processElements xsi:type="simplePDL:Ressources" name="Four" quantityAvailable="1"/>
-  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.28" quantity="1" workDefinitionAssociate="//@processElements.2"/>
-  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.28" quantity="1" workDefinitionAssociate="//@processElements.31"/>
+  <processElements xsi:type="simplePDL:Ressource" name="Farine" quantityAvailable="1000"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.18" quantity="1000" workDefinitionAssociate="//@processElements.0"/>
+  <processElements xsi:type="simplePDL:Ressource" name="Eau" quantityAvailable="1000"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.20" quantity="1000" workDefinitionAssociate="//@processElements.0"/>
+  <processElements xsi:type="simplePDL:Ressource" name="Levain" quantityAvailable="1"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.18" quantity="1" workDefinitionAssociate="//@processElements.0"/>
+  <processElements xsi:type="simplePDL:Ressource" name="Robot" quantityAvailable="1"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.24" quantity="1" workDefinitionAssociate="//@processElements.0"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.24" quantity="1" workDefinitionAssociate="//@processElements.1"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.24" quantity="1" workDefinitionAssociate="//@processElements.4"/>
+  <processElements xsi:type="simplePDL:Ressource" name="Four" quantityAvailable="1"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.28" quantity="1" workDefinitionAssociate="//@processElements.2"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.28" quantity="1" workDefinitionAssociate="//@processElements.31"/>
   <processElements xsi:type="simplePDL:WorkDefinition" linksToSuccessors="//@processElements.33 //@processElements.32" linkToRessource="//@processElements.30" name="Pré-chauffer le four"/>
   <processElements xsi:type="simplePDL:WorkSequence" linkType="finishToFinish" predecessor="//@processElements.31" successor="//@processElements.5"/>
   <processElements xsi:type="simplePDL:WorkSequence" linkType="finishToStart" predecessor="//@processElements.31" successor="//@processElements.2"/>

@@ -12,7 +12,7 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
-		<nature>org.eclipse.jdt.core.javanature</nature>
+		<nature>org.eclipse.sirius.nature.modelingproject</nature>
 	</natures>
 	<filteredResources>
 		<filter>

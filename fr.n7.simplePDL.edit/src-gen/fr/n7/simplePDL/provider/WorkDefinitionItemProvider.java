@@ -2,17 +2,19 @@
  */
 package fr.n7.simplePDL.provider;
 
+import fr.n7.simplePDL.RessourceLink;
 import fr.n7.simplePDL.SimplePDLPackage;
 import fr.n7.simplePDL.WorkDefinition;
+import fr.n7.simplePDL.WorkSequence;
 
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
-
 import org.eclipse.emf.common.util.ResourceLocator;
-
+import org.eclipse.emf.ecore.InternalEObject;
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -161,14 +163,41 @@ public class WorkDefinitionItemProvider extends ItemProviderAdapter implements I
 	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
+		WorkDefinition workDefinition = (WorkDefinition) notification.getNotifier();
+		List<WorkSequence> predecessors = workDefinition.getLinksToPredecessors();
+		List<WorkSequence> successors = workDefinition.getLinksToSuccessors();
+		List<RessourceLink> ressources = workDefinition.getLinkToRessource();
+
 		switch (notification.getFeatureID(WorkDefinition.class)) {
 		case SimplePDLPackage.WORK_DEFINITION__NAME:
+
+			if (predecessors != null && !predecessors.isEmpty()) {
+				for (WorkSequence workSequence : predecessors) {
+					workSequence.eNotify(new ENotificationImpl((InternalEObject) workSequence, Notification.SET,
+							SimplePDLPackage.WORK_SEQUENCE__PREDECESSOR, notification.getOldValue(),
+							notification.getNewValue()));
+				}
+			}
+			if (successors != null && !successors.isEmpty()) {
+				for (WorkSequence workSequence : successors) {
+					workSequence.eNotify(new ENotificationImpl((InternalEObject) workSequence, Notification.SET,
+							SimplePDLPackage.WORK_SEQUENCE__PREDECESSOR, notification.getOldValue(),
+							notification.getNewValue()));
+				}
+			}
+			if (ressources != null && !ressources.isEmpty()) {
+				for (RessourceLink link : ressources) {
+					link.eNotify(new ENotificationImpl((InternalEObject) link, Notification.SET,
+							SimplePDLPackage.WORK_SEQUENCE__PREDECESSOR, notification.getOldValue(),
+							notification.getNewValue()));
+				}
+			}
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
