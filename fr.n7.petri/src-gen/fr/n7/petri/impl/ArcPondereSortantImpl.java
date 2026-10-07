@@ -9,6 +9,7 @@ import fr.n7.petri.Transition;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -101,13 +102,41 @@ public class ArcPondereSortantImpl extends ArcPondereImpl implements ArcPondereS
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setSource(Transition newSource) {
+	public NotificationChain basicSetSource(Transition newSource, NotificationChain msgs) {
 		Transition oldSource = source;
 		source = newSource;
-		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.ARC_PONDERE_SORTANT__SOURCE, oldSource,
-					source));
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					PetriPackage.ARC_PONDERE_SORTANT__SOURCE, oldSource, newSource);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setSource(Transition newSource) {
+		if (newSource != source) {
+			NotificationChain msgs = null;
+			if (source != null)
+				msgs = ((InternalEObject) source).eInverseRemove(this, PetriPackage.TRANSITION__ARCS_SORTANTS,
+						Transition.class, msgs);
+			if (newSource != null)
+				msgs = ((InternalEObject) newSource).eInverseAdd(this, PetriPackage.TRANSITION__ARCS_SORTANTS,
+						Transition.class, msgs);
+			msgs = basicSetSource(newSource, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.ARC_PONDERE_SORTANT__SOURCE, newSource,
+					newSource));
 	}
 
 	/**
@@ -150,6 +179,37 @@ public class ArcPondereSortantImpl extends ArcPondereImpl implements ArcPondereS
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.ARC_PONDERE_SORTANT__DESTINATION,
 					oldDestination, destination));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case PetriPackage.ARC_PONDERE_SORTANT__SOURCE:
+			if (source != null)
+				msgs = ((InternalEObject) source).eInverseRemove(this, PetriPackage.TRANSITION__ARCS_SORTANTS,
+						Transition.class, msgs);
+			return basicSetSource((Transition) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case PetriPackage.ARC_PONDERE_SORTANT__SOURCE:
+			return basicSetSource(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

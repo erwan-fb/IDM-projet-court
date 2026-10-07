@@ -1,0 +1,36 @@
+[comment encoding = UTF-8 /]
+[module main('http://petri')/]
+
+[template public main(reseauPetri : ReseauPetri)]
+	
+	[comment @main /]
+	[file (reseauPetri.nom.concat('.net'), false, 'UTF-8')]
+		[comment On commence par ajouter les places/]
+		[let places : OrderedSet(Place) = reseauPetri.getPlaces()]
+			[for (place : Place | places)]
+pl [place.nom /] ([place.jetons /])
+			[/for]	
+		[/let]
+		
+		[let transitions : OrderedSet(Transition) = reseauPetri.getTransitions()]
+    		[for (transition : Transition | transitions)]
+tr [transition.nom/] [for (a : ArcPondereEntrant| transition.arcsEntrants)][a.source.nom/][if a.oclIsTypeOf(ArcLectureSeule)]?[a.ponderation/][else][if a.ponderation > 1]*[a.ponderation/][/if][/if] [/for]-> [for (a : ArcPondereSortant| transition.arcsSortants)][a.destination.nom/][if a.ponderation > 1]*[a.ponderation/][/if] [/for]
+        	[/for]
+    	[/let]
+	[/file]
+	
+[/template]
+
+[query public getPlaces(r : ReseauPetri) : OrderedSet(Place) =
+	r.composants
+		->select(e | e.oclIsTypeOf(Place))
+		->collect(e | e.oclAsType(Place))
+		->asOrderedSet()
+/]
+
+[query public getTransitions(r : ReseauPetri) : OrderedSet(Transition) =
+	r.composants
+		->select(e | e.oclIsTypeOf(Transition))
+		->collect(e | e.oclAsType(Transition))
+		->asOrderedSet()
+/]

@@ -44,12 +44,14 @@ public interface ArcPondereEntrant extends ArcPondere {
 
 	/**
 	 * Returns the value of the '<em><b>Destination</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link fr.n7.petri.Transition#getArcsEntrants <em>Arcs Entrants</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Destination</em>' reference.
 	 * @see #setDestination(Transition)
 	 * @see fr.n7.petri.PetriPackage#getArcPondereEntrant_Destination()
-	 * @model required="true"
+	 * @see fr.n7.petri.Transition#getArcsEntrants
+	 * @model opposite="arcsEntrants" required="true"
 	 * @generated
 	 */
 	Transition getDestination();

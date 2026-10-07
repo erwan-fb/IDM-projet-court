@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="ASCII"?>
-<petri:ReseauPetri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petri="http://petri">
-  <composants xsi:type="petri:Place" jetons="1" nom="Hungry Process_idle"/>
-  <composants xsi:type="petri:Place" nom="Hungry Process_started"/>
-  <composants xsi:type="petri:Place" nom="Hungry Process_running"/>
-  <composants xsi:type="petri:Place" nom="Hungry Process_ended"/>
-  <composants xsi:type="petri:Transition" nom="Hungry Process_start"/>
-  <composants xsi:type="petri:Transition" nom="Hungry Process_end"/>
+<petri:ReseauPetri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petri="http://petri" nom="Hungry">
+  <composants xsi:type="petri:Place" jetons="1" nom="Hungry_Process_idle"/>
+  <composants xsi:type="petri:Place" nom="Hungry_Process_started"/>
+  <composants xsi:type="petri:Place" nom="Hungry_Process_running"/>
+  <composants xsi:type="petri:Place" nom="Hungry_Process_ended"/>
+  <composants xsi:type="petri:Transition" nom="Hungry_Process_start" arcsEntrants="//@composants.6 //@composants.12" arcsSortants="//@composants.7 //@composants.8"/>
+  <composants xsi:type="petri:Transition" nom="Hungry_Process_end" arcsEntrants="//@composants.9" arcsSortants="//@composants.10 //@composants.13"/>
   <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.0" destination="//@composants.4"/>
   <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.4" destination="//@composants.1"/>
   <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.4" destination="//@composants.2"/>
   <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.2" destination="//@composants.5"/>
   <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.5" destination="//@composants.3"/>
   <composants xsi:type="petri:Place" jetons="100" nom="Bread"/>
-  <composants xsi:type="petri:ArcPondereEntrant" ponderation="50" source="//@composants.11"/>
-  <composants xsi:type="petri:ArcPondereSortant" ponderation="50" destination="//@composants.11"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="50" source="//@composants.11" destination="//@composants.4"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="50" source="//@composants.5" destination="//@composants.11"/>
 </petri:ReseauPetri>

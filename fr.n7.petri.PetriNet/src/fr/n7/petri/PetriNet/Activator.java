@@ -8,7 +8,7 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package fr.n7.simplePDL.ToPetri;
+package fr.n7.petri.PetriNet;
 
 import org.eclipse.core.runtime.Plugin;
 import org.osgi.framework.BundleContext;
@@ -21,7 +21,7 @@ public class Activator extends Plugin {
     /**
      * The plug-in ID.
      */
-    public static final String PLUGIN_ID = "fr.n7.simplePDL.ToPetri";
+    public static final String PLUGIN_ID = "fr.n7.petri.PetriNet";
 
     /**
      * The shared instance.

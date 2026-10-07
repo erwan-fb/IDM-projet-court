@@ -18,6 +18,8 @@
   <semanticResources>syntaxe_exemple/quantite_nulle_R.simplepdl</semanticResources>
   <semanticResources>syntaxe_exemple/quantite_nulle_RL.simplepdl</semanticResources>
   <semanticResources>tests/TestRessource.simplepdl</semanticResources>
+  <semanticResources>tests/Famine.simplepdl</semanticResources>
+  <semanticResources>tests/Bread.simplepdl</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" uid="_zFYv8MGeEfGoSbFxDYhvMg">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplepdlViewpoint']"/>
   </ownedViews>

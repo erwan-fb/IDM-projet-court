@@ -90,6 +90,8 @@ public class Converter {
 		arc.setDestination(destination);
 		arc.setPonderation(ponderation);
 		
+		destination.getArcsEntrants().add(arc);
+		
 		petri.getComposants().add(arc);
 		
 		return arc;
@@ -101,6 +103,8 @@ public class Converter {
 		arc.setSource(source);
 		arc.setDestination(destination);
 		arc.setPonderation(ponderation);
+		
+		source.getArcsSortants().add(arc);
 		
 		petri.getComposants().add(arc);
 		
@@ -114,6 +118,8 @@ public class Converter {
 		arc.setDestination(destination);
 		arc.setPonderation(ponderation);
 		
+		destination.getArcsEntrants().add(arc);
+		
 		petri.getComposants().add(arc);
 		
 		return arc;
@@ -125,7 +131,7 @@ public class Converter {
 			System.out.println("No source File set, please provide one");
 			return;
 		}
-		System.out.println("Converting " + sourceFile + " to petri ...");
+		
 		
 		// Création du fichier de destination : petri
 		ResourceSet resSetDestination = new ResourceSetImpl();
@@ -134,9 +140,9 @@ public class Converter {
 		
 		// Récupérer la racine du simplepdl
 		Process process = (Process) source.getContents().get(0);
-
-		// Création du réseau de petri
+		
 		petri.setNom(process.getName());
+		System.out.println("Converting " + petri.getNom() + " to petri ...");
 
 		// Ajouter les process
 		for (var processElement : process.getProcessElements()) {
@@ -195,8 +201,8 @@ public class Converter {
 		// Ajouter les liens des ressoures
 		for (var processElement : process.getProcessElements()) {
 			if (processElement instanceof RessourceLink ressourceLink) {
-				addArc(getPlace(ressourceLink.getRessourceNeeded().getName()), getTransition(ressourceLink.getProcess().getName() + "_start"), ressourceLink.getQuantity());
-				addArc(getTransition(ressourceLink.getProcess().getName() + "_end"), getPlace(ressourceLink.getRessourceNeeded().getName()), ressourceLink.getQuantity());
+				addArc(getPlace(ressourceLink.getRessourceNeeded().getName()), getTransition(ressourceLink.getWorkDefinitionAssociate().getName() + "_start"), ressourceLink.getQuantity());
+				addArc(getTransition(ressourceLink.getWorkDefinitionAssociate().getName() + "_end"), getPlace(ressourceLink.getRessourceNeeded().getName()), ressourceLink.getQuantity());
 			}
 		}
 
@@ -210,12 +216,12 @@ public class Converter {
 			e.printStackTrace();
 		}
 
-		System.out.println("Done converting " + sourceFile + " to " + destinationFilename);
+		System.out.println("Done converting " + petri.getNom());
 
 	}
 
-	public void setSource(String destinationFilename) {
-		sourceFile = destinationFilename;
+	public void setSource(String sourceFilename) {
+		sourceFile = sourceFilename;
 		
 		// Créer un objet resourceSetImpl qui contiendra une ressource EMF (notre modèle)
 		resSetSource = new ResourceSetImpl();

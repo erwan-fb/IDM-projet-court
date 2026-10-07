@@ -1,0 +1,13 @@
+pl Process1_idle (1)
+pl Process1_started (0)
+pl Process1_running (0)
+pl Process1_ended (0)
+pl Process2_idle (1)
+pl Process2_started (0)
+pl Process2_running (0)
+pl Process2_ended (0)
+		
+tr Process1_start Process1_idle -> Process1_started Process1_running 
+tr Process1_end Process1_running -> Process1_ended 
+tr Process2_start Process2_idle -> Process2_started Process2_running 
+tr Process2_end Process2_running Process1_started?1 -> Process2_ended 

@@ -9,6 +9,7 @@ import fr.n7.petri.Transition;
 
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
@@ -143,13 +144,72 @@ public class ArcPondereEntrantImpl extends ArcPondereImpl implements ArcPondereE
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public void setDestination(Transition newDestination) {
+	public NotificationChain basicSetDestination(Transition newDestination, NotificationChain msgs) {
 		Transition oldDestination = destination;
 		destination = newDestination;
-		if (eNotificationRequired())
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					PetriPackage.ARC_PONDERE_ENTRANT__DESTINATION, oldDestination, newDestination);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setDestination(Transition newDestination) {
+		if (newDestination != destination) {
+			NotificationChain msgs = null;
+			if (destination != null)
+				msgs = ((InternalEObject) destination).eInverseRemove(this, PetriPackage.TRANSITION__ARCS_ENTRANTS,
+						Transition.class, msgs);
+			if (newDestination != null)
+				msgs = ((InternalEObject) newDestination).eInverseAdd(this, PetriPackage.TRANSITION__ARCS_ENTRANTS,
+						Transition.class, msgs);
+			msgs = basicSetDestination(newDestination, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.ARC_PONDERE_ENTRANT__DESTINATION,
-					oldDestination, destination));
+					newDestination, newDestination));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case PetriPackage.ARC_PONDERE_ENTRANT__DESTINATION:
+			if (destination != null)
+				msgs = ((InternalEObject) destination).eInverseRemove(this, PetriPackage.TRANSITION__ARCS_ENTRANTS,
+						Transition.class, msgs);
+			return basicSetDestination((Transition) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case PetriPackage.ARC_PONDERE_ENTRANT__DESTINATION:
+			return basicSetDestination(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**

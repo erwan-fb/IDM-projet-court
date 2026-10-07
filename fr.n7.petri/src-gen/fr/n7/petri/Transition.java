@@ -2,6 +2,8 @@
  */
 package fr.n7.petri;
 
+import org.eclipse.emf.common.util.EList;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Transition</b></em>'.
@@ -13,6 +15,8 @@ package fr.n7.petri;
  * <ul>
  *   <li>{@link fr.n7.petri.Transition#getNom <em>Nom</em>}</li>
  *   <li>{@link fr.n7.petri.Transition#getIntervalleTemps <em>Intervalle Temps</em>}</li>
+ *   <li>{@link fr.n7.petri.Transition#getArcsEntrants <em>Arcs Entrants</em>}</li>
+ *   <li>{@link fr.n7.petri.Transition#getArcsSortants <em>Arcs Sortants</em>}</li>
  * </ul>
  *
  * @see fr.n7.petri.PetriPackage#getTransition()
@@ -63,5 +67,33 @@ public interface Transition extends Composant {
 	 * @generated
 	 */
 	void setIntervalleTemps(Temps value);
+
+	/**
+	 * Returns the value of the '<em><b>Arcs Entrants</b></em>' reference list.
+	 * The list contents are of type {@link fr.n7.petri.ArcPondereEntrant}.
+	 * It is bidirectional and its opposite is '{@link fr.n7.petri.ArcPondereEntrant#getDestination <em>Destination</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Arcs Entrants</em>' reference list.
+	 * @see fr.n7.petri.PetriPackage#getTransition_ArcsEntrants()
+	 * @see fr.n7.petri.ArcPondereEntrant#getDestination
+	 * @model opposite="destination" required="true"
+	 * @generated
+	 */
+	EList<ArcPondereEntrant> getArcsEntrants();
+
+	/**
+	 * Returns the value of the '<em><b>Arcs Sortants</b></em>' reference list.
+	 * The list contents are of type {@link fr.n7.petri.ArcPondereSortant}.
+	 * It is bidirectional and its opposite is '{@link fr.n7.petri.ArcPondereSortant#getSource <em>Source</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Arcs Sortants</em>' reference list.
+	 * @see fr.n7.petri.PetriPackage#getTransition_ArcsSortants()
+	 * @see fr.n7.petri.ArcPondereSortant#getSource
+	 * @model opposite="source" required="true"
+	 * @generated
+	 */
+	EList<ArcPondereSortant> getArcsSortants();
 
 } // Transition

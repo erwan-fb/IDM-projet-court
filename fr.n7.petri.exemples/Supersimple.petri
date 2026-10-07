@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="ASCII"?>
-<petri:ReseauPetri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petri="http://petri">
+<petri:ReseauPetri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petri="http://petri" nom="test">
   <composants xsi:type="petri:Place" jetons="1" nom="test_idle"/>
   <composants xsi:type="petri:Place" nom="test_started"/>
   <composants xsi:type="petri:Place" nom="test_running"/>
   <composants xsi:type="petri:Place" nom="test_ended"/>
-  <composants xsi:type="petri:Transition" nom="test_start"/>
-  <composants xsi:type="petri:Transition" nom="test_end"/>
+  <composants xsi:type="petri:Transition" nom="test_start" arcsEntrants="//@composants.6" arcsSortants="//@composants.7 //@composants.8"/>
+  <composants xsi:type="petri:Transition" nom="test_end" arcsEntrants="//@composants.9" arcsSortants="//@composants.10"/>
   <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.0" destination="//@composants.4"/>
   <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.4" destination="//@composants.1"/>
   <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.4" destination="//@composants.2"/>

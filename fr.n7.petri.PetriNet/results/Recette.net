@@ -1,0 +1,78 @@
+pl Melanger_idle (1)
+pl Melanger_started (0)
+pl Melanger_running (0)
+pl Melanger_ended (0)
+pl Petrir1_idle (1)
+pl Petrir1_started (0)
+pl Petrir1_running (0)
+pl Petrir1_ended (0)
+pl Cuire_idle (1)
+pl Cuire_started (0)
+pl Cuire_running (0)
+pl Cuire_ended (0)
+pl Laisser_reposer1_idle (1)
+pl Laisser_reposer1_started (0)
+pl Laisser_reposer1_running (0)
+pl Laisser_reposer1_ended (0)
+pl Petrir2_idle (1)
+pl Petrir2_started (0)
+pl Petrir2_running (0)
+pl Petrir2_ended (0)
+pl Laisser_reposer2_idle (1)
+pl Laisser_reposer2_started (0)
+pl Laisser_reposer2_running (0)
+pl Laisser_reposer2_ended (0)
+pl Laisser_refroidir_idle (1)
+pl Laisser_refroidir_started (0)
+pl Laisser_refroidir_running (0)
+pl Laisser_refroidir_ended (0)
+pl Vendre_idle (1)
+pl Vendre_started (0)
+pl Vendre_running (0)
+pl Vendre_ended (0)
+pl Ajouter_la_farine_idle (1)
+pl Ajouter_la_farine_started (0)
+pl Ajouter_la_farine_running (0)
+pl Ajouter_la_farine_ended (0)
+pl Ajouter_l'eau_idle (1)
+pl Ajouter_l'eau_started (0)
+pl Ajouter_l'eau_running (0)
+pl Ajouter_l'eau_ended (0)
+pl Ajouter_le_levain_idle (1)
+pl Ajouter_le_levain_started (0)
+pl Ajouter_le_levain_running (0)
+pl Ajouter_le_levain_ended (0)
+pl Pre_chauffer_le_four_idle (1)
+pl Pre_chauffer_le_four_started (0)
+pl Pre_chauffer_le_four_running (0)
+pl Pre_chauffer_le_four_ended (0)
+pl Farine (1000)
+pl Eau (1000)
+pl Levain (1)
+pl Robot (1)
+pl Four (1)
+		
+tr Melanger_start Melanger_idle Farine*1000 Eau*1000 Farine Robot -> Melanger_started Melanger_running 
+tr Melanger_end Melanger_running -> Melanger_ended Farine*1000 Eau*1000 Farine Robot 
+tr Petrir1_start Petrir1_idle Melanger_ended?1 Robot -> Petrir1_started Petrir1_running 
+tr Petrir1_end Petrir1_running -> Petrir1_ended Robot 
+tr Cuire_start Cuire_idle Laisser_reposer2_ended?1 Pre_chauffer_le_four_ended?1 Four -> Cuire_started Cuire_running 
+tr Cuire_end Cuire_running -> Cuire_ended Four 
+tr Laisser_reposer1_start Laisser_reposer1_idle -> Laisser_reposer1_started Laisser_reposer1_running 
+tr Laisser_reposer1_end Laisser_reposer1_running Petrir1_started?1 -> Laisser_reposer1_ended 
+tr Petrir2_start Petrir2_idle Robot -> Petrir2_started Petrir2_running 
+tr Petrir2_end Petrir2_running Laisser_reposer1_started?1 -> Petrir2_ended Robot 
+tr Laisser_reposer2_start Laisser_reposer2_idle Petrir2_ended?1 -> Laisser_reposer2_started Laisser_reposer2_running 
+tr Laisser_reposer2_end Laisser_reposer2_running Pre_chauffer_le_four_ended?1 -> Laisser_reposer2_ended 
+tr Laisser_refroidir_start Laisser_refroidir_idle Cuire_ended?1 -> Laisser_refroidir_started Laisser_refroidir_running 
+tr Laisser_refroidir_end Laisser_refroidir_running -> Laisser_refroidir_ended 
+tr Vendre_start Vendre_idle Laisser_refroidir_started?1 -> Vendre_started Vendre_running 
+tr Vendre_end Vendre_running -> Vendre_ended 
+tr Ajouter_la_farine_start Ajouter_la_farine_idle -> Ajouter_la_farine_started Ajouter_la_farine_running 
+tr Ajouter_la_farine_end Ajouter_la_farine_running -> Ajouter_la_farine_ended 
+tr Ajouter_l'eau_start Ajouter_l'eau_idle -> Ajouter_l'eau_started Ajouter_l'eau_running 
+tr Ajouter_l'eau_end Ajouter_l'eau_running -> Ajouter_l'eau_ended 
+tr Ajouter_le_levain_start Ajouter_le_levain_idle -> Ajouter_le_levain_started Ajouter_le_levain_running 
+tr Ajouter_le_levain_end Ajouter_le_levain_running -> Ajouter_le_levain_ended 
+tr Pre_chauffer_le_four_start Pre_chauffer_le_four_idle Four -> Pre_chauffer_le_four_started Pre_chauffer_le_four_running 
+tr Pre_chauffer_le_four_end Pre_chauffer_le_four_running -> Pre_chauffer_le_four_ended Four 

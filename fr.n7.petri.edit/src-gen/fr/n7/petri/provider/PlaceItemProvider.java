@@ -28,7 +28,6 @@ import org.eclipse.emf.edit.provider.ViewerNotification;
  * This is the item provider adapter for a {@link fr.n7.petri.Place} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class PlaceItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
@@ -37,7 +36,6 @@ public class PlaceItemProvider extends ItemProviderAdapter implements IEditingDo
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public PlaceItemProvider(AdapterFactory adapterFactory) {
@@ -48,7 +46,6 @@ public class PlaceItemProvider extends ItemProviderAdapter implements IEditingDo
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -66,7 +63,6 @@ public class PlaceItemProvider extends ItemProviderAdapter implements IEditingDo
 	 * This adds a property descriptor for the Jetons feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected void addJetonsPropertyDescriptor(Object object) {
@@ -82,7 +78,6 @@ public class PlaceItemProvider extends ItemProviderAdapter implements IEditingDo
 	 * This adds a property descriptor for the Nom feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected void addNomPropertyDescriptor(Object object) {
@@ -98,7 +93,6 @@ public class PlaceItemProvider extends ItemProviderAdapter implements IEditingDo
 	 * This returns Place.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -109,7 +103,6 @@ public class PlaceItemProvider extends ItemProviderAdapter implements IEditingDo
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -131,13 +124,10 @@ public class PlaceItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update
-	 * any cached
-	 * children and by creating a viewer notification, which it passes to
-	 * {@link #fireNotifyChanged}.
+	 * This handles model notifications by calling {@link #updateChildren} to update any cached
+	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -145,21 +135,19 @@ public class PlaceItemProvider extends ItemProviderAdapter implements IEditingDo
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Place.class)) {
-			case PetriPackage.PLACE__JETONS:
-			case PetriPackage.PLACE__NOM:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
+		case PetriPackage.PLACE__JETONS:
+		case PetriPackage.PLACE__NOM:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		}
 		super.notifyChanged(notification);
 	}
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing
-	 * the children
+	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -171,7 +159,6 @@ public class PlaceItemProvider extends ItemProviderAdapter implements IEditingDo
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override

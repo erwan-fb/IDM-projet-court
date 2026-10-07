@@ -205,13 +205,31 @@ public interface PetriPackage extends EPackage {
 	int TRANSITION__INTERVALLE_TEMPS = COMPOSANT_FEATURE_COUNT + 1;
 
 	/**
+	 * The feature id for the '<em><b>Arcs Entrants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__ARCS_ENTRANTS = COMPOSANT_FEATURE_COUNT + 2;
+
+	/**
+	 * The feature id for the '<em><b>Arcs Sortants</b></em>' reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__ARCS_SORTANTS = COMPOSANT_FEATURE_COUNT + 3;
+
+	/**
 	 * The number of structural features of the '<em>Transition</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TRANSITION_FEATURE_COUNT = COMPOSANT_FEATURE_COUNT + 2;
+	int TRANSITION_FEATURE_COUNT = COMPOSANT_FEATURE_COUNT + 4;
 
 	/**
 	 * The number of operations of the '<em>Transition</em>' class.
@@ -577,6 +595,28 @@ public interface PetriPackage extends EPackage {
 	EReference getTransition_IntervalleTemps();
 
 	/**
+	 * Returns the meta object for the reference list '{@link fr.n7.petri.Transition#getArcsEntrants <em>Arcs Entrants</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Arcs Entrants</em>'.
+	 * @see fr.n7.petri.Transition#getArcsEntrants()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_ArcsEntrants();
+
+	/**
+	 * Returns the meta object for the reference list '{@link fr.n7.petri.Transition#getArcsSortants <em>Arcs Sortants</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference list '<em>Arcs Sortants</em>'.
+	 * @see fr.n7.petri.Transition#getArcsSortants()
+	 * @see #getTransition()
+	 * @generated
+	 */
+	EReference getTransition_ArcsSortants();
+
+	/**
 	 * Returns the meta object for class '{@link fr.n7.petri.ArcPondere <em>Arc Pondere</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -813,6 +853,22 @@ public interface PetriPackage extends EPackage {
 		 * @generated
 		 */
 		EReference TRANSITION__INTERVALLE_TEMPS = eINSTANCE.getTransition_IntervalleTemps();
+
+		/**
+		 * The meta object literal for the '<em><b>Arcs Entrants</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__ARCS_ENTRANTS = eINSTANCE.getTransition_ArcsEntrants();
+
+		/**
+		 * The meta object literal for the '<em><b>Arcs Sortants</b></em>' reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference TRANSITION__ARCS_SORTANTS = eINSTANCE.getTransition_ArcsSortants();
 
 		/**
 		 * The meta object literal for the '{@link fr.n7.petri.impl.ArcPondereImpl <em>Arc Pondere</em>}' class.
