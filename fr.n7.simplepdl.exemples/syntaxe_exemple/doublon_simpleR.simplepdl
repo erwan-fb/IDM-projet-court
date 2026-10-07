@@ -7,8 +7,8 @@
   <processElements xsi:type="simplePDL:WorkSequence" predecessor="//@processElements.1" successor="//@processElements.2"/>
   <processElements xsi:type="simplePDL:WorkSequence" linkType="startToFinish" predecessor="//@processElements.2" successor="//@processElements.1"/>
   <processElements xsi:type="simplePDL:Guidance" element="//@processElements.3" text="Bien remplit"/>
-  <processElements xsi:type="simplePDL:Ressources" name="BienNommerR1" quantityAvailable="2"/>
-  <processElements xsi:type="simplePDL:Ressources" name="BienNommerR1" quantityAvailable="2"/>
-  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.7" quantity="1" workDefinitionAssociate="//@processElements.0"/>
-  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.7" quantity="2" workDefinitionAssociate="//@processElements.1"/>
+  <processElements xsi:type="simplePDL:Ressource" name="BienNommerR1" quantityAvailable="2"/>
+  <processElements xsi:type="simplePDL:Ressource" name="BienNommerR1" quantityAvailable="2"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.7" quantity="1" workDefinitionAssociate="//@processElements.0"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.7" quantity="2" workDefinitionAssociate="//@processElements.1"/>
 </simplePDL:Process>
