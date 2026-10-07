@@ -37,14 +37,14 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="element" eType="#//ProcessElement"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="text" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Ressources" eSuperTypes="#//ProcessElement">
+  <eClassifiers xsi:type="ecore:EClass" name="Ressource" eSuperTypes="#//ProcessElement">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantityAvailable" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="RessourceLink" eSuperTypes="#//ProcessElement">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ressource" lowerBound="1"
-        eType="#//Ressources"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ressourceNeeded" lowerBound="1"
+        eType="#//Ressource"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="quantity" lowerBound="1"
         eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="workDefinitionAssociate"

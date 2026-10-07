@@ -2,33 +2,36 @@
  */
 package fr.n7.simplePDL.impl;
 
-import fr.n7.simplePDL.Ressources;
+import fr.n7.simplePDL.Ressource;
 import fr.n7.simplePDL.SimplePDLPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Ressources</b></em>'.
+ * An implementation of the model object '<em><b>Ressource</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.n7.simplePDL.impl.RessourcesImpl#getProcess <em>Process</em>}</li>
- *   <li>{@link fr.n7.simplePDL.impl.RessourcesImpl#getName <em>Name</em>}</li>
- *   <li>{@link fr.n7.simplePDL.impl.RessourcesImpl#getQuantityAvailable <em>Quantity Available</em>}</li>
+ *   <li>{@link fr.n7.simplePDL.impl.RessourceImpl#getProcess <em>Process</em>}</li>
+ *   <li>{@link fr.n7.simplePDL.impl.RessourceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link fr.n7.simplePDL.impl.RessourceImpl#getQuantityAvailable <em>Quantity Available</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ressources {
+public class RessourceImpl extends MinimalEObjectImpl.Container implements Ressource {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -74,7 +77,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RessourcesImpl() {
+	protected RessourceImpl() {
 		super();
 	}
 
@@ -250,7 +253,6 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
@@ -325,4 +327,4 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 		return result.toString();
 	}
 
-} //RessourcesImpl
+} //RessourceImpl

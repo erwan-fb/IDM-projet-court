@@ -6,7 +6,7 @@ import org.eclipse.emf.ecore.resource.Resource;
 import fr.n7.simplePDL.Guidance;
 import fr.n7.simplePDL.ProcessElement;
 import fr.n7.simplePDL.RessourceLink;
-import fr.n7.simplePDL.Ressources;
+import fr.n7.simplePDL.Ressource;
 import fr.n7.simplePDL.SimplePDLPackage;
 import fr.n7.simplePDL.WorkDefinition;
 import fr.n7.simplePDL.WorkSequence;
@@ -165,7 +165,7 @@ public class SimplePDLValidator extends SimplePDLSwitch<Boolean> {
 	 * vers les classes parentes, le cas échéant)
 	 */
 	@Override
-	public Boolean caseRessources(Ressources object) {
+	public Boolean caseRessource(Ressource object) {
 		this.result.recordIfFailed(
 				object.getName() != null || object.getName().matches(IDENT_REGEX), 
 				object, 

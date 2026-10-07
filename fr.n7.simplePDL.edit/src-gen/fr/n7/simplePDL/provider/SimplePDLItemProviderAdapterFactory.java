@@ -165,26 +165,26 @@ public class SimplePDLItemProviderAdapterFactory extends SimplePDLAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link fr.n7.simplePDL.Ressources} instances.
+	 * This keeps track of the one adapter used for all {@link fr.n7.simplePDL.Ressource} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RessourcesItemProvider ressourcesItemProvider;
+	protected RessourceItemProvider ressourceItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link fr.n7.simplePDL.Ressources}.
+	 * This creates an adapter for a {@link fr.n7.simplePDL.Ressource}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
-	public Adapter createRessourcesAdapter() {
-		if (ressourcesItemProvider == null) {
-			ressourcesItemProvider = new RessourcesItemProvider(this);
+	public Adapter createRessourceAdapter() {
+		if (ressourceItemProvider == null) {
+			ressourceItemProvider = new RessourceItemProvider(this);
 		}
 
-		return ressourcesItemProvider;
+		return ressourceItemProvider;
 	}
 
 	/**
@@ -323,8 +323,8 @@ public class SimplePDLItemProviderAdapterFactory extends SimplePDLAdapterFactory
 			workSequenceItemProvider.dispose();
 		if (guidanceItemProvider != null)
 			guidanceItemProvider.dispose();
-		if (ressourcesItemProvider != null)
-			ressourcesItemProvider.dispose();
+		if (ressourceItemProvider != null)
+			ressourceItemProvider.dispose();
 		if (ressourceLinkItemProvider != null)
 			ressourceLinkItemProvider.dispose();
 	}

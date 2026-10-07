@@ -3,8 +3,8 @@
 package fr.n7.simplePDL.impl;
 
 import fr.n7.simplePDL.Guidance;
+import fr.n7.simplePDL.Ressource;
 import fr.n7.simplePDL.RessourceLink;
-import fr.n7.simplePDL.Ressources;
 import fr.n7.simplePDL.SimplePDLFactory;
 import fr.n7.simplePDL.SimplePDLPackage;
 import fr.n7.simplePDL.WorkDefinition;
@@ -72,8 +72,8 @@ public class SimplePDLFactoryImpl extends EFactoryImpl implements SimplePDLFacto
 			return createWorkSequence();
 		case SimplePDLPackage.GUIDANCE:
 			return createGuidance();
-		case SimplePDLPackage.RESSOURCES:
-			return createRessources();
+		case SimplePDLPackage.RESSOURCE:
+			return createRessource();
 		case SimplePDLPackage.RESSOURCE_LINK:
 			return createRessourceLink();
 		default:
@@ -161,9 +161,9 @@ public class SimplePDLFactoryImpl extends EFactoryImpl implements SimplePDLFacto
 	 * @generated
 	 */
 	@Override
-	public Ressources createRessources() {
-		RessourcesImpl ressources = new RessourcesImpl();
-		return ressources;
+	public Ressource createRessource() {
+		RessourceImpl ressource = new RessourceImpl();
+		return ressource;
 	}
 
 	/**

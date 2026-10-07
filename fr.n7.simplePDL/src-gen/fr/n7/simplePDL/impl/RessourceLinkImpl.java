@@ -2,8 +2,8 @@
  */
 package fr.n7.simplePDL.impl;
 
+import fr.n7.simplePDL.Ressource;
 import fr.n7.simplePDL.RessourceLink;
-import fr.n7.simplePDL.Ressources;
 import fr.n7.simplePDL.SimplePDLPackage;
 import fr.n7.simplePDL.WorkDefinition;
 
@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  * </p>
  * <ul>
  *   <li>{@link fr.n7.simplePDL.impl.RessourceLinkImpl#getProcess <em>Process</em>}</li>
- *   <li>{@link fr.n7.simplePDL.impl.RessourceLinkImpl#getRessource <em>Ressource</em>}</li>
+ *   <li>{@link fr.n7.simplePDL.impl.RessourceLinkImpl#getRessourceNeeded <em>Ressource Needed</em>}</li>
  *   <li>{@link fr.n7.simplePDL.impl.RessourceLinkImpl#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link fr.n7.simplePDL.impl.RessourceLinkImpl#getWorkDefinitionAssociate <em>Work Definition Associate</em>}</li>
  * </ul>
@@ -36,14 +36,14 @@ import org.eclipse.emf.ecore.util.EcoreUtil;
  */
 public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements RessourceLink {
 	/**
-	 * The cached value of the '{@link #getRessource() <em>Ressource</em>}' reference.
+	 * The cached value of the '{@link #getRessourceNeeded() <em>Ressource Needed</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getRessource()
+	 * @see #getRessourceNeeded()
 	 * @generated
 	 * @ordered
 	 */
-	protected Ressources ressource;
+	protected Ressource ressourceNeeded;
 
 	/**
 	 * The default value of the '{@link #getQuantity() <em>Quantity</em>}' attribute.
@@ -147,17 +147,17 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public Ressources getRessource() {
-		if (ressource != null && ressource.eIsProxy()) {
-			InternalEObject oldRessource = (InternalEObject) ressource;
-			ressource = (Ressources) eResolveProxy(oldRessource);
-			if (ressource != oldRessource) {
+	public Ressource getRessourceNeeded() {
+		if (ressourceNeeded != null && ressourceNeeded.eIsProxy()) {
+			InternalEObject oldRessourceNeeded = (InternalEObject) ressourceNeeded;
+			ressourceNeeded = (Ressource) eResolveProxy(oldRessourceNeeded);
+			if (ressourceNeeded != oldRessourceNeeded) {
 				if (eNotificationRequired())
 					eNotify(new ENotificationImpl(this, Notification.RESOLVE,
-							SimplePDLPackage.RESSOURCE_LINK__RESSOURCE, oldRessource, ressource));
+							SimplePDLPackage.RESSOURCE_LINK__RESSOURCE_NEEDED, oldRessourceNeeded, ressourceNeeded));
 			}
 		}
-		return ressource;
+		return ressourceNeeded;
 	}
 
 	/**
@@ -165,8 +165,8 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Ressources basicGetRessource() {
-		return ressource;
+	public Ressource basicGetRessourceNeeded() {
+		return ressourceNeeded;
 	}
 
 	/**
@@ -175,12 +175,12 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 	 * @generated
 	 */
 	@Override
-	public void setRessource(Ressources newRessource) {
-		Ressources oldRessource = ressource;
-		ressource = newRessource;
+	public void setRessourceNeeded(Ressource newRessourceNeeded) {
+		Ressource oldRessourceNeeded = ressourceNeeded;
+		ressourceNeeded = newRessourceNeeded;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SimplePDLPackage.RESSOURCE_LINK__RESSOURCE,
-					oldRessource, ressource));
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplePDLPackage.RESSOURCE_LINK__RESSOURCE_NEEDED,
+					oldRessourceNeeded, ressourceNeeded));
 	}
 
 	/**
@@ -343,10 +343,10 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 		switch (featureID) {
 		case SimplePDLPackage.RESSOURCE_LINK__PROCESS:
 			return getProcess();
-		case SimplePDLPackage.RESSOURCE_LINK__RESSOURCE:
+		case SimplePDLPackage.RESSOURCE_LINK__RESSOURCE_NEEDED:
 			if (resolve)
-				return getRessource();
-			return basicGetRessource();
+				return getRessourceNeeded();
+			return basicGetRessourceNeeded();
 		case SimplePDLPackage.RESSOURCE_LINK__QUANTITY:
 			return getQuantity();
 		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE:
@@ -368,8 +368,8 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 		case SimplePDLPackage.RESSOURCE_LINK__PROCESS:
 			setProcess((fr.n7.simplePDL.Process) newValue);
 			return;
-		case SimplePDLPackage.RESSOURCE_LINK__RESSOURCE:
-			setRessource((Ressources) newValue);
+		case SimplePDLPackage.RESSOURCE_LINK__RESSOURCE_NEEDED:
+			setRessourceNeeded((Ressource) newValue);
 			return;
 		case SimplePDLPackage.RESSOURCE_LINK__QUANTITY:
 			setQuantity((Integer) newValue);
@@ -392,8 +392,8 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 		case SimplePDLPackage.RESSOURCE_LINK__PROCESS:
 			setProcess((fr.n7.simplePDL.Process) null);
 			return;
-		case SimplePDLPackage.RESSOURCE_LINK__RESSOURCE:
-			setRessource((Ressources) null);
+		case SimplePDLPackage.RESSOURCE_LINK__RESSOURCE_NEEDED:
+			setRessourceNeeded((Ressource) null);
 			return;
 		case SimplePDLPackage.RESSOURCE_LINK__QUANTITY:
 			setQuantity(QUANTITY_EDEFAULT);
@@ -415,8 +415,8 @@ public class RessourceLinkImpl extends MinimalEObjectImpl.Container implements R
 		switch (featureID) {
 		case SimplePDLPackage.RESSOURCE_LINK__PROCESS:
 			return getProcess() != null;
-		case SimplePDLPackage.RESSOURCE_LINK__RESSOURCE:
-			return ressource != null;
+		case SimplePDLPackage.RESSOURCE_LINK__RESSOURCE_NEEDED:
+			return ressourceNeeded != null;
 		case SimplePDLPackage.RESSOURCE_LINK__QUANTITY:
 			return quantity != QUANTITY_EDEFAULT;
 		case SimplePDLPackage.RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE:

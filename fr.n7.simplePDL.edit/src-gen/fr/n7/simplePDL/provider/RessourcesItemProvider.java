@@ -2,7 +2,7 @@
  */
 package fr.n7.simplePDL.provider;
 
-import fr.n7.simplePDL.Ressources;
+import fr.n7.simplePDL.Ressource;
 import fr.n7.simplePDL.SimplePDLPackage;
 
 import java.util.Collection;
@@ -71,7 +71,7 @@ public class RessourcesItemProvider extends ItemProviderAdapter implements IEdit
 						getResourceLocator(), getString("_UI_Ressources_name_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Ressources_name_feature",
 								"_UI_Ressources_type"),
-						SimplePDLPackage.Literals.RESSOURCES__NAME, true, false, false,
+						SimplePDLPackage.Literals.RESSOURCE__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -87,7 +87,7 @@ public class RessourcesItemProvider extends ItemProviderAdapter implements IEdit
 						getResourceLocator(), getString("_UI_Ressources_quantityAvailable_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Ressources_quantityAvailable_feature",
 								"_UI_Ressources_type"),
-						SimplePDLPackage.Literals.RESSOURCES__QUANTITY_AVAILABLE, true, false, false,
+						SimplePDLPackage.Literals.RESSOURCE__QUANTITY_AVAILABLE, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
@@ -120,8 +120,8 @@ public class RessourcesItemProvider extends ItemProviderAdapter implements IEdit
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Ressources) object).getName();
-		int quantity = ((Ressources) object).getQuantityAvailable();
+		String label = ((Ressource) object).getName();
+		int quantity = ((Ressource) object).getQuantityAvailable();
 		return label == null || label.length() == 0 ? getString("_UI_Ressources_type")
 				: getString("_UI_Ressources_type") + " " + label + " : " + quantity;
 	}
@@ -137,9 +137,9 @@ public class RessourcesItemProvider extends ItemProviderAdapter implements IEdit
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Ressources.class)) {
-		case SimplePDLPackage.RESSOURCES__NAME:
-		case SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE:
+		switch (notification.getFeatureID(Ressource.class)) {
+		case SimplePDLPackage.RESSOURCE__NAME:
+		case SimplePDLPackage.RESSOURCE__QUANTITY_AVAILABLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
