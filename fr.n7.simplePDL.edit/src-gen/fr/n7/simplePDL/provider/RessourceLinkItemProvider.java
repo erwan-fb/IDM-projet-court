@@ -3,9 +3,7 @@
 package fr.n7.simplePDL.provider;
 
 import fr.n7.simplePDL.RessourceLink;
-import fr.n7.simplePDL.Ressources;
 import fr.n7.simplePDL.SimplePDLPackage;
-import fr.n7.simplePDL.WorkDefinition;
 
 import java.util.Collection;
 import java.util.List;
@@ -55,7 +53,7 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addRessourcePropertyDescriptor(object);
+			addRessourceNeededPropertyDescriptor(object);
 			addQuantityPropertyDescriptor(object);
 			addWorkDefinitionAssociatePropertyDescriptor(object);
 		}
@@ -63,18 +61,19 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	}
 
 	/**
-	 * This adds a property descriptor for the Ressource feature.
+	 * This adds a property descriptor for the Ressource Needed feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addRessourcePropertyDescriptor(Object object) {
+	protected void addRessourceNeededPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_RessourceLink_ressource_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_RessourceLink_ressource_feature",
+						getResourceLocator(), getString("_UI_RessourceLink_ressourceNeeded_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_RessourceLink_ressourceNeeded_feature",
 								"_UI_RessourceLink_type"),
-						SimplePDLPackage.Literals.RESSOURCE_LINK__RESSOURCE, true, false, true, null, null, null));
+						SimplePDLPackage.Literals.RESSOURCE_LINK__RESSOURCE_NEEDED, true, false, true, null, null,
+						null));
 	}
 
 	/**
@@ -134,17 +133,12 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated NOT
+	 * @generated
 	 */
 	@Override
 	public String getText(Object object) {
 		RessourceLink ressourceLink = (RessourceLink) object;
-		WorkDefinition requester = ressourceLink.getWorkDefinitionAssociate();
-		Ressources ressource = ressourceLink.getRessource();
-		String nameRequester = (requester == null ? "?" : requester.getName());
-		String nameRessource = (ressource == null ? "?" : ressource.getName());
-		return getString("_UI_RessourceLink_type") + " " + nameRequester + " --> " + nameRessource + " : "
-				+ ressourceLink.getQuantity();
+		return getString("_UI_RessourceLink_type") + " " + ressourceLink.getQuantity();
 	}
 
 	/**

@@ -1,0 +1,58 @@
+WorkSequenceLinkItemProvider
+
+/**
+	 * This returns the label text for the adapted class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String getText(Object object) {
+		WorkSequence ws = (WorkSequence) object;
+		WorkSequenceType labelValue = ws.getLinkType();
+		String label = "--" + (labelValue == null ? "?" : labelValue.toString()) + "-->";
+		String previous = ws.getPredecessor() == null ? "?" : ws.getPredecessor().getName();
+		String next = ws.getSuccessor() == null ? "?" : ws.getSuccessor().getName();
+		return label == null || label.length() == 0 ? getString("_UI_WorkSequence_type")
+				: getString("_UI_WorkSequence_type") + " " + previous + " " + label + " " + next;
+	}
+
+	/**
+	 * This handles model notifications by calling {@link #updateChildren} to update any cached
+	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public void notifyChanged(Notification notification) {
+		updateChildren(notification);
+
+		switch (notification.getFeatureID(WorkSequence.class)) {
+		case SimplePDLPackage.WORK_SEQUENCE__LINK_TYPE:
+		case SimplePDLPackage.WORK_SEQUENCE__PREDECESSOR:
+		case SimplePDLPackage.WORK_SEQUENCE__SUCCESSOR:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
+		}
+		super.notifyChanged(notification);
+	}
+
+RessourceLinkItemProvider
+
+/**
+	 * This returns the label text for the adapted class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated NOT
+	 */
+	@Override
+	public String getText(Object object) {
+		RessourceLink ressourceLink = (RessourceLink) object;
+		WorkDefinition requester = ressourceLink.getWorkDefinitionAssociate();
+		Ressource ressource = ressourceLink.getRessourceNeeded();
+		String nameRequester = (requester == null ? "?" : requester.getName());
+		String nameRessource = (ressource == null ? "?" : ressource.getName());
+		return getString("_UI_RessourceLink_type") + " " + nameRessource + " --" + ressourceLink.getQuantity() + "--> "
+				+ nameRequester;
+	}

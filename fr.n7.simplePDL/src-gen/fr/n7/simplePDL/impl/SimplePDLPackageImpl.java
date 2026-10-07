@@ -4,8 +4,8 @@ package fr.n7.simplePDL.impl;
 
 import fr.n7.simplePDL.Guidance;
 import fr.n7.simplePDL.ProcessElement;
+import fr.n7.simplePDL.Ressource;
 import fr.n7.simplePDL.RessourceLink;
-import fr.n7.simplePDL.Ressources;
 import fr.n7.simplePDL.SimplePDLFactory;
 import fr.n7.simplePDL.SimplePDLPackage;
 import fr.n7.simplePDL.WorkDefinition;
@@ -67,7 +67,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	private EClass ressourcesEClass = null;
+	private EClass ressourceEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -323,8 +323,8 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	 * @generated
 	 */
 	@Override
-	public EClass getRessources() {
-		return ressourcesEClass;
+	public EClass getRessource() {
+		return ressourceEClass;
 	}
 
 	/**
@@ -333,8 +333,8 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRessources_Name() {
-		return (EAttribute) ressourcesEClass.getEStructuralFeatures().get(0);
+	public EAttribute getRessource_Name() {
+		return (EAttribute) ressourceEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -343,8 +343,8 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	 * @generated
 	 */
 	@Override
-	public EAttribute getRessources_QuantityAvailable() {
-		return (EAttribute) ressourcesEClass.getEStructuralFeatures().get(1);
+	public EAttribute getRessource_QuantityAvailable() {
+		return (EAttribute) ressourceEClass.getEStructuralFeatures().get(1);
 	}
 
 	/**
@@ -363,7 +363,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 	 * @generated
 	 */
 	@Override
-	public EReference getRessourceLink_Ressource() {
+	public EReference getRessourceLink_RessourceNeeded() {
 		return (EReference) ressourceLinkEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -449,12 +449,12 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 		createEReference(guidanceEClass, GUIDANCE__ELEMENTS);
 		createEAttribute(guidanceEClass, GUIDANCE__TEXT);
 
-		ressourcesEClass = createEClass(RESSOURCES);
-		createEAttribute(ressourcesEClass, RESSOURCES__NAME);
-		createEAttribute(ressourcesEClass, RESSOURCES__QUANTITY_AVAILABLE);
+		ressourceEClass = createEClass(RESSOURCE);
+		createEAttribute(ressourceEClass, RESSOURCE__NAME);
+		createEAttribute(ressourceEClass, RESSOURCE__QUANTITY_AVAILABLE);
 
 		ressourceLinkEClass = createEClass(RESSOURCE_LINK);
-		createEReference(ressourceLinkEClass, RESSOURCE_LINK__RESSOURCE);
+		createEReference(ressourceLinkEClass, RESSOURCE_LINK__RESSOURCE_NEEDED);
 		createEAttribute(ressourceLinkEClass, RESSOURCE_LINK__QUANTITY);
 		createEReference(ressourceLinkEClass, RESSOURCE_LINK__WORK_DEFINITION_ASSOCIATE);
 
@@ -494,7 +494,7 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 		workDefinitionEClass.getESuperTypes().add(this.getProcessElement());
 		workSequenceEClass.getESuperTypes().add(this.getProcessElement());
 		guidanceEClass.getESuperTypes().add(this.getProcessElement());
-		ressourcesEClass.getESuperTypes().add(this.getProcessElement());
+		ressourceEClass.getESuperTypes().add(this.getProcessElement());
 		ressourceLinkEClass.getESuperTypes().add(this.getProcessElement());
 
 		// Initialize classes, features, and operations; add parameters
@@ -551,17 +551,17 @@ public class SimplePDLPackageImpl extends EPackageImpl implements SimplePDLPacka
 		initEAttribute(getGuidance_Text(), ecorePackage.getEString(), "text", null, 1, 1, Guidance.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(ressourcesEClass, Ressources.class, "Ressources", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(ressourceEClass, Ressource.class, "Ressource", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getRessources_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ressources.class,
+		initEAttribute(getRessource_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ressource.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getRessources_QuantityAvailable(), ecorePackage.getEInt(), "quantityAvailable", null, 1, 1,
-				Ressources.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
+		initEAttribute(getRessource_QuantityAvailable(), ecorePackage.getEInt(), "quantityAvailable", null, 1, 1,
+				Ressource.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE,
 				!IS_DERIVED, IS_ORDERED);
 
 		initEClass(ressourceLinkEClass, RessourceLink.class, "RessourceLink", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getRessourceLink_Ressource(), this.getRessources(), null, "ressource", null, 1, 1,
+		initEReference(getRessourceLink_RessourceNeeded(), this.getRessource(), null, "ressourceNeeded", null, 1, 1,
 				RessourceLink.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getRessourceLink_Quantity(), ecorePackage.getEInt(), "quantity", null, 1, 1, RessourceLink.class,

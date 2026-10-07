@@ -58,13 +58,13 @@ public interface SimplePDLFactory extends EFactory {
 	Guidance createGuidance();
 
 	/**
-	 * Returns a new object of class '<em>Ressources</em>'.
+	 * Returns a new object of class '<em>Ressource</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ressources</em>'.
+	 * @return a new object of class '<em>Ressource</em>'.
 	 * @generated
 	 */
-	Ressources createRessources();
+	Ressource createRessource();
 
 	/**
 	 * Returns a new object of class '<em>Ressource Link</em>'.

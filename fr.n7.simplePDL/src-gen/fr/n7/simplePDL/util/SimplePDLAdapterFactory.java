@@ -4,8 +4,8 @@ package fr.n7.simplePDL.util;
 
 import fr.n7.simplePDL.Guidance;
 import fr.n7.simplePDL.ProcessElement;
+import fr.n7.simplePDL.Ressource;
 import fr.n7.simplePDL.RessourceLink;
-import fr.n7.simplePDL.Ressources;
 import fr.n7.simplePDL.SimplePDLPackage;
 import fr.n7.simplePDL.WorkDefinition;
 import fr.n7.simplePDL.WorkSequence;
@@ -98,8 +98,8 @@ public class SimplePDLAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
-		public Adapter caseRessources(Ressources object) {
-			return createRessourcesAdapter();
+		public Adapter caseRessource(Ressource object) {
+			return createRessourceAdapter();
 		}
 
 		@Override
@@ -197,16 +197,16 @@ public class SimplePDLAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link fr.n7.simplePDL.Ressources <em>Ressources</em>}'.
+	 * Creates a new adapter for an object of class '{@link fr.n7.simplePDL.Ressource <em>Ressource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see fr.n7.simplePDL.Ressources
+	 * @see fr.n7.simplePDL.Ressource
 	 * @generated
 	 */
-	public Adapter createRessourcesAdapter() {
+	public Adapter createRessourceAdapter() {
 		return null;
 	}
 

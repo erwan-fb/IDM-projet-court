@@ -182,7 +182,7 @@ public class ProcessItemProvider extends ItemProviderAdapter implements IEditing
 				SimplePDLFactory.eINSTANCE.createGuidance()));
 
 		newChildDescriptors.add(createChildParameter(SimplePDLPackage.Literals.PROCESS__PROCESS_ELEMENTS,
-				SimplePDLFactory.eINSTANCE.createRessources()));
+				SimplePDLFactory.eINSTANCE.createRessource()));
 
 		newChildDescriptors.add(createChildParameter(SimplePDLPackage.Literals.PROCESS__PROCESS_ELEMENTS,
 				SimplePDLFactory.eINSTANCE.createRessourceLink()));

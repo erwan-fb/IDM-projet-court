@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<simplePDL:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplePDL="http://simplepdl">
+  <processElements xsi:type="simplePDL:WorkDefinition" linkToRessource="//@processElements.2" name="NeedBread"/>
+  <processElements xsi:type="simplePDL:Ressources" name="Bread" quantityAvailable="100"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressource="//@processElements.1" quantity="50" workDefinitionAssociate="//@processElements.0"/>
+</simplePDL:Process>

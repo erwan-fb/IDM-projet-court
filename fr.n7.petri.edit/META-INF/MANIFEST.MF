@@ -12,5 +12,6 @@ Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: fr.n7.petri.provider
 Require-Bundle: org.eclipse.core.runtime,
  fr.n7.petri;visibility:=reexport,
- org.eclipse.emf.edit;visibility:=reexport
+ org.eclipse.emf.edit;visibility:=reexport,
+ fr.n7.petri.edit;bundle-version="[1.0.0,2.0.0)"
 Bundle-ActivationPolicy: lazy

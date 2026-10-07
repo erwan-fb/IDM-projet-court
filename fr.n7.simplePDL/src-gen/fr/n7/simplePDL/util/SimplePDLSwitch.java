@@ -4,8 +4,8 @@ package fr.n7.simplePDL.util;
 
 import fr.n7.simplePDL.Guidance;
 import fr.n7.simplePDL.ProcessElement;
+import fr.n7.simplePDL.Ressource;
 import fr.n7.simplePDL.RessourceLink;
-import fr.n7.simplePDL.Ressources;
 import fr.n7.simplePDL.SimplePDLPackage;
 import fr.n7.simplePDL.WorkDefinition;
 import fr.n7.simplePDL.WorkSequence;
@@ -113,11 +113,11 @@ public class SimplePDLSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case SimplePDLPackage.RESSOURCES: {
-			Ressources ressources = (Ressources) theEObject;
-			T result = caseRessources(ressources);
+		case SimplePDLPackage.RESSOURCE: {
+			Ressource ressource = (Ressource) theEObject;
+			T result = caseRessource(ressource);
 			if (result == null)
-				result = caseProcessElement(ressources);
+				result = caseProcessElement(ressource);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -212,17 +212,17 @@ public class SimplePDLSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Ressources</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Ressource</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Ressources</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Ressource</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseRessources(Ressources object) {
+	public T caseRessource(Ressource object) {
 		return null;
 	}
 

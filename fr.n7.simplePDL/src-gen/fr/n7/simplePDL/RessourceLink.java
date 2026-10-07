@@ -11,7 +11,7 @@ package fr.n7.simplePDL;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link fr.n7.simplePDL.RessourceLink#getRessource <em>Ressource</em>}</li>
+ *   <li>{@link fr.n7.simplePDL.RessourceLink#getRessourceNeeded <em>Ressource Needed</em>}</li>
  *   <li>{@link fr.n7.simplePDL.RessourceLink#getQuantity <em>Quantity</em>}</li>
  *   <li>{@link fr.n7.simplePDL.RessourceLink#getWorkDefinitionAssociate <em>Work Definition Associate</em>}</li>
  * </ul>
@@ -22,26 +22,26 @@ package fr.n7.simplePDL;
  */
 public interface RessourceLink extends ProcessElement {
 	/**
-	 * Returns the value of the '<em><b>Ressource</b></em>' reference.
+	 * Returns the value of the '<em><b>Ressource Needed</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Ressource</em>' reference.
-	 * @see #setRessource(Ressources)
-	 * @see fr.n7.simplePDL.SimplePDLPackage#getRessourceLink_Ressource()
+	 * @return the value of the '<em>Ressource Needed</em>' reference.
+	 * @see #setRessourceNeeded(Ressource)
+	 * @see fr.n7.simplePDL.SimplePDLPackage#getRessourceLink_RessourceNeeded()
 	 * @model required="true"
 	 * @generated
 	 */
-	Ressources getRessource();
+	Ressource getRessourceNeeded();
 
 	/**
-	 * Sets the value of the '{@link fr.n7.simplePDL.RessourceLink#getRessource <em>Ressource</em>}' reference.
+	 * Sets the value of the '{@link fr.n7.simplePDL.RessourceLink#getRessourceNeeded <em>Ressource Needed</em>}' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Ressource</em>' reference.
-	 * @see #getRessource()
+	 * @param value the new value of the '<em>Ressource Needed</em>' reference.
+	 * @see #getRessourceNeeded()
 	 * @generated
 	 */
-	void setRessource(Ressources value);
+	void setRessourceNeeded(Ressource value);
 
 	/**
 	 * Returns the value of the '<em><b>Quantity</b></em>' attribute.

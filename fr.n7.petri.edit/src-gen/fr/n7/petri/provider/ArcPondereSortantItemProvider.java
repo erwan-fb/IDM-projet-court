@@ -103,12 +103,16 @@ public class ArcPondereSortantItemProvider extends ArcPondereItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		ArcPondereSortant arcPondereSortant = (ArcPondereSortant) object;
-		return getString("_UI_ArcPondereSortant_type") + " " + arcPondereSortant.getPonderation();
+		return getString("_UI_ArcPondere_type") + " ["
+				+ (arcPondereSortant.getSource() == null ? "?" : arcPondereSortant.getSource().getNom()) + "] ---"
+				+ arcPondereSortant.getPonderation() + "---> ("
+				+ (arcPondereSortant.getDestination() == null ? "?" : arcPondereSortant.getDestination().getNom())
+				+ ")";
 	}
 
 	/**

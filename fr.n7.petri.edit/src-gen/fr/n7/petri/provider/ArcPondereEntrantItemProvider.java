@@ -103,12 +103,16 @@ public class ArcPondereEntrantItemProvider extends ArcPondereItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		ArcPondereEntrant arcPondereEntrant = (ArcPondereEntrant) object;
-		return getString("_UI_ArcPondereEntrant_type") + " " + arcPondereEntrant.getPonderation();
+		return getString("_UI_ArcPondere_type") + " ("
+				+ (arcPondereEntrant.getSource() == null ? "?" : arcPondereEntrant.getSource().getNom()) + ") ---"
+				+ arcPondereEntrant.getPonderation() + "---> ["
+				+ (arcPondereEntrant.getDestination() == null ? "?" : arcPondereEntrant.getDestination().getNom())
+				+ "]";
 	}
 
 	/**

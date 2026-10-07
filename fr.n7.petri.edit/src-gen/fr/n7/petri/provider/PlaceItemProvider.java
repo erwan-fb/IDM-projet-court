@@ -114,12 +114,12 @@ public class PlaceItemProvider extends ItemProviderAdapter implements IEditingDo
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		Place place = (Place) object;
-		return getString("_UI_Place_type") + " " + place.getJetons();
+		return getString("_UI_Place_type") + " " + place.getNom() + " (" + place.getJetons() + ")";
 	}
 
 	/**

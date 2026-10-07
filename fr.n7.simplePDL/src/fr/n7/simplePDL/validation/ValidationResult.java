@@ -1,4 +1,4 @@
-package simplePDL.validation;
+package fr.n7.simplePDL.validation;
 
 import java.util.ArrayList;
 import java.util.Collections;

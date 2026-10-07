@@ -69,12 +69,15 @@ public class ArcLectureSeuleItemProvider extends ArcPondereEntrantItemProvider {
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
 		ArcLectureSeule arcLectureSeule = (ArcLectureSeule) object;
-		return getString("_UI_ArcLectureSeule_type") + " " + arcLectureSeule.getPonderation();
+		return getString("_UI_ArcPondere_type") + " ("
+				+ (arcLectureSeule.getSource() == null ? "?" : arcLectureSeule.getSource().getNom()) + ")@---"
+				+ arcLectureSeule.getPonderation() + "---> ["
+				+ (arcLectureSeule.getDestination() == null ? "?" : arcLectureSeule.getDestination().getNom()) + "]";
 	}
 
 	/**

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="ASCII"?>
+<petri:ReseauPetri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petri="http://petri">
+  <composants xsi:type="petri:Place" jetons="1" nom="Process1_idle"/>
+  <composants xsi:type="petri:Place" nom="Process1_started"/>
+  <composants xsi:type="petri:Place" nom="Process1_running"/>
+  <composants xsi:type="petri:Place" nom="Process1_ended"/>
+  <composants xsi:type="petri:Transition" nom="Process1_start"/>
+  <composants xsi:type="petri:Transition" nom="Process1_end"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.0"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.1"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.2"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.2"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.3"/>
+  <composants xsi:type="petri:Place" jetons="1" nom="Process2_idle"/>
+  <composants xsi:type="petri:Place" nom="Process2_started"/>
+  <composants xsi:type="petri:Place" nom="Process2_running"/>
+  <composants xsi:type="petri:Place" nom="Process2_ended"/>
+  <composants xsi:type="petri:Transition" nom="Process2_start"/>
+  <composants xsi:type="petri:Transition" nom="Process2_end"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.11"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.12"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.13"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.13"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.14"/>
+  <composants xsi:type="petri:ArcLectureSeule" ponderation="1" source="//@composants.1"/>
+</petri:ReseauPetri>

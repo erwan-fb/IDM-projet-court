@@ -2,7 +2,7 @@
  */
 package fr.n7.simplePDL.provider;
 
-import fr.n7.simplePDL.Ressources;
+import fr.n7.simplePDL.Ressource;
 import fr.n7.simplePDL.SimplePDLPackage;
 
 import java.util.Collection;
@@ -25,12 +25,12 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link fr.n7.simplePDL.Ressources} object.
+ * This is the item provider adapter for a {@link fr.n7.simplePDL.Ressource} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class RessourcesItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class RessourceItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -38,7 +38,7 @@ public class RessourcesItemProvider extends ItemProviderAdapter implements IEdit
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public RessourcesItemProvider(AdapterFactory adapterFactory) {
+	public RessourceItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -68,10 +68,10 @@ public class RessourcesItemProvider extends ItemProviderAdapter implements IEdit
 	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Ressources_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Ressources_name_feature",
-								"_UI_Ressources_type"),
-						SimplePDLPackage.Literals.RESSOURCES__NAME, true, false, false,
+						getResourceLocator(), getString("_UI_Ressource_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Ressource_name_feature",
+								"_UI_Ressource_type"),
+						SimplePDLPackage.Literals.RESSOURCE__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
@@ -84,22 +84,22 @@ public class RessourcesItemProvider extends ItemProviderAdapter implements IEdit
 	protected void addQuantityAvailablePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Ressources_quantityAvailable_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Ressources_quantityAvailable_feature",
-								"_UI_Ressources_type"),
-						SimplePDLPackage.Literals.RESSOURCES__QUANTITY_AVAILABLE, true, false, false,
+						getResourceLocator(), getString("_UI_Ressource_quantityAvailable_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Ressource_quantityAvailable_feature",
+								"_UI_Ressource_type"),
+						SimplePDLPackage.Literals.RESSOURCE__QUANTITY_AVAILABLE, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This returns Ressources.gif.
+	 * This returns Ressource.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Ressources"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Ressource"));
 	}
 
 	/**
@@ -120,9 +120,9 @@ public class RessourcesItemProvider extends ItemProviderAdapter implements IEdit
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Ressources) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Ressources_type")
-				: getString("_UI_Ressources_type") + " " + label;
+		String label = ((Ressource) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Ressource_type")
+				: getString("_UI_Ressource_type") + " " + label;
 	}
 
 	/**
@@ -136,9 +136,9 @@ public class RessourcesItemProvider extends ItemProviderAdapter implements IEdit
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Ressources.class)) {
-		case SimplePDLPackage.RESSOURCES__NAME:
-		case SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE:
+		switch (notification.getFeatureID(Ressource.class)) {
+		case SimplePDLPackage.RESSOURCE__NAME:
+		case SimplePDLPackage.RESSOURCE__QUANTITY_AVAILABLE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

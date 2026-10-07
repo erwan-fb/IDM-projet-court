@@ -2,33 +2,36 @@
  */
 package fr.n7.simplePDL.impl;
 
-import fr.n7.simplePDL.Ressources;
+import fr.n7.simplePDL.Ressource;
 import fr.n7.simplePDL.SimplePDLPackage;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
 import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Ressources</b></em>'.
+ * An implementation of the model object '<em><b>Ressource</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link fr.n7.simplePDL.impl.RessourcesImpl#getProcess <em>Process</em>}</li>
- *   <li>{@link fr.n7.simplePDL.impl.RessourcesImpl#getName <em>Name</em>}</li>
- *   <li>{@link fr.n7.simplePDL.impl.RessourcesImpl#getQuantityAvailable <em>Quantity Available</em>}</li>
+ *   <li>{@link fr.n7.simplePDL.impl.RessourceImpl#getProcess <em>Process</em>}</li>
+ *   <li>{@link fr.n7.simplePDL.impl.RessourceImpl#getName <em>Name</em>}</li>
+ *   <li>{@link fr.n7.simplePDL.impl.RessourceImpl#getQuantityAvailable <em>Quantity Available</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ressources {
+public class RessourceImpl extends MinimalEObjectImpl.Container implements Ressource {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -74,7 +77,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected RessourcesImpl() {
+	protected RessourceImpl() {
 		super();
 	}
 
@@ -85,7 +88,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return SimplePDLPackage.Literals.RESSOURCES;
+		return SimplePDLPackage.Literals.RESSOURCE;
 	}
 
 	/**
@@ -95,7 +98,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	 */
 	@Override
 	public fr.n7.simplePDL.Process getProcess() {
-		if (eContainerFeatureID() != SimplePDLPackage.RESSOURCES__PROCESS)
+		if (eContainerFeatureID() != SimplePDLPackage.RESSOURCE__PROCESS)
 			return null;
 		return (fr.n7.simplePDL.Process) eInternalContainer();
 	}
@@ -106,7 +109,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	 * @generated
 	 */
 	public NotificationChain basicSetProcess(fr.n7.simplePDL.Process newProcess, NotificationChain msgs) {
-		msgs = eBasicSetContainer((InternalEObject) newProcess, SimplePDLPackage.RESSOURCES__PROCESS, msgs);
+		msgs = eBasicSetContainer((InternalEObject) newProcess, SimplePDLPackage.RESSOURCE__PROCESS, msgs);
 		return msgs;
 	}
 
@@ -118,7 +121,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	@Override
 	public void setProcess(fr.n7.simplePDL.Process newProcess) {
 		if (newProcess != eInternalContainer()
-				|| (eContainerFeatureID() != SimplePDLPackage.RESSOURCES__PROCESS && newProcess != null)) {
+				|| (eContainerFeatureID() != SimplePDLPackage.RESSOURCE__PROCESS && newProcess != null)) {
 			if (EcoreUtil.isAncestor(this, newProcess))
 				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
 			NotificationChain msgs = null;
@@ -131,7 +134,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 			if (msgs != null)
 				msgs.dispatch();
 		} else if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SimplePDLPackage.RESSOURCES__PROCESS, newProcess,
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplePDLPackage.RESSOURCE__PROCESS, newProcess,
 					newProcess));
 	}
 
@@ -155,7 +158,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SimplePDLPackage.RESSOURCES__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplePDLPackage.RESSOURCE__NAME, oldName, name));
 	}
 
 	/**
@@ -178,7 +181,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 		int oldQuantityAvailable = quantityAvailable;
 		quantityAvailable = newQuantityAvailable;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE,
+			eNotify(new ENotificationImpl(this, Notification.SET, SimplePDLPackage.RESSOURCE__QUANTITY_AVAILABLE,
 					oldQuantityAvailable, quantityAvailable));
 	}
 
@@ -190,7 +193,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case SimplePDLPackage.RESSOURCES__PROCESS:
+		case SimplePDLPackage.RESSOURCE__PROCESS:
 			if (eInternalContainer() != null)
 				msgs = eBasicRemoveFromContainer(msgs);
 			return basicSetProcess((fr.n7.simplePDL.Process) otherEnd, msgs);
@@ -206,7 +209,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case SimplePDLPackage.RESSOURCES__PROCESS:
+		case SimplePDLPackage.RESSOURCE__PROCESS:
 			return basicSetProcess(null, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -220,7 +223,7 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	@Override
 	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
 		switch (eContainerFeatureID()) {
-		case SimplePDLPackage.RESSOURCES__PROCESS:
+		case SimplePDLPackage.RESSOURCE__PROCESS:
 			return eInternalContainer().eInverseRemove(this, SimplePDLPackage.PROCESS__PROCESS_ELEMENTS,
 					fr.n7.simplePDL.Process.class, msgs);
 		}
@@ -235,11 +238,11 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case SimplePDLPackage.RESSOURCES__PROCESS:
+		case SimplePDLPackage.RESSOURCE__PROCESS:
 			return getProcess();
-		case SimplePDLPackage.RESSOURCES__NAME:
+		case SimplePDLPackage.RESSOURCE__NAME:
 			return getName();
-		case SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE:
+		case SimplePDLPackage.RESSOURCE__QUANTITY_AVAILABLE:
 			return getQuantityAvailable();
 		}
 		return super.eGet(featureID, resolve, coreType);
@@ -250,17 +253,16 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case SimplePDLPackage.RESSOURCES__PROCESS:
+		case SimplePDLPackage.RESSOURCE__PROCESS:
 			setProcess((fr.n7.simplePDL.Process) newValue);
 			return;
-		case SimplePDLPackage.RESSOURCES__NAME:
+		case SimplePDLPackage.RESSOURCE__NAME:
 			setName((String) newValue);
 			return;
-		case SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE:
+		case SimplePDLPackage.RESSOURCE__QUANTITY_AVAILABLE:
 			setQuantityAvailable((Integer) newValue);
 			return;
 		}
@@ -275,13 +277,13 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case SimplePDLPackage.RESSOURCES__PROCESS:
+		case SimplePDLPackage.RESSOURCE__PROCESS:
 			setProcess((fr.n7.simplePDL.Process) null);
 			return;
-		case SimplePDLPackage.RESSOURCES__NAME:
+		case SimplePDLPackage.RESSOURCE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE:
+		case SimplePDLPackage.RESSOURCE__QUANTITY_AVAILABLE:
 			setQuantityAvailable(QUANTITY_AVAILABLE_EDEFAULT);
 			return;
 		}
@@ -296,11 +298,11 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case SimplePDLPackage.RESSOURCES__PROCESS:
+		case SimplePDLPackage.RESSOURCE__PROCESS:
 			return getProcess() != null;
-		case SimplePDLPackage.RESSOURCES__NAME:
+		case SimplePDLPackage.RESSOURCE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case SimplePDLPackage.RESSOURCES__QUANTITY_AVAILABLE:
+		case SimplePDLPackage.RESSOURCE__QUANTITY_AVAILABLE:
 			return quantityAvailable != QUANTITY_AVAILABLE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
@@ -325,4 +327,4 @@ public class RessourcesImpl extends MinimalEObjectImpl.Container implements Ress
 		return result.toString();
 	}
 
-} //RessourcesImpl
+} //RessourceImpl

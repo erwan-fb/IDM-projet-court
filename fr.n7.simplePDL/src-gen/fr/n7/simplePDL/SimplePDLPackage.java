@@ -333,14 +333,14 @@ public interface SimplePDLPackage extends EPackage {
 	int GUIDANCE_OPERATION_COUNT = PROCESS_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link fr.n7.simplePDL.impl.RessourcesImpl <em>Ressources</em>}' class.
+	 * The meta object id for the '{@link fr.n7.simplePDL.impl.RessourceImpl <em>Ressource</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see fr.n7.simplePDL.impl.RessourcesImpl
-	 * @see fr.n7.simplePDL.impl.SimplePDLPackageImpl#getRessources()
+	 * @see fr.n7.simplePDL.impl.RessourceImpl
+	 * @see fr.n7.simplePDL.impl.SimplePDLPackageImpl#getRessource()
 	 * @generated
 	 */
-	int RESSOURCES = 5;
+	int RESSOURCE = 5;
 
 	/**
 	 * The feature id for the '<em><b>Process</b></em>' container reference.
@@ -349,7 +349,7 @@ public interface SimplePDLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESSOURCES__PROCESS = PROCESS_ELEMENT__PROCESS;
+	int RESSOURCE__PROCESS = PROCESS_ELEMENT__PROCESS;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -358,7 +358,7 @@ public interface SimplePDLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESSOURCES__NAME = PROCESS_ELEMENT_FEATURE_COUNT + 0;
+	int RESSOURCE__NAME = PROCESS_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Quantity Available</b></em>' attribute.
@@ -367,25 +367,25 @@ public interface SimplePDLPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESSOURCES__QUANTITY_AVAILABLE = PROCESS_ELEMENT_FEATURE_COUNT + 1;
+	int RESSOURCE__QUANTITY_AVAILABLE = PROCESS_ELEMENT_FEATURE_COUNT + 1;
 
 	/**
-	 * The number of structural features of the '<em>Ressources</em>' class.
+	 * The number of structural features of the '<em>Ressource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESSOURCES_FEATURE_COUNT = PROCESS_ELEMENT_FEATURE_COUNT + 2;
+	int RESSOURCE_FEATURE_COUNT = PROCESS_ELEMENT_FEATURE_COUNT + 2;
 
 	/**
-	 * The number of operations of the '<em>Ressources</em>' class.
+	 * The number of operations of the '<em>Ressource</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESSOURCES_OPERATION_COUNT = PROCESS_ELEMENT_OPERATION_COUNT + 0;
+	int RESSOURCE_OPERATION_COUNT = PROCESS_ELEMENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The meta object id for the '{@link fr.n7.simplePDL.impl.RessourceLinkImpl <em>Ressource Link</em>}' class.
@@ -407,13 +407,13 @@ public interface SimplePDLPackage extends EPackage {
 	int RESSOURCE_LINK__PROCESS = PROCESS_ELEMENT__PROCESS;
 
 	/**
-	 * The feature id for the '<em><b>Ressource</b></em>' reference.
+	 * The feature id for the '<em><b>Ressource Needed</b></em>' reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESSOURCE_LINK__RESSOURCE = PROCESS_ELEMENT_FEATURE_COUNT + 0;
+	int RESSOURCE_LINK__RESSOURCE_NEEDED = PROCESS_ELEMENT_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Quantity</b></em>' attribute.
@@ -644,36 +644,36 @@ public interface SimplePDLPackage extends EPackage {
 	EAttribute getGuidance_Text();
 
 	/**
-	 * Returns the meta object for class '{@link fr.n7.simplePDL.Ressources <em>Ressources</em>}'.
+	 * Returns the meta object for class '{@link fr.n7.simplePDL.Ressource <em>Ressource</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for class '<em>Ressources</em>'.
-	 * @see fr.n7.simplePDL.Ressources
+	 * @return the meta object for class '<em>Ressource</em>'.
+	 * @see fr.n7.simplePDL.Ressource
 	 * @generated
 	 */
-	EClass getRessources();
+	EClass getRessource();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fr.n7.simplePDL.Ressources#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link fr.n7.simplePDL.Ressource#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see fr.n7.simplePDL.Ressources#getName()
-	 * @see #getRessources()
+	 * @see fr.n7.simplePDL.Ressource#getName()
+	 * @see #getRessource()
 	 * @generated
 	 */
-	EAttribute getRessources_Name();
+	EAttribute getRessource_Name();
 
 	/**
-	 * Returns the meta object for the attribute '{@link fr.n7.simplePDL.Ressources#getQuantityAvailable <em>Quantity Available</em>}'.
+	 * Returns the meta object for the attribute '{@link fr.n7.simplePDL.Ressource#getQuantityAvailable <em>Quantity Available</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Quantity Available</em>'.
-	 * @see fr.n7.simplePDL.Ressources#getQuantityAvailable()
-	 * @see #getRessources()
+	 * @see fr.n7.simplePDL.Ressource#getQuantityAvailable()
+	 * @see #getRessource()
 	 * @generated
 	 */
-	EAttribute getRessources_QuantityAvailable();
+	EAttribute getRessource_QuantityAvailable();
 
 	/**
 	 * Returns the meta object for class '{@link fr.n7.simplePDL.RessourceLink <em>Ressource Link</em>}'.
@@ -686,15 +686,15 @@ public interface SimplePDLPackage extends EPackage {
 	EClass getRessourceLink();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.n7.simplePDL.RessourceLink#getRessource <em>Ressource</em>}'.
+	 * Returns the meta object for the reference '{@link fr.n7.simplePDL.RessourceLink#getRessourceNeeded <em>Ressource Needed</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Ressource</em>'.
-	 * @see fr.n7.simplePDL.RessourceLink#getRessource()
+	 * @return the meta object for the reference '<em>Ressource Needed</em>'.
+	 * @see fr.n7.simplePDL.RessourceLink#getRessourceNeeded()
 	 * @see #getRessourceLink()
 	 * @generated
 	 */
-	EReference getRessourceLink_Ressource();
+	EReference getRessourceLink_RessourceNeeded();
 
 	/**
 	 * Returns the meta object for the attribute '{@link fr.n7.simplePDL.RessourceLink#getQuantity <em>Quantity</em>}'.
@@ -898,14 +898,14 @@ public interface SimplePDLPackage extends EPackage {
 		EAttribute GUIDANCE__TEXT = eINSTANCE.getGuidance_Text();
 
 		/**
-		 * The meta object literal for the '{@link fr.n7.simplePDL.impl.RessourcesImpl <em>Ressources</em>}' class.
+		 * The meta object literal for the '{@link fr.n7.simplePDL.impl.RessourceImpl <em>Ressource</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see fr.n7.simplePDL.impl.RessourcesImpl
-		 * @see fr.n7.simplePDL.impl.SimplePDLPackageImpl#getRessources()
+		 * @see fr.n7.simplePDL.impl.RessourceImpl
+		 * @see fr.n7.simplePDL.impl.SimplePDLPackageImpl#getRessource()
 		 * @generated
 		 */
-		EClass RESSOURCES = eINSTANCE.getRessources();
+		EClass RESSOURCE = eINSTANCE.getRessource();
 
 		/**
 		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
@@ -913,7 +913,7 @@ public interface SimplePDLPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESSOURCES__NAME = eINSTANCE.getRessources_Name();
+		EAttribute RESSOURCE__NAME = eINSTANCE.getRessource_Name();
 
 		/**
 		 * The meta object literal for the '<em><b>Quantity Available</b></em>' attribute feature.
@@ -921,7 +921,7 @@ public interface SimplePDLPackage extends EPackage {
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EAttribute RESSOURCES__QUANTITY_AVAILABLE = eINSTANCE.getRessources_QuantityAvailable();
+		EAttribute RESSOURCE__QUANTITY_AVAILABLE = eINSTANCE.getRessource_QuantityAvailable();
 
 		/**
 		 * The meta object literal for the '{@link fr.n7.simplePDL.impl.RessourceLinkImpl <em>Ressource Link</em>}' class.
@@ -934,12 +934,12 @@ public interface SimplePDLPackage extends EPackage {
 		EClass RESSOURCE_LINK = eINSTANCE.getRessourceLink();
 
 		/**
-		 * The meta object literal for the '<em><b>Ressource</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Ressource Needed</b></em>' reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference RESSOURCE_LINK__RESSOURCE = eINSTANCE.getRessourceLink_Ressource();
+		EReference RESSOURCE_LINK__RESSOURCE_NEEDED = eINSTANCE.getRessourceLink_RessourceNeeded();
 
 		/**
 		 * The meta object literal for the '<em><b>Quantity</b></em>' attribute feature.
