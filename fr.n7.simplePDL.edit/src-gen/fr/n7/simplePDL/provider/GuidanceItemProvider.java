@@ -4,8 +4,8 @@ package fr.n7.simplePDL.provider;
 
 import fr.n7.simplePDL.Guidance;
 import fr.n7.simplePDL.ProcessElement;
+import fr.n7.simplePDL.Ressource;
 import fr.n7.simplePDL.RessourceLink;
-import fr.n7.simplePDL.Ressources;
 import fr.n7.simplePDL.SimplePDLPackage;
 import fr.n7.simplePDL.WorkDefinition;
 import fr.n7.simplePDL.WorkSequence;
@@ -133,8 +133,8 @@ public class GuidanceItemProvider extends ItemProviderAdapter implements IEditin
 			elementLabel = "";
 		} else if (element instanceof WorkDefinition) {
 			elementLabel = radicalLabel + "[" + ((WorkDefinition) element).getName();
-		} else if (element instanceof Ressources) {
-			elementLabel = radicalLabel + "[" + ((Ressources) element).getName();
+		} else if (element instanceof Ressource) {
+			elementLabel = radicalLabel + "[" + ((Ressource) element).getName();
 		} else if (element instanceof WorkSequence) {
 			elementLabel = radicalLabel + "a [WorkSequence";
 		} else if (element instanceof Guidance) {

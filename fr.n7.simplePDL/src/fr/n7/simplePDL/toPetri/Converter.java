@@ -33,50 +33,57 @@ public class Converter {
 	private ResourceSet resSetSource;
 	private ReseauPetri petri;
 
-	private void addPlace(String name, int nbJetons) {
+	private Place addPlace(String name, int nbJetons) {
 		Place place = petriMaker.createPlace();
 
 		place.setNom(name);
 		place.setJetons(nbJetons);
 		places.put(name, place);
 		petri.getComposants().add(place);
+		
+		return place;
 	}
 	
 	private Place getPlace(String name) {
 		return places.get(name);
 	}
 	
-	private void addTransition(String name) {
+	private Transition addTransition(String name) {
 		Transition transition = petriMaker.createTransition();
 		
 		transition.setNom(name);
+		transitions.put(name, transition);
 		petri.getComposants().add(transition);
+		
+		return transition;
 	}
 	
 	private Transition getTransition(String name) {
 		return transitions.get(name);
 	}
 	
-	private void addTransition(String name, int tempsMin) {
-		addTransition(name);
-		Transition transition = getTransition(name);
+	private Transition addTransition(String name, int tempsMin) {
+		Transition transition = addTransition(name);
 		
 		Temps intervalle = petriMaker.createTemps();
 		intervalle.setTempsMinimum(tempsMin);
 		transition.setIntervalleTemps(intervalle);
+		
+		return transition;
 	}
 	
-	private void addTransition(String name, int tempsMin, int tempsMax) {
-		addTransition(name);
-		Transition transition = getTransition(name);
+	private Transition addTransition(String name, int tempsMin, int tempsMax) {
+		Transition transition = addTransition(name);
 		
 		Temps intervalle = petriMaker.createTemps();
 		intervalle.setTempsMinimum(tempsMin);
 		intervalle.setTempsMaximum(tempsMax);
 		transition.setIntervalleTemps(intervalle);
+		
+		return transition;
 	}
 	
-	private void addArc(Place source, Transition destination, int ponderation) {
+	private ArcPondere addArc(Place source, Transition destination, int ponderation) {
 		ArcPondereEntrant arc = petriMaker.createArcPondereEntrant();
 		
 		arc.setSource(source);
@@ -84,9 +91,11 @@ public class Converter {
 		arc.setPonderation(ponderation);
 		
 		petri.getComposants().add(arc);
+		
+		return arc;
 	}
 	
-	private void addArc(Transition source, Place destination, int ponderation) {
+	private ArcPondere addArc(Transition source, Place destination, int ponderation) {
 		ArcPondereSortant arc = petriMaker.createArcPondereSortant();
 		
 		arc.setSource(source);
@@ -94,9 +103,11 @@ public class Converter {
 		arc.setPonderation(ponderation);
 		
 		petri.getComposants().add(arc);
+		
+		return arc;
 	}
 	
-	private void addArcReadonly(Place source, Transition destination, int ponderation) {
+	private ArcPondere addArcReadonly(Place source, Transition destination, int ponderation) {
 		ArcLectureSeule arc = petriMaker.createArcLectureSeule();
 		
 		arc.setSource(source);
@@ -104,6 +115,8 @@ public class Converter {
 		arc.setPonderation(ponderation);
 		
 		petri.getComposants().add(arc);
+		
+		return arc;
 	}
 
 	
@@ -131,19 +144,19 @@ public class Converter {
 				String name = workDefinition.getName();
 				
 				// creation des objets
-				addPlace(name + "_idle", 1);
-				addPlace(name + "_started", 0);
-				addPlace(name + "_running", 0);
-				addPlace(name + "_ended", 0);
+				Place idle = addPlace(name + "_idle", 1);
+				Place started = addPlace(name + "_started", 0);
+				Place running = addPlace(name + "_running", 0);
+				Place ended = addPlace(name + "_ended", 0);
 				
-				addTransition(name + "_start");
-				addTransition(name + "_end");
+				Transition start = addTransition(name + "_start");
+				Transition end = addTransition(name + "_end");
 				
-				addArc(getPlace(name + "_idle"), getTransition(name + "_start"), 1);
-				addArc(getTransition(name + "_start"), getPlace(name + "_started"), 1);
-				addArc(getTransition(name + "_start"), getPlace(name + "_running"), 1);
-				addArc(getPlace(name + "_running"), getTransition(name + "_end"), 1);
-				addArc(getTransition(name + "_end"), getPlace(name + "_ended"), 1);
+				addArc(idle, start, 1);
+				addArc(start, started, 1);
+				addArc(start, running, 1);
+				addArc(running, end, 1);
+				addArc(end, ended, 1);
 			}
 		}
 

@@ -6,21 +6,21 @@
   <composants xsi:type="petri:Place" nom="Process1_ended"/>
   <composants xsi:type="petri:Transition" nom="Process1_start"/>
   <composants xsi:type="petri:Transition" nom="Process1_end"/>
-  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.0"/>
-  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.1"/>
-  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.2"/>
-  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.2"/>
-  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.3"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.0" destination="//@composants.4"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.4" destination="//@composants.1"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.4" destination="//@composants.2"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.2" destination="//@composants.5"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.5" destination="//@composants.3"/>
   <composants xsi:type="petri:Place" jetons="1" nom="Process2_idle"/>
   <composants xsi:type="petri:Place" nom="Process2_started"/>
   <composants xsi:type="petri:Place" nom="Process2_running"/>
   <composants xsi:type="petri:Place" nom="Process2_ended"/>
   <composants xsi:type="petri:Transition" nom="Process2_start"/>
   <composants xsi:type="petri:Transition" nom="Process2_end"/>
-  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.11"/>
-  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.12"/>
-  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.13"/>
-  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.13"/>
-  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" destination="//@composants.14"/>
-  <composants xsi:type="petri:ArcLectureSeule" ponderation="1" source="//@composants.3"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.11" destination="//@composants.15"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.15" destination="//@composants.12"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.15" destination="//@composants.13"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.13" destination="//@composants.16"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.16" destination="//@composants.14"/>
+  <composants xsi:type="petri:ArcLectureSeule" ponderation="1" source="//@composants.3" destination="//@composants.15"/>
 </petri:ReseauPetri>

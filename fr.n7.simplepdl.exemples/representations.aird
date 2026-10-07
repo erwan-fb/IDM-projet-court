@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" uid="_vkYHUMGeEfGoSbFxDYhvMg" selectedViews="_zFYv8MGeEfGoSbFxDYhvMg" version="15.2.0.202303281325">
+<viewpoint:DAnalysis xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description" uid="_vkYHUMGeEfGoSbFxDYhvMg" selectedViews="_zFYv8MGeEfGoSbFxDYhvMg" version="15.4.1.202403191723">
   <semanticResources>Bread.simplepdl</semanticResources>
   <semanticResources>Supersimple.simplepdl</semanticResources>
   <semanticResources>autres_exemples.simplepdl</semanticResources>
@@ -17,6 +17,7 @@
   <semanticResources>syntaxe_exemple/quantite_negative_RL.simplepdl</semanticResources>
   <semanticResources>syntaxe_exemple/quantite_nulle_R.simplepdl</semanticResources>
   <semanticResources>syntaxe_exemple/quantite_nulle_RL.simplepdl</semanticResources>
+  <semanticResources>tests/TestRessource.simplepdl</semanticResources>
   <ownedViews xmi:type="viewpoint:DView" uid="_zFYv8MGeEfGoSbFxDYhvMg">
     <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplepdlViewpoint']"/>
   </ownedViews>

@@ -2,9 +2,10 @@
  */
 package fr.n7.simplePDL.provider;
 
-import fr.n7.simplePDL.RessourceLink;
 import fr.n7.simplePDL.Ressource;
+import fr.n7.simplePDL.RessourceLink;
 import fr.n7.simplePDL.SimplePDLPackage;
+import fr.n7.simplePDL.WorkDefinition;
 
 import java.util.Collection;
 import java.util.List;
@@ -26,11 +27,9 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link fr.n7.simplePDL.RessourceLink}
- * object.
+ * This is the item provider adapter for a {@link fr.n7.simplePDL.RessourceLink} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
- * 
  * @generated
  */
 public class RessourceLinkItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
@@ -39,7 +38,6 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	 * This constructs an instance from a factory and a notifier.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	public RessourceLinkItemProvider(AdapterFactory adapterFactory) {
@@ -50,7 +48,6 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	 * This returns the property descriptors for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -69,7 +66,6 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	 * This adds a property descriptor for the Ressource Needed feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected void addRessourceNeededPropertyDescriptor(Object object) {
@@ -86,7 +82,6 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	 * This adds a property descriptor for the Quantity feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected void addQuantityPropertyDescriptor(Object object) {
@@ -103,7 +98,6 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	 * This adds a property descriptor for the Work Definition Associate feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	protected void addWorkDefinitionAssociatePropertyDescriptor(Object object) {
@@ -120,7 +114,6 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	 * This returns RessourceLink.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -131,7 +124,6 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -143,8 +135,7 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
@@ -153,18 +144,15 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 		Ressource ressource = ressourceLink.getRessourceNeeded();
 		String nameRequester = (requester == null ? "?" : requester.getName());
 		String nameRessource = (ressource == null ? "?" : ressource.getName());
-		return getString("_UI_RessourceLink_type") + " " + nameRequester + " --> " + nameRessource + " : "
-				+ ressourceLink.getQuantity();
+		return getString("_UI_RessourceLink_type") + " " + nameRessource + " --" + ressourceLink.getQuantity() + "--> "
+				+ nameRequester;
 	}
 
 	/**
-	 * This handles model notifications by calling {@link #updateChildren} to update
-	 * any cached
-	 * children and by creating a viewer notification, which it passes to
-	 * {@link #fireNotifyChanged}.
+	 * This handles model notifications by calling {@link #updateChildren} to update any cached
+	 * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -172,20 +160,18 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(RessourceLink.class)) {
-			case SimplePDLPackage.RESSOURCE_LINK__QUANTITY:
-				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
-				return;
+		case SimplePDLPackage.RESSOURCE_LINK__QUANTITY:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+			return;
 		}
 		super.notifyChanged(notification);
 	}
 
 	/**
-	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing
-	 * the children
+	 * This adds {@link org.eclipse.emf.edit.command.CommandParameter}s describing the children
 	 * that can be created under this object.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
@@ -197,7 +183,6 @@ public class RessourceLinkItemProvider extends ItemProviderAdapter implements IE
 	 * Return the resource locator for this item provider's resources.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * 
 	 * @generated
 	 */
 	@Override
