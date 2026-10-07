@@ -6,11 +6,6 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="/fr.n7.simplePDL/src">
-		<attributes>
-			<attribute name="module" value="true"/>
-		</attributes>
-	</classpathentry>
-	<classpathentry kind="src" path="/fr.n7.simplePDL"/>
+	<classpathentry kind="lib" path="/home/mcr6414/git/IDM-projet-court/fr.n7.simplePDL"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
