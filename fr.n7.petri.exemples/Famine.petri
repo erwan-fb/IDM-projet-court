@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="ASCII"?>
+<petri:ReseauPetri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petri="http://petri" nom="Famine">
+  <composants xsi:type="petri:Place" jetons="1" nom="Manger_idle"/>
+  <composants xsi:type="petri:Place" nom="Manger_started"/>
+  <composants xsi:type="petri:Place" nom="Manger_running"/>
+  <composants xsi:type="petri:Place" nom="Manger_ended"/>
+  <composants xsi:type="petri:Transition" nom="Manger_start" arcsEntrants="//@composants.6 //@composants.12" arcsSortants="//@composants.7 //@composants.8"/>
+  <composants xsi:type="petri:Transition" nom="Manger_end" arcsEntrants="//@composants.9" arcsSortants="//@composants.10 //@composants.13"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.0" destination="//@composants.4"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.4" destination="//@composants.1"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.4" destination="//@composants.2"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.2" destination="//@composants.5"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.5" destination="//@composants.3"/>
+  <composants xsi:type="petri:Place" jetons="10" nom="Pain"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="20" source="//@composants.11" destination="//@composants.4"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="20" source="//@composants.5" destination="//@composants.11"/>
+</petri:ReseauPetri>

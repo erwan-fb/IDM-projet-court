@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <simplePDL:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplePDL="http://simplepdl" name="Recette">
-  <processElements xsi:type="simplePDL:WorkDefinition" linksToSuccessors="//@processElements.8" linkToRessource="//@processElements.19 //@processElements.21 //@processElements.23 //@processElements.25" name="Mélanger"/>
-  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.8" linksToSuccessors="//@processElements.9" linkToRessource="//@processElements.26" name="Pétrir1"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToSuccessors="//@processElements.8" linkToRessource="//@processElements.19 //@processElements.21 //@processElements.23 //@processElements.25" name="Melanger"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.8" linksToSuccessors="//@processElements.9" linkToRessource="//@processElements.26" name="Petrir1"/>
   <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.12 //@processElements.33" linksToSuccessors="//@processElements.13" linkToRessource="//@processElements.29" name="Cuire"/>
-  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.9" linksToSuccessors="//@processElements.10" name="Laisser reposer1"/>
-  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.10" linksToSuccessors="//@processElements.11" linkToRessource="//@processElements.27" name="Pétrir2"/>
-  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.11 //@processElements.32" linksToSuccessors="//@processElements.12" name="Laisser reposer2"/>
-  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.13" linksToSuccessors="//@processElements.14" name="Laisser refroidir"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.9" linksToSuccessors="//@processElements.10" name="Laisser_reposer1"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.10" linksToSuccessors="//@processElements.11" linkToRessource="//@processElements.27" name="Petrir2"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.11 //@processElements.32" linksToSuccessors="//@processElements.12" name="Laisser_reposer2"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.13" linksToSuccessors="//@processElements.14" name="Laisser_refroidir"/>
   <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.14" name="Vendre"/>
   <processElements xsi:type="simplePDL:WorkSequence" linkType="finishToStart" predecessor="//@processElements.0" successor="//@processElements.1"/>
   <processElements xsi:type="simplePDL:WorkSequence" linkType="startToFinish" predecessor="//@processElements.1" successor="//@processElements.3"/>
@@ -15,9 +15,9 @@
   <processElements xsi:type="simplePDL:WorkSequence" linkType="finishToStart" predecessor="//@processElements.5" successor="//@processElements.2"/>
   <processElements xsi:type="simplePDL:WorkSequence" linkType="finishToStart" predecessor="//@processElements.2" successor="//@processElements.6"/>
   <processElements xsi:type="simplePDL:WorkSequence" predecessor="//@processElements.6" successor="//@processElements.7"/>
-  <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter la farine"/>
-  <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter l'eau"/>
-  <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter le levain"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter_la_farine"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter_l'eau"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter_le_levain"/>
   <processElements xsi:type="simplePDL:Ressource" name="Farine" quantityAvailable="1000"/>
   <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.18" quantity="1000" workDefinitionAssociate="//@processElements.0"/>
   <processElements xsi:type="simplePDL:Ressource" name="Eau" quantityAvailable="1000"/>
@@ -31,7 +31,7 @@
   <processElements xsi:type="simplePDL:Ressource" name="Four" quantityAvailable="1"/>
   <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.28" quantity="1" workDefinitionAssociate="//@processElements.2"/>
   <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.28" quantity="1" workDefinitionAssociate="//@processElements.31"/>
-  <processElements xsi:type="simplePDL:WorkDefinition" linksToSuccessors="//@processElements.33 //@processElements.32" linkToRessource="//@processElements.30" name="Pré-chauffer le four"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToSuccessors="//@processElements.33 //@processElements.32" linkToRessource="//@processElements.30" name="Pre_chauffer_le_four"/>
   <processElements xsi:type="simplePDL:WorkSequence" linkType="finishToFinish" predecessor="//@processElements.31" successor="//@processElements.5"/>
   <processElements xsi:type="simplePDL:WorkSequence" linkType="finishToStart" predecessor="//@processElements.31" successor="//@processElements.2"/>
 </simplePDL:Process>

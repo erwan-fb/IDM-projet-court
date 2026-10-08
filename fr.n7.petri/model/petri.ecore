@@ -15,6 +15,10 @@
   <eClassifiers xsi:type="ecore:EClass" name="Transition" eSuperTypes="#//Composant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="nom" lowerBound="1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="intervalleTemps" eType="#//Temps"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arcsEntrants" lowerBound="1"
+        upperBound="-1" eType="#//ArcPondereEntrant" eOpposite="#//ArcPondereEntrant/destination"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="arcsSortants" lowerBound="1"
+        upperBound="-1" eType="#//ArcPondereSortant" eOpposite="#//ArcPondereSortant/source"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArcPondere" eSuperTypes="#//Composant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="ponderation" lowerBound="1"
@@ -24,11 +28,11 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
         eType="#//Place"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="destination" lowerBound="1"
-        eType="#//Transition"/>
+        eType="#//Transition" eOpposite="#//Transition/arcsEntrants"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="ArcPondereSortant" eSuperTypes="#//ArcPondere">
     <eStructuralFeatures xsi:type="ecore:EReference" name="source" lowerBound="1"
-        eType="#//Transition"/>
+        eType="#//Transition" eOpposite="#//Transition/arcsSortants"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="destination" lowerBound="1"
         eType="#//Place"/>
   </eClassifiers>

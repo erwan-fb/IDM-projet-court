@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project default="main" name="fr.n7.simplePDL.ToPetri">
+<project default="main" name="fr.n7.petri.PetriNet">
     <property name="ECLIPSE_HOME" value="../../../../../../../Applications/Eclipse.app/Contents/Eclipse"/>
     <property name="ECLIPSE_WORKSPACE" value="../.."/>
 
     <!-- The classpath with only the dependencies used by the project -->
-    <path id="fr.n7.simplePDL.ToPetri.libraryclasspath">
-        <pathelement location="${ECLIPSE_WORKSPACE}/fr.n7.simplePDL.ToPetri/bin"/>
+    <path id="fr.n7.petri.PetriNet.libraryclasspath">
+        <pathelement location="${ECLIPSE_WORKSPACE}/fr.n7.petri.PetriNet/bin"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.aarch64_25.0.4.v20260826-0822/jre/lib/jrt-fs.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.annotation.versioning_1.1.2.202109301733.jar"/>
         <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.annotation.bundle_2.0.0.202202082230.jar"/>
@@ -56,23 +56,23 @@
         <pathelement location="${ECLIPSE_HOME}/plugins/org.osgi.service.event_1.4.1.202109301733.jar"/>
     </path>
 
-    <path id="fr.n7.simplePDL.ToPetri.classpath">
-        <path refid="fr.n7.simplePDL.ToPetri.libraryclasspath"/>
+    <path id="fr.n7.petri.PetriNet.classpath">
+        <path refid="fr.n7.petri.PetriNet.libraryclasspath"/>
     </path>
 
     <!-- The classpath with only the jars available in the plugin folder of Eclipse -->
-    <path id="fr.n7.simplePDL.ToPetri.libraryclasspath.alljars">
-        <pathelement location="../fr.n7.simplePDL.ToPetri/bin"/>
+    <path id="fr.n7.petri.PetriNet.libraryclasspath.alljars">
+        <pathelement location="../fr.n7.petri.PetriNet/bin"/>
         <fileset dir="${ECLIPSE_HOME}/plugins/" includes="*.jar"/>
     </path>
 
-    <path id="fr.n7.simplePDL.ToPetri.classpath.alljars">
-        <path refid="fr.n7.simplePDL.ToPetri.libraryclasspath.alljars"/>
+    <path id="fr.n7.petri.PetriNet.classpath.alljars">
+        <path refid="fr.n7.petri.PetriNet.libraryclasspath.alljars"/>
     </path>
 
     <!-- The default task with the jars used by this project -->
     <target name="main">
-        <java classname="fr.n7.simplePDL.ToPetri.Main" classpathref="fr.n7.simplePDL.ToPetri.classpath">
+        <java classname="fr.n7.petri.PetriNet.Main" classpathref="fr.n7.petri.PetriNet.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>
@@ -83,7 +83,7 @@
         Keep in mind that having two versions of the same jar can create problems
     -->
     <target name="main.alljars">
-        <java classname="fr.n7.simplePDL.ToPetri.Main" classpathref="fr.n7.simplePDL.ToPetri.classpath">
+        <java classname="fr.n7.petri.PetriNet.Main" classpathref="fr.n7.petri.PetriNet.classpath">
             <arg value="${model}"/>
             <arg value="${target}"/>
         </java>

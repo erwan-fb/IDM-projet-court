@@ -22,6 +22,8 @@
     <genClasses ecoreClass="petri.ecore#//Transition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Transition/nom"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//Transition/intervalleTemps"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//Transition/arcsEntrants"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//Transition/arcsSortants"/>
     </genClasses>
     <genClasses ecoreClass="petri.ecore#//ArcPondere">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//ArcPondere/ponderation"/>

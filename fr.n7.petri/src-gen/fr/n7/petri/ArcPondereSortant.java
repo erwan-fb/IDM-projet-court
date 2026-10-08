@@ -22,12 +22,14 @@ package fr.n7.petri;
 public interface ArcPondereSortant extends ArcPondere {
 	/**
 	 * Returns the value of the '<em><b>Source</b></em>' reference.
+	 * It is bidirectional and its opposite is '{@link fr.n7.petri.Transition#getArcsSortants <em>Arcs Sortants</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Source</em>' reference.
 	 * @see #setSource(Transition)
 	 * @see fr.n7.petri.PetriPackage#getArcPondereSortant_Source()
-	 * @model required="true"
+	 * @see fr.n7.petri.Transition#getArcsSortants
+	 * @model opposite="arcsSortants" required="true"
 	 * @generated
 	 */
 	Transition getSource();

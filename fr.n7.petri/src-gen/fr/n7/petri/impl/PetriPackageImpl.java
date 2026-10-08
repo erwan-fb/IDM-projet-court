@@ -261,6 +261,26 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 	 * @generated
 	 */
 	@Override
+	public EReference getTransition_ArcsEntrants() {
+		return (EReference) transitionEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getTransition_ArcsSortants() {
+		return (EReference) transitionEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public EClass getArcPondere() {
 		return arcPondereEClass;
 	}
@@ -418,6 +438,8 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		transitionEClass = createEClass(TRANSITION);
 		createEAttribute(transitionEClass, TRANSITION__NOM);
 		createEReference(transitionEClass, TRANSITION__INTERVALLE_TEMPS);
+		createEReference(transitionEClass, TRANSITION__ARCS_ENTRANTS);
+		createEReference(transitionEClass, TRANSITION__ARCS_SORTANTS);
 
 		arcPondereEClass = createEClass(ARC_PONDERE);
 		createEAttribute(arcPondereEClass, ARC_PONDERE__PONDERATION);
@@ -498,6 +520,13 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		initEReference(getTransition_IntervalleTemps(), this.getTemps(), null, "intervalleTemps", null, 0, 1,
 				Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTransition_ArcsEntrants(), this.getArcPondereEntrant(),
+				this.getArcPondereEntrant_Destination(), "arcsEntrants", null, 1, -1, Transition.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getTransition_ArcsSortants(), this.getArcPondereSortant(), this.getArcPondereSortant_Source(),
+				"arcsSortants", null, 1, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arcPondereEClass, ArcPondere.class, "ArcPondere", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
@@ -509,15 +538,15 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		initEReference(getArcPondereEntrant_Source(), this.getPlace(), null, "source", null, 1, 1,
 				ArcPondereEntrant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEReference(getArcPondereEntrant_Destination(), this.getTransition(), null, "destination", null, 1, 1,
-				ArcPondereEntrant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArcPondereEntrant_Destination(), this.getTransition(), this.getTransition_ArcsEntrants(),
+				"destination", null, 1, 1, ArcPondereEntrant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
+				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(arcPondereSortantEClass, ArcPondereSortant.class, "ArcPondereSortant", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getArcPondereSortant_Source(), this.getTransition(), null, "source", null, 1, 1,
-				ArcPondereSortant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
-				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getArcPondereSortant_Source(), this.getTransition(), this.getTransition_ArcsSortants(), "source",
+				null, 1, 1, ArcPondereSortant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE,
+				IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getArcPondereSortant_Destination(), this.getPlace(), null, "destination", null, 1, 1,
 				ArcPondereSortant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<simplePDL:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplePDL="http://simplepdl">
-  <processElements xsi:type="simplePDL:WorkDefinition" linkToRessource="//@processElements.2" name="Hungry Process"/>
+<simplePDL:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplePDL="http://simplepdl" name="Hungry">
+  <processElements xsi:type="simplePDL:WorkDefinition" linkToRessource="//@processElements.2" name="Hungry_Process"/>
   <processElements xsi:type="simplePDL:Ressource" name="Bread" quantityAvailable="100"/>
   <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.1" quantity="50" workDefinitionAssociate="//@processElements.0"/>
 </simplePDL:Process>

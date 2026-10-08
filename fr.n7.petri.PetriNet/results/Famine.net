@@ -1,0 +1,8 @@
+pl Manger_idle (1)
+pl Manger_started (0)
+pl Manger_running (0)
+pl Manger_ended (0)
+pl Pain (10)
+		
+tr Manger_start Manger_idle Pain*20 -> Manger_started Manger_running 
+tr Manger_end Manger_running -> Manger_ended Pain*20 

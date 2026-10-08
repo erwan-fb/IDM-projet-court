@@ -8,8 +8,9 @@
  * Contributors:
  *     Obeo - initial API and implementation
  *******************************************************************************/
-package fr.n7.simplePDL.ToPetri;
+package fr.n7.petri.PetriNet;
 
+import fr.n7.petri.PetriPackage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -35,7 +36,7 @@ public class Main extends AbstractAcceleoGenerator {
      *
      * @generated
      */
-    public static final String MODULE_FILE_NAME = "/fr/n7/simplePDL/ToPetri/main";
+    public static final String MODULE_FILE_NAME = "/fr/n7/petri/PetriNet/main";
     
     /**
      * The name of the templates that are to be generated.
@@ -335,11 +336,15 @@ public class Main extends AbstractAcceleoGenerator {
      * 
      * @param resourceSet
      *            The resource set which registry has to be updated.
-     * @generated
+     * @generated NOT
      */
     @Override
     public void registerPackages(ResourceSet resourceSet) {
         super.registerPackages(resourceSet);
+        if (!isInWorkspace(PetriPackage.class)) {
+             // The normal package registration if your metamodel is in a plugin.
+             resourceSet.getPackageRegistry().put(PetriPackage.eNS_URI, PetriPackage.eINSTANCE);
+         }
         
         /*
          * If you want to change the content of this method, do NOT forget to change the "@generated"

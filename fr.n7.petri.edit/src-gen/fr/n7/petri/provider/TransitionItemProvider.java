@@ -55,6 +55,8 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 
 			addNomPropertyDescriptor(object);
 			addIntervalleTempsPropertyDescriptor(object);
+			addArcsEntrantsPropertyDescriptor(object);
+			addArcsSortantsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -88,6 +90,36 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 						getString("_UI_PropertyDescriptor_description", "_UI_Transition_intervalleTemps_feature",
 								"_UI_Transition_type"),
 						PetriPackage.Literals.TRANSITION__INTERVALLE_TEMPS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Arcs Entrants feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addArcsEntrantsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Transition_arcsEntrants_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Transition_arcsEntrants_feature",
+								"_UI_Transition_type"),
+						PetriPackage.Literals.TRANSITION__ARCS_ENTRANTS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Arcs Sortants feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addArcsSortantsPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Transition_arcsSortants_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Transition_arcsSortants_feature",
+								"_UI_Transition_type"),
+						PetriPackage.Literals.TRANSITION__ARCS_SORTANTS, true, false, true, null, null, null));
 	}
 
 	/**

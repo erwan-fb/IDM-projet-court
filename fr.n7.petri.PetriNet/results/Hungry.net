@@ -1,0 +1,8 @@
+pl Hungry_Process_idle (1)
+pl Hungry_Process_started (0)
+pl Hungry_Process_running (0)
+pl Hungry_Process_ended (0)
+pl Bread (100)
+		
+tr Hungry_Process_start Hungry_Process_idle Bread*50 -> Hungry_Process_started Hungry_Process_running 
+tr Hungry_Process_end Hungry_Process_running -> Hungry_Process_ended Bread*50 

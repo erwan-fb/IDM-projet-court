@@ -1,0 +1,7 @@
+pl test_idle (1)
+pl test_started (0)
+pl test_running (0)
+pl test_ended (0)
+		
+tr test_start test_idle -> test_started test_running 
+tr test_end test_running -> test_ended 
