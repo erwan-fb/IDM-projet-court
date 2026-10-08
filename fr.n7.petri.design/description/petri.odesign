@@ -1,6 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" name="petri" version="12.0.0.2017041100">
-  <ownedViewpoints name="MyViewpoint">
+<description:Group xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" name="petri" version="12.0.0.2017041100">
+  <ownedViewpoints name="PetriViewpoint" modelFileExtension="petri">
+    <ownedRepresentations xsi:type="description_1:DiagramDescription" name="PetriGraph" domainClass="petri::ReseauPetri" enablePopupBars="true">
+      <defaultLayer name="Default">
+        <nodeMappings name="PNode" domainClass="petri::Place">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="[jetons/]" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW" shape="ring">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+          </style>
+        </nodeMappings>
+        <nodeMappings name="TNode" domainClass="petri::Transition">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="feature:nom" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
+          </style>
+        </nodeMappings>
+      </defaultLayer>
+    </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="fr.n7.petri.design.Services"/>
   </ownedViewpoints>
 </description:Group>
