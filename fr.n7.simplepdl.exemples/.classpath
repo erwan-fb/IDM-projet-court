@@ -7,5 +7,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="lib" path="/home/mcr6414/git/IDM-projet-court/fr.n7.simplePDL"/>
+	<classpathentry kind="src" path="/fr.n7.simplePDL"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
