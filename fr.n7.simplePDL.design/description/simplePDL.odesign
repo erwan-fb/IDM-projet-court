@@ -33,7 +33,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <edgeMappings name="GDEdge" sourceMapping="//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='GDNode']" targetMapping="//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='GDNode'] //@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='RNode'] //@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode'] //@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='WSEdge']" targetFinderExpression="feature:element">
+        <edgeMappings name="GDEdge" sourceMapping="//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='GDNode']" targetMapping="//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='GDNode'] //@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='RNode'] //@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode'] //@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='WSEdge'] //@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='RLEdge']" targetFinderExpression="feature:element">
           <style lineStyle="dash" sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_yellow']"/>
             <centerLabelStyleDescription labelSize="1">
@@ -49,16 +49,7 @@
             </centerLabelStyleDescription>
           </style>
         </edgeMappings>
-        <toolSections name="OutilsSection">
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="WDCreation" nodeMappings="//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']">
-            <variable name="container"/>
-            <viewVariable name="containerView"/>
-            <initialOperation>
-              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/].">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="simplePDL::WorkDefinition" referenceName="processElements"/>
-              </firstModelOperations>
-            </initialOperation>
-          </ownedTools>
+        <toolSections name="EdgeSection">
           <ownedTools xsi:type="tool:EdgeCreationDescription" name="WSCreation" edgeMappings="//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='WSEdge']">
             <sourceVariable name="source"/>
             <targetVariable name="target"/>
@@ -73,12 +64,39 @@
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
-          <ownedTools xsi:type="tool:NodeCreationDescription" name="GDCreation" nodeMappings="//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='GDNode']">
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="RLCreation" edgeMappings="//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='RLEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[self.eContainer()/]">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="simplePDL::RessourceLink" referenceName="processElements">
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="ressourceNeeded" valueExpression="[source/]"/>
+                  <subModelOperations xsi:type="tool_1:SetValue" featureName="workDefinitionAssociate" valueExpression="[target/]"/>
+                </subModelOperations>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:EdgeCreationDescription" name="GDCretation" edgeMappings="//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@edgeMappings[name='GDEdge']">
+            <sourceVariable name="source"/>
+            <targetVariable name="target"/>
+            <sourceViewVariable name="sourceView"/>
+            <targetViewVariable name="targetView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[source/]">
+                <subModelOperations xsi:type="tool_1:SetValue" featureName="element" valueExpression="[target/]"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+        </toolSections>
+        <toolSections name="NodeSection">
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="WDCreation" nodeMappings="//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']">
             <variable name="container"/>
             <viewVariable name="containerView"/>
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/].">
-                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="simplePDL::Guidance" referenceName="processElements"/>
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="simplePDL::WorkDefinition" referenceName="processElements"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
@@ -88,6 +106,15 @@
             <initialOperation>
               <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/].">
                 <subModelOperations xsi:type="tool_1:CreateInstance" typeName="simplePDL::Ressource" referenceName="processElements"/>
+              </firstModelOperations>
+            </initialOperation>
+          </ownedTools>
+          <ownedTools xsi:type="tool:NodeCreationDescription" name="GDCreation" nodeMappings="//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='GDNode']">
+            <variable name="container"/>
+            <viewVariable name="containerView"/>
+            <initialOperation>
+              <firstModelOperations xsi:type="tool_1:ChangeContext" browseExpression="[container/].">
+                <subModelOperations xsi:type="tool_1:CreateInstance" typeName="simplePDL::Guidance" referenceName="processElements"/>
               </firstModelOperations>
             </initialOperation>
           </ownedTools>
