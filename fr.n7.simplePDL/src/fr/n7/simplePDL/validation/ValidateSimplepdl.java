@@ -53,6 +53,8 @@ public class ValidateSimplepdl {
 		afficherErreurs("- Process", resultat.getRecordedErrorsFor(SimplePDLPackage.PROCESS));
 		afficherErreurs("- WorkDefinition", resultat.getRecordedErrorsFor(SimplePDLPackage.WORK_DEFINITION));
 		afficherErreurs("- WorkSequence", resultat.getRecordedErrorsFor(SimplePDLPackage.WORK_SEQUENCE));
+		afficherErreurs("- Ressource", resultat.getRecordedErrorsFor(SimplePDLPackage.RESSOURCE));
+		afficherErreurs("- RessourceLink", resultat.getRecordedErrorsFor(SimplePDLPackage.RESSOURCE_LINK));
 		afficherErreurs("- Guidance", resultat.getRecordedErrorsFor(SimplePDLPackage.GUIDANCE));
 	}
 
