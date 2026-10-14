@@ -8,13 +8,13 @@
 		[comment On commence par ajouter les places/]
 		[let places : OrderedSet(petri::Place) = reseauPetri.getPlaces()]
 			[for (place : petri::Place | places)]
-['pl'/] [place.nom /] ([place.jetons /])
+pl [place.nom /] ([place.jetons /])
 			[/for]	
 		[/let]
 		
 		[let transitions : OrderedSet(petri::Transition) = reseauPetri.getTransitions()]
     		[for (transition : petri::Transition | transitions)]
-['tr'/] [transition.nom/] [if transition.intervalleTemps = null][else]['['/][transition.intervalleTemps.tempsMinimum/],[if transition.intervalleTemps.tempsMaximum = null]w['['/][else][transition.intervalleTemps.tempsMaximum/][']'/][/if][/if] [for (a : petri::ArcPondereEntrant | transition.arcsEntrants)][a.source.nom/][if a.oclIsTypeOf(petri::ArcLectureSeule)]?[a.ponderation/][else][if a.ponderation > 1]*[a.ponderation/][/if][/if] [/for]-> [for (a : petri::ArcPondereSortant| transition.arcsSortants)][a.destination.nom/][if a.ponderation > 1]*[a.ponderation/][/if] [/for]
+tr [transition.nom/] [if transition.intervalleTemps = null][else]['['/][transition.intervalleTemps.tempsMinimum/],[if transition.intervalleTemps.tempsMaximum = null]w['['/][else][transition.intervalleTemps.tempsMaximum/][']'/][/if][/if] [for (a : petri::ArcPondereEntrant | transition.arcsEntrants)][a.source.nom/][if a.oclIsTypeOf(petri::ArcLectureSeule)]?[a.ponderation/][else][if a.ponderation > 1]*[a.ponderation/][/if][/if] [/for]-> [for (a : petri::ArcPondereSortant| transition.arcsSortants)][a.destination.nom/][if a.ponderation > 1]*[a.ponderation/][/if] [/for]
         	[/for]
     	[/let]
 	[/file]

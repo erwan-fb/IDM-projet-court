@@ -16,7 +16,7 @@
   <processElements xsi:type="simplePDL:WorkSequence" linkType="finishToStart" predecessor="//@processElements.2" successor="//@processElements.6"/>
   <processElements xsi:type="simplePDL:WorkSequence" predecessor="//@processElements.6" successor="//@processElements.7"/>
   <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter_la_farine"/>
-  <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter_l'eau"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter_l_eau"/>
   <processElements xsi:type="simplePDL:WorkDefinition" name="Ajouter_le_levain"/>
   <processElements xsi:type="simplePDL:Ressource" name="Farine" quantityAvailable="1000"/>
   <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.18" quantity="1000" workDefinitionAssociate="//@processElements.0"/>

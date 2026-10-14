@@ -1,0 +1,5 @@
+digraph Famine {
+	Manger
+	Pain [label="Pain : 10"]
+	Pain -> Manger [arrowhead=vee label=20 style=dashed]
+}

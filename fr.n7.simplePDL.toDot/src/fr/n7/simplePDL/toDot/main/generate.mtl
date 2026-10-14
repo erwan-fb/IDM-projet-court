@@ -1,0 +1,60 @@
+[comment encoding = UTF-8 /]
+[module generate('http://simplePDL')/]
+
+[template public generateElement(process : simplePDL::Process)]
+	
+	[comment @main /]
+	[file (process.name.concat('.dot'), false, 'UTF-8')]
+digraph [process.name/] {
+		[let workDefinitions : OrderedSet(simplePDL::WorkDefinition) = process.getWorkDefinitions()]
+			[for (workDefinition : simplePDL::WorkDefinition | workDefinitions)]
+	[workDefinition.name /]
+			[/for]
+		[/let]
+		[let ressources : OrderedSet(simplePDL::Ressource) = process.getRessources()]
+			[for (ressource : simplePDL::Ressource | ressources)]
+	[ressource.name /] ['['/]label=['"' + ressource.name + ' : ' + ressource.quantityAvailable + '"'/][']'/]
+			[/for]
+		[/let]
+		[let workSequences : OrderedSet(simplePDL::WorkSequence) = process.getWorkSequences()]
+    			[for (workSequence : simplePDL::WorkSequence | workSequences)]
+	[workSequence.predecessor.name/] -> [workSequence.successor.name/] ['['/]arrowhead=vee label=[workSequence.linkType/][']'/]
+        		[/for]
+    		[/let]
+    		[let ressourceLinks : OrderedSet(simplePDL::RessourceLink) = process.getRessourceLinks()]
+    			[for (ressourceLink : simplePDL::RessourceLink | ressourceLinks)]
+	[ressourceLink.ressourceNeeded.name/] -> [ressourceLink.workDefinitionAssociate.name/] ['['/]arrowhead=vee label=[ressourceLink.quantity/] style=dashed[']'/]
+    			[/for]
+    		[/let]
+}
+	[/file]
+	
+[/template]
+
+[query public getWorkDefinitions(r : simplePDL::Process) : OrderedSet(simplePDL::WorkDefinition) =
+	r.processElements
+		->select(e | e.oclIsTypeOf(simplePDL::WorkDefinition))
+		->collect(e | e.oclAsType(simplePDL::WorkDefinition))
+		->asOrderedSet()
+/]
+
+[query public getWorkSequences(r : simplePDL::Process) : OrderedSet(simplePDL::WorkSequence) =
+	r.processElements
+		->select(e | e.oclIsTypeOf(simplePDL::WorkSequence))
+		->collect(e | e.oclAsType(simplePDL::WorkSequence))
+		->asOrderedSet()
+/]
+
+[query public getRessources(r : simplePDL::Process) : OrderedSet(simplePDL::Ressource) =
+	r.processElements
+		->select(e | e.oclIsTypeOf(simplePDL::Ressource))
+		->collect(e | e.oclAsType(simplePDL::Ressource))
+		->asOrderedSet()
+/]
+
+[query public getRessourceLinks(r : simplePDL::Process) : OrderedSet(simplePDL::RessourceLink) =
+	r.processElements
+		->select(e | e.oclIsTypeOf(simplePDL::RessourceLink))
+		->collect(e | e.oclAsType(simplePDL::RessourceLink))
+		->asOrderedSet()
+/]
