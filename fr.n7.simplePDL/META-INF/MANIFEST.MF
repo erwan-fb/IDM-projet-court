@@ -9,13 +9,12 @@ Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-17
 Export-Package: fr.n7.simplePDL;uses:="org.eclipse.emf.ecore,org.eclipse.emf.common.util",
- fr.n7.simplePDL.impl;fr.n7.simplePDL.toPetri;
+ fr.n7.simplePDL.impl;
   uses:="org.eclipse.emf.ecore,
    org.eclipse.emf.ecore.impl,
    org.eclipse.emf.common.util,
    fr.n7.simplePDL,
    org.eclipse.emf.common.notify",
- fr.n7.simplePDL.toPetri,
  fr.n7.simplePDL.util;
   uses:="org.eclipse.emf.ecore,
    fr.n7.simplePDL,
