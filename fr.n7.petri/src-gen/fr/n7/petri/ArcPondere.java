@@ -15,7 +15,7 @@ package fr.n7.petri;
  * </ul>
  *
  * @see fr.n7.petri.PetriPackage#getArcPondere()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface ArcPondere extends Composant {

@@ -47,22 +47,22 @@ public interface Transition extends Composant {
 	void setNom(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Intervalle Temps</b></em>' reference.
+	 * Returns the value of the '<em><b>Intervalle Temps</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Intervalle Temps</em>' reference.
+	 * @return the value of the '<em>Intervalle Temps</em>' containment reference.
 	 * @see #setIntervalleTemps(Temps)
 	 * @see fr.n7.petri.PetriPackage#getTransition_IntervalleTemps()
-	 * @model
+	 * @model containment="true"
 	 * @generated
 	 */
 	Temps getIntervalleTemps();
 
 	/**
-	 * Sets the value of the '{@link fr.n7.petri.Transition#getIntervalleTemps <em>Intervalle Temps</em>}' reference.
+	 * Sets the value of the '{@link fr.n7.petri.Transition#getIntervalleTemps <em>Intervalle Temps</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Intervalle Temps</em>' reference.
+	 * @param value the new value of the '<em>Intervalle Temps</em>' containment reference.
 	 * @see #getIntervalleTemps()
 	 * @generated
 	 */

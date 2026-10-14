@@ -61,8 +61,6 @@ public class PetriFactoryImpl extends EFactoryImpl implements PetriFactory {
 			return createPlace();
 		case PetriPackage.TRANSITION:
 			return createTransition();
-		case PetriPackage.ARC_PONDERE:
-			return createArcPondere();
 		case PetriPackage.ARC_PONDERE_ENTRANT:
 			return createArcPondereEntrant();
 		case PetriPackage.ARC_PONDERE_SORTANT:
@@ -107,17 +105,6 @@ public class PetriFactoryImpl extends EFactoryImpl implements PetriFactory {
 	public Transition createTransition() {
 		TransitionImpl transition = new TransitionImpl();
 		return transition;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public ArcPondere createArcPondere() {
-		ArcPondereImpl arcPondere = new ArcPondereImpl();
-		return arcPondere;
 	}
 
 	/**

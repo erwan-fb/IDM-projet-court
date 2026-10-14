@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petri:ReseauPetri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petri="http://petri">
+  <composants xsi:type="petri:Place" jetons="1" nom="P1"/>
+  <composants xsi:type="petri:Transition" nom="T1" arcsEntrants="//@composants.2" arcsSortants="//@composants.3">
+    <intervalleTemps/>
+  </composants>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.4" destination="//@composants.1"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.1" destination="//@composants.0"/>
+  <composants xsi:type="petri:Place" nom="P2"/>
+</petri:ReseauPetri>

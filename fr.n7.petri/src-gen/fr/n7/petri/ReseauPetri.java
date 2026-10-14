@@ -27,11 +27,13 @@ public interface ReseauPetri extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Composants</b></em>' containment reference list.
 	 * The list contents are of type {@link fr.n7.petri.Composant}.
+	 * It is bidirectional and its opposite is '{@link fr.n7.petri.Composant#getParent <em>Parent</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Composants</em>' containment reference list.
 	 * @see fr.n7.petri.PetriPackage#getReseauPetri_Composants()
-	 * @model containment="true"
+	 * @see fr.n7.petri.Composant#getParent
+	 * @model opposite="parent" containment="true"
 	 * @generated
 	 */
 	EList<Composant> getComposants();

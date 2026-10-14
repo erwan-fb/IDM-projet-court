@@ -4,7 +4,7 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="PetriGraph" domainClass="petri::ReseauPetri" enablePopupBars="true">
       <defaultLayer name="Default">
         <nodeMappings name="PNode" domainClass="petri::Place">
-          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="[jetons/]" sizeComputationExpression="12" labelPosition="node" resizeKind="NSEW" shape="ring">
+          <style xsi:type="style:BundledImageDescription" labelSize="12" labelExpression="[nom + ' :\n' + jetons/]" sizeComputationExpression="15" labelPosition="node" resizeKind="NSEW" shape="ring">
             <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
@@ -17,6 +17,22 @@
             <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_blue']"/>
           </style>
         </nodeMappings>
+        <edgeMappings name="APEEdge" semanticCandidatesExpression="aql:self.composants" sourceMapping="//@ownedViewpoints[name='PetriViewpoint']/@ownedRepresentations[name='PetriGraph']/@defaultLayer/@nodeMappings[name='PNode']" targetMapping="//@ownedViewpoints[name='PetriViewpoint']/@ownedRepresentations[name='PetriGraph']/@defaultLayer/@nodeMappings[name='TNode']" targetFinderExpression="aql:self.oclIsTypeOf(ArcPondereEntrant)" sourceFinderExpression="feature:source" domainClass="petri::ArcPondereEntrant" useDomainElement="true">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="ALSEdge" sourceMapping="//@ownedViewpoints[name='PetriViewpoint']/@ownedRepresentations[name='PetriGraph']/@defaultLayer/@nodeMappings[name='PNode']" targetMapping="//@ownedViewpoints[name='PetriViewpoint']/@ownedRepresentations[name='PetriGraph']/@defaultLayer/@nodeMappings[name='TNode']" targetFinderExpression="feature:destination" sourceFinderExpression="feature:source" domainClass="petri::ArcLectureSeule" useDomainElement="true">
+          <style sourceArrow="Dot" sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='dark_red']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
       </defaultLayer>
     </ownedRepresentations>
     <ownedJavaExtensions qualifiedClassName="fr.n7.petri.design.Services"/>

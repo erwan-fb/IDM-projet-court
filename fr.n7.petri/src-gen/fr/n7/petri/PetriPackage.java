@@ -113,13 +113,22 @@ public interface PetriPackage extends EPackage {
 	int COMPOSANT = 1;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int COMPOSANT__PARENT = 0;
+
+	/**
 	 * The number of structural features of the '<em>Composant</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int COMPOSANT_FEATURE_COUNT = 0;
+	int COMPOSANT_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Composant</em>' class.
@@ -139,6 +148,15 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 */
 	int PLACE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PLACE__PARENT = COMPOSANT__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Jetons</b></em>' attribute.
@@ -187,6 +205,15 @@ public interface PetriPackage extends EPackage {
 	int TRANSITION = 3;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TRANSITION__PARENT = COMPOSANT__PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Nom</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -196,7 +223,7 @@ public interface PetriPackage extends EPackage {
 	int TRANSITION__NOM = COMPOSANT_FEATURE_COUNT + 0;
 
 	/**
-	 * The feature id for the '<em><b>Intervalle Temps</b></em>' reference.
+	 * The feature id for the '<em><b>Intervalle Temps</b></em>' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -251,6 +278,15 @@ public interface PetriPackage extends EPackage {
 	int ARC_PONDERE = 4;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_PONDERE__PARENT = COMPOSANT__PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Ponderation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -286,6 +322,15 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 */
 	int ARC_PONDERE_ENTRANT = 5;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_PONDERE_ENTRANT__PARENT = ARC_PONDERE__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Ponderation</b></em>' attribute.
@@ -343,6 +388,15 @@ public interface PetriPackage extends EPackage {
 	int ARC_PONDERE_SORTANT = 6;
 
 	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_PONDERE_SORTANT__PARENT = ARC_PONDERE__PARENT;
+
+	/**
 	 * The feature id for the '<em><b>Ponderation</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -396,6 +450,15 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 */
 	int ARC_LECTURE_SEULE = 7;
+
+	/**
+	 * The feature id for the '<em><b>Parent</b></em>' container reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ARC_LECTURE_SEULE__PARENT = ARC_PONDERE_ENTRANT__PARENT;
 
 	/**
 	 * The feature id for the '<em><b>Ponderation</b></em>' attribute.
@@ -471,13 +534,22 @@ public interface PetriPackage extends EPackage {
 	int TEMPS__TEMPS_MAXIMUM = 1;
 
 	/**
+	 * The feature id for the '<em><b>Est Borne</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TEMPS__EST_BORNE = 2;
+
+	/**
 	 * The number of structural features of the '<em>Temps</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TEMPS_FEATURE_COUNT = 2;
+	int TEMPS_FEATURE_COUNT = 3;
 
 	/**
 	 * The number of operations of the '<em>Temps</em>' class.
@@ -529,6 +601,17 @@ public interface PetriPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getComposant();
+
+	/**
+	 * Returns the meta object for the container reference '{@link fr.n7.petri.Composant#getParent <em>Parent</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the container reference '<em>Parent</em>'.
+	 * @see fr.n7.petri.Composant#getParent()
+	 * @see #getComposant()
+	 * @generated
+	 */
+	EReference getComposant_Parent();
 
 	/**
 	 * Returns the meta object for class '{@link fr.n7.petri.Place <em>Place</em>}'.
@@ -584,10 +667,10 @@ public interface PetriPackage extends EPackage {
 	EAttribute getTransition_Nom();
 
 	/**
-	 * Returns the meta object for the reference '{@link fr.n7.petri.Transition#getIntervalleTemps <em>Intervalle Temps</em>}'.
+	 * Returns the meta object for the containment reference '{@link fr.n7.petri.Transition#getIntervalleTemps <em>Intervalle Temps</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Intervalle Temps</em>'.
+	 * @return the meta object for the containment reference '<em>Intervalle Temps</em>'.
 	 * @see fr.n7.petri.Transition#getIntervalleTemps()
 	 * @see #getTransition()
 	 * @generated
@@ -744,6 +827,17 @@ public interface PetriPackage extends EPackage {
 	EAttribute getTemps_TempsMaximum();
 
 	/**
+	 * Returns the meta object for the attribute '{@link fr.n7.petri.Temps#isEstBorne <em>Est Borne</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Est Borne</em>'.
+	 * @see fr.n7.petri.Temps#isEstBorne()
+	 * @see #getTemps()
+	 * @generated
+	 */
+	EAttribute getTemps_EstBorne();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -803,6 +897,14 @@ public interface PetriPackage extends EPackage {
 		EClass COMPOSANT = eINSTANCE.getComposant();
 
 		/**
+		 * The meta object literal for the '<em><b>Parent</b></em>' container reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference COMPOSANT__PARENT = eINSTANCE.getComposant_Parent();
+
+		/**
 		 * The meta object literal for the '{@link fr.n7.petri.impl.PlaceImpl <em>Place</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -847,7 +949,7 @@ public interface PetriPackage extends EPackage {
 		EAttribute TRANSITION__NOM = eINSTANCE.getTransition_Nom();
 
 		/**
-		 * The meta object literal for the '<em><b>Intervalle Temps</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Intervalle Temps</b></em>' containment reference feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
@@ -975,6 +1077,14 @@ public interface PetriPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute TEMPS__TEMPS_MAXIMUM = eINSTANCE.getTemps_TempsMaximum();
+
+		/**
+		 * The meta object literal for the '<em><b>Est Borne</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute TEMPS__EST_BORNE = eINSTANCE.getTemps_EstBorne();
 
 	}
 

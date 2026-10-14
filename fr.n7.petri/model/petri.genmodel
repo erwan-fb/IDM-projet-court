@@ -14,18 +14,20 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petri.ecore#//ReseauPetri/composants"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//ReseauPetri/nom"/>
     </genClasses>
-    <genClasses ecoreClass="petri.ecore#//Composant"/>
+    <genClasses image="false" ecoreClass="petri.ecore#//Composant">
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference petri.ecore#//Composant/parent"/>
+    </genClasses>
     <genClasses ecoreClass="petri.ecore#//Place">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Place/jetons"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Place/nom"/>
     </genClasses>
     <genClasses ecoreClass="petri.ecore#//Transition">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Transition/nom"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//Transition/intervalleTemps"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference petri.ecore#//Transition/intervalleTemps"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//Transition/arcsEntrants"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference petri.ecore#//Transition/arcsSortants"/>
     </genClasses>
-    <genClasses ecoreClass="petri.ecore#//ArcPondere">
+    <genClasses image="false" ecoreClass="petri.ecore#//ArcPondere">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//ArcPondere/ponderation"/>
     </genClasses>
     <genClasses ecoreClass="petri.ecore#//ArcPondereEntrant">
@@ -40,6 +42,7 @@
     <genClasses ecoreClass="petri.ecore#//Temps">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Temps/tempsMinimum"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Temps/tempsMaximum"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute petri.ecore#//Temps/estBorne"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

@@ -22,6 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link fr.n7.petri.impl.TempsImpl#getTempsMinimum <em>Temps Minimum</em>}</li>
  *   <li>{@link fr.n7.petri.impl.TempsImpl#getTempsMaximum <em>Temps Maximum</em>}</li>
+ *   <li>{@link fr.n7.petri.impl.TempsImpl#isEstBorne <em>Est Borne</em>}</li>
  * </ul>
  *
  * @generated
@@ -66,6 +67,26 @@ public class TempsImpl extends MinimalEObjectImpl.Container implements Temps {
 	 * @ordered
 	 */
 	protected int tempsMaximum = TEMPS_MAXIMUM_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #isEstBorne() <em>Est Borne</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isEstBorne()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final boolean EST_BORNE_EDEFAULT = true;
+
+	/**
+	 * The cached value of the '{@link #isEstBorne() <em>Est Borne</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #isEstBorne()
+	 * @generated
+	 * @ordered
+	 */
+	protected boolean estBorne = EST_BORNE_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -140,12 +161,38 @@ public class TempsImpl extends MinimalEObjectImpl.Container implements Temps {
 	 * @generated
 	 */
 	@Override
+	public boolean isEstBorne() {
+		return estBorne;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setEstBorne(boolean newEstBorne) {
+		boolean oldEstBorne = estBorne;
+		estBorne = newEstBorne;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.TEMPS__EST_BORNE, oldEstBorne,
+					estBorne));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
 		case PetriPackage.TEMPS__TEMPS_MINIMUM:
 			return getTempsMinimum();
 		case PetriPackage.TEMPS__TEMPS_MAXIMUM:
 			return getTempsMaximum();
+		case PetriPackage.TEMPS__EST_BORNE:
+			return isEstBorne();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -163,6 +210,9 @@ public class TempsImpl extends MinimalEObjectImpl.Container implements Temps {
 			return;
 		case PetriPackage.TEMPS__TEMPS_MAXIMUM:
 			setTempsMaximum((Integer) newValue);
+			return;
+		case PetriPackage.TEMPS__EST_BORNE:
+			setEstBorne((Boolean) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -182,6 +232,9 @@ public class TempsImpl extends MinimalEObjectImpl.Container implements Temps {
 		case PetriPackage.TEMPS__TEMPS_MAXIMUM:
 			setTempsMaximum(TEMPS_MAXIMUM_EDEFAULT);
 			return;
+		case PetriPackage.TEMPS__EST_BORNE:
+			setEstBorne(EST_BORNE_EDEFAULT);
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -198,6 +251,8 @@ public class TempsImpl extends MinimalEObjectImpl.Container implements Temps {
 			return tempsMinimum != TEMPS_MINIMUM_EDEFAULT;
 		case PetriPackage.TEMPS__TEMPS_MAXIMUM:
 			return tempsMaximum != TEMPS_MAXIMUM_EDEFAULT;
+		case PetriPackage.TEMPS__EST_BORNE:
+			return estBorne != EST_BORNE_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
 	}
@@ -217,6 +272,8 @@ public class TempsImpl extends MinimalEObjectImpl.Container implements Temps {
 		result.append(tempsMinimum);
 		result.append(", tempsMaximum: ");
 		result.append(tempsMaximum);
+		result.append(", estBorne: ");
+		result.append(estBorne);
 		result.append(')');
 		return result.toString();
 	}

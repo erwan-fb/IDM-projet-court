@@ -181,9 +181,6 @@ public class ReseauPetriItemProvider extends ItemProviderAdapter implements IEdi
 				PetriFactory.eINSTANCE.createTransition()));
 
 		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,
-				PetriFactory.eINSTANCE.createArcPondere()));
-
-		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,
 				PetriFactory.eINSTANCE.createArcPondereEntrant()));
 
 		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.RESEAU_PETRI__COMPOSANTS,

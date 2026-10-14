@@ -5,12 +5,16 @@ package fr.n7.petri.impl;
 import fr.n7.petri.ArcPondere;
 import fr.n7.petri.PetriPackage;
 
+import fr.n7.petri.ReseauPetri;
 import org.eclipse.emf.common.notify.Notification;
 
+import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.ecore.EClass;
 
+import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 
 /**
  * <!-- begin-user-doc -->
@@ -20,12 +24,13 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link fr.n7.petri.impl.ArcPondereImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link fr.n7.petri.impl.ArcPondereImpl#getPonderation <em>Ponderation</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ArcPondereImpl extends MinimalEObjectImpl.Container implements ArcPondere {
+public abstract class ArcPondereImpl extends MinimalEObjectImpl.Container implements ArcPondere {
 	/**
 	 * The default value of the '{@link #getPonderation() <em>Ponderation</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -71,6 +76,53 @@ public class ArcPondereImpl extends MinimalEObjectImpl.Container implements ArcP
 	 * @generated
 	 */
 	@Override
+	public ReseauPetri getParent() {
+		if (eContainerFeatureID() != PetriPackage.ARC_PONDERE__PARENT)
+			return null;
+		return (ReseauPetri) eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetParent(ReseauPetri newParent, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject) newParent, PetriPackage.ARC_PONDERE__PARENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setParent(ReseauPetri newParent) {
+		if (newParent != eInternalContainer()
+				|| (eContainerFeatureID() != PetriPackage.ARC_PONDERE__PARENT && newParent != null)) {
+			if (EcoreUtil.isAncestor(this, newParent))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newParent != null)
+				msgs = ((InternalEObject) newParent).eInverseAdd(this, PetriPackage.RESEAU_PETRI__COMPOSANTS,
+						ReseauPetri.class, msgs);
+			msgs = basicSetParent(newParent, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.ARC_PONDERE__PARENT, newParent,
+					newParent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public int getPonderation() {
 		return ponderation;
 	}
@@ -95,8 +147,55 @@ public class ArcPondereImpl extends MinimalEObjectImpl.Container implements ArcP
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case PetriPackage.ARC_PONDERE__PARENT:
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			return basicSetParent((ReseauPetri) otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case PetriPackage.ARC_PONDERE__PARENT:
+			return basicSetParent(null, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+		case PetriPackage.ARC_PONDERE__PARENT:
+			return eInternalContainer().eInverseRemove(this, PetriPackage.RESEAU_PETRI__COMPOSANTS, ReseauPetri.class,
+					msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case PetriPackage.ARC_PONDERE__PARENT:
+			return getParent();
 		case PetriPackage.ARC_PONDERE__PONDERATION:
 			return getPonderation();
 		}
@@ -111,6 +210,9 @@ public class ArcPondereImpl extends MinimalEObjectImpl.Container implements ArcP
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case PetriPackage.ARC_PONDERE__PARENT:
+			setParent((ReseauPetri) newValue);
+			return;
 		case PetriPackage.ARC_PONDERE__PONDERATION:
 			setPonderation((Integer) newValue);
 			return;
@@ -126,6 +228,9 @@ public class ArcPondereImpl extends MinimalEObjectImpl.Container implements ArcP
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case PetriPackage.ARC_PONDERE__PARENT:
+			setParent((ReseauPetri) null);
+			return;
 		case PetriPackage.ARC_PONDERE__PONDERATION:
 			setPonderation(PONDERATION_EDEFAULT);
 			return;
@@ -141,6 +246,8 @@ public class ArcPondereImpl extends MinimalEObjectImpl.Container implements ArcP
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case PetriPackage.ARC_PONDERE__PARENT:
+			return getParent() != null;
 		case PetriPackage.ARC_PONDERE__PONDERATION:
 			return ponderation != PONDERATION_EDEFAULT;
 		}

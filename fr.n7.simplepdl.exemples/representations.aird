@@ -33,7 +33,7 @@
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']"/>
         <target xmi:type="simplePDL:Process" href="autres_exemples.simplepdl#/"/>
       </ownedRepresentationDescriptors>
-      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_nmS3UMMbEfGQzOCeEX9J6w" name="diagrame" repPath="#_nmRpMMMbEfGQzOCeEX9J6w" changeId="1791467512403">
+      <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_nmS3UMMbEfGQzOCeEX9J6w" name="diagrame" repPath="#_nmRpMMMbEfGQzOCeEX9J6w" changeId="1791969534262">
         <description xmi:type="description_1:DiagramDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']"/>
         <target xmi:type="simplePDL:Process" href="tests/ignored/Bread.simplepdl#/"/>
       </ownedRepresentationDescriptors>
@@ -767,7 +767,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="autres_exemples.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="autres_exemples.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUPWwMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -775,7 +775,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/False_bienNommer.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/False_bienNommer.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUTBIMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -783,7 +783,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/False_bienNommer.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/False_bienNommer.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUToMMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -791,7 +791,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/False_bienNommer.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/False_bienNommer.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUToM8JjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -799,7 +799,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/True_bienNommer.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/True_bienNommer.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUUPQsJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -807,7 +807,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/True_bienNommer.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/True_bienNommer.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUU2UsJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -815,7 +815,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/True_bienNommer.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/True_bienNommer.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUVdYcJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -823,7 +823,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexePR.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexePR.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUWEcMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -831,7 +831,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexePR.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexePR.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUWEc8JjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -839,7 +839,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexePR.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexePR.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUWrgsJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -847,7 +847,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDP.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDP.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUXSksJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -855,7 +855,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDP.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDP.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUX5oMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -863,7 +863,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDP.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDP.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUX5o8JjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -871,7 +871,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDR.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDR.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUYgssJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -879,7 +879,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDR.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDR.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUZHwcJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -887,7 +887,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDR.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDR.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUZHxMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -895,7 +895,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleR.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleR.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUZu0cJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -903,7 +903,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleR.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleR.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUZu1MJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -911,7 +911,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleR.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleR.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUaV4cJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -919,7 +919,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleRL.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleRL.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUaV5MJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -927,7 +927,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleRL.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleRL.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUa88sJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -935,7 +935,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleRL.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleRL.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUa89cJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -943,7 +943,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWD.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWD.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUbkAsJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -951,7 +951,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWD.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWD.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUcLEcJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -959,7 +959,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWD.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWD.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUcLFMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -967,7 +967,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUcyIsJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -975,7 +975,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUdZMcJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -983,7 +983,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUdZNMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -991,7 +991,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS_pred-suc.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS_pred-suc.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUeAQsJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -999,7 +999,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS_pred-suc.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS_pred-suc.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUeARcJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1007,7 +1007,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS_pred-suc.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWS_pred-suc.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUenUsJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1015,7 +1015,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_R.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_R.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUfOYcJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1023,7 +1023,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_R.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_R.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUf1cMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1031,7 +1031,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_R.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_R.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUf1c8JjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1039,7 +1039,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_RL.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_RL.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUgcgsJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1047,7 +1047,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_RL.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_RL.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUgchcJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1055,7 +1055,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_RL.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_negative_RL.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUhDksJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1063,7 +1063,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_R.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_R.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUhqocJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1071,7 +1071,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_R.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_R.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUhqpMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1079,7 +1079,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_R.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_R.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUiRscJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1087,7 +1087,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_RL.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_RL.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUiRtMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1095,7 +1095,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_RL.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_RL.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUi4wMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1103,7 +1103,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_RL.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/quantite_nulle_RL.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUi4w8JjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1111,7 +1111,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/FinishToFinish.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/FinishToFinish.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUjf0sJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1119,7 +1119,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/FinishToFinish.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/FinishToFinish.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUjf1cJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1127,7 +1127,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/FinishToStart.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/FinishToStart.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUkG4cJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1135,7 +1135,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/FinishToStart.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/FinishToStart.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUkG5MJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1143,7 +1143,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/StartToFinish.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/StartToFinish.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUkG58JjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1151,7 +1151,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/StartToFinish.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/StartToFinish.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUkt8sJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1159,7 +1159,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/StartToStart.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/StartToStart.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUkt9cJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1167,7 +1167,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/StartToStart.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/StartToStart.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUlVAMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1175,7 +1175,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/SuperSimple.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/SuperSimple.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUlVA8JjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1183,7 +1183,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/TestRessource.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/TestRessource.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUlVBsJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1191,7 +1191,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUl8EcJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1199,7 +1199,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUl8FMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1207,7 +1207,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.2"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.2"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUl8F8JjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1215,7 +1215,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.3"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.3"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUmjIcJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1223,7 +1223,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.4"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.4"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUmjJMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1231,7 +1231,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.5"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.5"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUmjJ8JjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1239,7 +1239,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.6"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.6"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUnKMsJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1247,7 +1247,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.7"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.7"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUnKNcJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1255,7 +1255,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.15"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.15"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUnKOMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1263,7 +1263,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.16"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.16"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUnxQsJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1271,7 +1271,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.17"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.17"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUnxRcJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1279,7 +1279,7 @@
       <target xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.31"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="tests/ignored/Bread.simplepdl#//@processElements.31"/>
       <ownedStyle xmi:type="diagram:Ellipse" uid="_sUnxSMJjEfG749C1pDMu-g" labelSize="12" labelPosition="node" color="194,239,255">
-        <description xmi:type="style:EllipseNodeDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
+        <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
@@ -1358,7 +1358,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HR0N68McEfGQzOCeEX9J6w"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_HRk9UcMcEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HRk9UsMcEfGQzOCeEX9J6w" x="720" width="120" height="120"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HRk9UsMcEfGQzOCeEX9J6w" x="368" y="456" width="120" height="120"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_HRlkYMMcEfGQzOCeEX9J6w" type="2001" element="_HQDTUMMcEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_HRlkY8McEfGQzOCeEX9J6w" type="5002">
@@ -1369,7 +1369,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HR0N7sMcEfGQzOCeEX9J6w"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_HRlkYcMcEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HRlkYsMcEfGQzOCeEX9J6w" x="900" width="120" height="120"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_HRlkYsMcEfGQzOCeEX9J6w" x="659" y="297" width="120" height="120"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_HRlkZcMcEfGQzOCeEX9J6w" type="2001" element="_HQDTU8McEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_HRlkaMMcEfGQzOCeEX9J6w" type="5002">
@@ -2128,7 +2128,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hOIl-MMcEfGQzOCeEX9J6w"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_hOE7kcMcEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hOE7ksMcEfGQzOCeEX9J6w" x="832" width="120" height="120"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_hOE7ksMcEfGQzOCeEX9J6w" x="824" y="440" width="120" height="120"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_hOFiosMcEfGQzOCeEX9J6w" type="2001" element="_hNqr4MMcEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_hOFipcMcEfGQzOCeEX9J6w" type="5002">
@@ -2271,7 +2271,7 @@
             <layoutConstraint xmi:type="notation:Bounds" xmi:id="_qKrqR8McEfGQzOCeEX9J6w"/>
           </children>
           <styles xmi:type="notation:ShapeStyle" xmi:id="_me0cdsMcEfGQzOCeEX9J6w" fontName="Ubuntu"/>
-          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_me0cd8McEfGQzOCeEX9J6w" x="628" y="8" width="120" height="120"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_me0cd8McEfGQzOCeEX9J6w" x="681" y="178" width="120" height="120"/>
         </children>
         <children xmi:type="notation:Node" xmi:id="_me0cesMcEfGQzOCeEX9J6w" type="2001" element="_meK8McMcEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_me1DgMMcEfGQzOCeEX9J6w" type="5002">
@@ -2456,49 +2456,49 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_FO2bJMMdEfGQzOCeEX9J6w" type="4001" element="_FNnFAMMdEfGQzOCeEX9J6w" source="_HRk9UMMcEfGQzOCeEX9J6w" target="_HRlkYMMcEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_FO2bKMMdEfGQzOCeEX9J6w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO2bKcMdEfGQzOCeEX9J6w" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO2bKcMdEfGQzOCeEX9J6w" x="2" y="33"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FO2bKsMdEfGQzOCeEX9J6w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO2bK8MdEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO2bK8MdEfGQzOCeEX9J6w" x="5" y="-1"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FO2bLMMdEfGQzOCeEX9J6w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO2bLcMdEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO2bLcMdEfGQzOCeEX9J6w" x="3" y="-1"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_FO2bJcMdEfGQzOCeEX9J6w"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_FO2bJsMdEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FO2bJ8MdEfGQzOCeEX9J6w" points="[60, 0, -120, 0]$[120, 0, -60, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FO2bJ8MdEfGQzOCeEX9J6w" points="[60, -33, -231, 126]$[231, -127, -60, 32]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FO2bLsMdEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FO2bL8MdEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_FO3CMMMdEfGQzOCeEX9J6w" type="4001" element="_FNnFBcMdEfGQzOCeEX9J6w" source="_HRlkYMMcEfGQzOCeEX9J6w" target="_HRlkZcMcEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_FO3CNMMdEfGQzOCeEX9J6w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3CNcMdEfGQzOCeEX9J6w" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3CNcMdEfGQzOCeEX9J6w" x="8" y="-4"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FO3CNsMdEfGQzOCeEX9J6w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3CN8MdEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3CN8MdEfGQzOCeEX9J6w" x="-9" y="4"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FO3COMMdEfGQzOCeEX9J6w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3COcMdEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3COcMdEfGQzOCeEX9J6w" x="-10" y="4"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_FO3CMcMdEfGQzOCeEX9J6w"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_FO3CMsMdEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FO3CM8MdEfGQzOCeEX9J6w" points="[60, 0, -120, 0]$[120, 0, -60, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FO3CM8MdEfGQzOCeEX9J6w" points="[60, -43, -361, 254]$[361, -255, -60, 42]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FO3COsMdEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FO3CO8MdEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_FO3CPMMdEfGQzOCeEX9J6w" type="4001" element="_FNnsEsMdEfGQzOCeEX9J6w" source="_HRlkZcMcEfGQzOCeEX9J6w" target="_HRlkYMMcEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_FO3CQMMdEfGQzOCeEX9J6w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3CQcMdEfGQzOCeEX9J6w" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3CQcMdEfGQzOCeEX9J6w" x="-80" y="-4"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FO3CQsMdEfGQzOCeEX9J6w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3CQ8MdEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3CQ8MdEfGQzOCeEX9J6w" x="-44" y="-21"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FO3CRMMdEfGQzOCeEX9J6w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3CRcMdEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FO3CRcMdEfGQzOCeEX9J6w" x="-73" y="7"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_FO3CPcMdEfGQzOCeEX9J6w"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_FO3CPsMdEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FO3CP8MdEfGQzOCeEX9J6w" points="[-60, 0, 120, 0]$[-120, 0, 60, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FO3CP8MdEfGQzOCeEX9J6w" points="[-60, -10, 361, -307]$[-90, -15, 331, -312]$[-361, 240, 60, -57]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FO3CRsMdEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FO3CR8MdEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
         </edges>
@@ -3304,17 +3304,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_avW5wMMeEfGQzOCeEX9J6w" type="4001" element="_auf-IMMeEfGQzOCeEX9J6w" source="_hOCfUMMcEfGQzOCeEX9J6w" target="_FO2bJMMdEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_avW5xMMeEfGQzOCeEX9J6w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avW5xcMeEfGQzOCeEX9J6w" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avW5xcMeEfGQzOCeEX9J6w" x="5" y="-9"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_avW5xsMeEfGQzOCeEX9J6w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avW5x8MeEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avW5x8MeEfGQzOCeEX9J6w" x="-1" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_avW5yMMeEfGQzOCeEX9J6w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avW5ycMeEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avW5ycMeEfGQzOCeEX9J6w" x="-5" y="9"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_avW5wcMeEfGQzOCeEX9J6w"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_avW5wsMeEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_avW5w8MeEfGQzOCeEX9J6w" points="[60, -20, -478, 151]$[388, -124, -150, 47]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_avW5w8MeEfGQzOCeEX9J6w" points="[60, -8, -478, 163]$[276, -35, -262, 136]$[539, -171, 1, 0]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_avW5ysMeEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_avW5y8MeEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
         </edges>
@@ -3432,17 +3432,17 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_avYIAMMeEfGQzOCeEX9J6w" type="4001" element="_auhzWcMeEfGQzOCeEX9J6w" source="_hOE7kMMcEfGQzOCeEX9J6w" target="_FPIH8MMdEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_avYIBMMeEfGQzOCeEX9J6w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avYIBcMeEfGQzOCeEX9J6w" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avYIBcMeEfGQzOCeEX9J6w" y="-11"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_avYIBsMeEfGQzOCeEX9J6w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avYIB8MeEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avYIB8MeEfGQzOCeEX9J6w" x="-1" y="9"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_avYICMMeEfGQzOCeEX9J6w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avYICcMeEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_avYICcMeEfGQzOCeEX9J6w" x="-1" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_avYIAcMeEfGQzOCeEX9J6w"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_avYIAsMeEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_avYIA8MeEfGQzOCeEX9J6w" points="[60, 0, -4148, 0]$[4148, 0, -60, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_avYIA8MeEfGQzOCeEX9J6w" points="[60, -6, -4225, 365]$[4231, -367, -54, 4]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_avYu8MMeEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_avYu8cMeEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
         </edges>
@@ -3544,33 +3544,33 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_FdkhvsMfEfGQzOCeEX9J6w" type="4001" element="_FaupGsMfEfGQzOCeEX9J6w" source="_mezOVcMcEfGQzOCeEX9J6w" target="_HRk9UMMcEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_FdkhwsMfEfGQzOCeEX9J6w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdkhw8MfEfGQzOCeEX9J6w" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdkhw8MfEfGQzOCeEX9J6w" x="14" y="15"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FdkhxMMfEfGQzOCeEX9J6w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FdkhxcMfEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_FdkhxcMfEfGQzOCeEX9J6w" x="6" y="7"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_FdkhxsMfEfGQzOCeEX9J6w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdkhx8MfEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdkhx8MfEfGQzOCeEX9J6w" x="7" y="7"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_Fdkhv8MfEfGQzOCeEX9J6w"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_FdkhwMMfEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FdkhwcMfEfGQzOCeEX9J6w" points="[60, 16, -592, -164]$[592, 163, -60, -17]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FdkhwcMfEfGQzOCeEX9J6w" points="[28, 60, -272, -576]$[271, 576, -29, -60]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FdkhyMMfEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FdkhycMfEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_FdkhysMfEfGQzOCeEX9J6w" type="4001" element="_FavQIMMfEfGQzOCeEX9J6w" source="_mezOVcMcEfGQzOCeEX9J6w" target="_HRlkYMMcEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_FdkhzsMfEfGQzOCeEX9J6w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdkhz8MfEfGQzOCeEX9J6w" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdkhz8MfEfGQzOCeEX9J6w" x="-5" y="-10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Fdkh0MMfEfGQzOCeEX9J6w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdkh0cMfEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdkh0cMfEfGQzOCeEX9J6w" x="2" y="7"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Fdkh0sMfEfGQzOCeEX9J6w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdkh08MfEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdkh08MfEfGQzOCeEX9J6w" x="3" y="10"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_Fdkhy8MfEfGQzOCeEX9J6w"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_FdkhzMMfEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FdkhzcMfEfGQzOCeEX9J6w" points="[60, 12, -772, -168]$[772, 167, -60, -13]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_FdkhzcMfEfGQzOCeEX9J6w" points="[60, 48, -531, -429]$[531, 428, -60, -49]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Fdkh1MMfEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Fdkh1cMfEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
         </edges>
@@ -3736,33 +3736,33 @@
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_Fdr2fsMfEfGQzOCeEX9J6w" type="4001" element="_FaweT8MfEfGQzOCeEX9J6w" source="_me0cdcMcEfGQzOCeEX9J6w" target="_HRoArMMcEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_Fdr2gsMfEfGQzOCeEX9J6w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2g8MfEfGQzOCeEX9J6w" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2g8MfEfGQzOCeEX9J6w" x="1" y="-11"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Fdr2hMMfEfGQzOCeEX9J6w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2hcMfEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2hcMfEfGQzOCeEX9J6w" x="-1" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Fdr2hsMfEfGQzOCeEX9J6w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2h8MfEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2h8MfEfGQzOCeEX9J6w" y="9"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_Fdr2f8MfEfGQzOCeEX9J6w"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_Fdr2gMMfEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Fdr2gcMfEfGQzOCeEX9J6w" points="[60, -1, -3272, 7]$[3272, -8, -60, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Fdr2gcMfEfGQzOCeEX9J6w" points="[60, -4, -3219, 174]$[3219, -175, -60, 3]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Fdr2iMMfEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_Fdr2icMfEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
         </edges>
         <edges xmi:type="notation:Edge" xmi:id="_Fdr2isMfEfGQzOCeEX9J6w" type="4001" element="_FaxFUsMfEfGQzOCeEX9J6w" source="_me0cdcMcEfGQzOCeEX9J6w" target="_HRoAscMcEfGQzOCeEX9J6w">
           <children xmi:type="notation:Node" xmi:id="_Fdr2jsMfEfGQzOCeEX9J6w" type="6001">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2j8MfEfGQzOCeEX9J6w" y="-10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2j8MfEfGQzOCeEX9J6w" x="1" y="-11"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Fdr2kMMfEfGQzOCeEX9J6w" type="6002">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2kcMfEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2kcMfEfGQzOCeEX9J6w" x="-1" y="10"/>
           </children>
           <children xmi:type="notation:Node" xmi:id="_Fdr2ksMfEfGQzOCeEX9J6w" type="6003">
-            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2k8MfEfGQzOCeEX9J6w" y="10"/>
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_Fdr2k8MfEfGQzOCeEX9J6w" y="9"/>
           </children>
           <styles xmi:type="notation:ConnectorStyle" xmi:id="_Fdr2i8MfEfGQzOCeEX9J6w"/>
           <styles xmi:type="notation:FontStyle" xmi:id="_Fdr2jMMfEfGQzOCeEX9J6w" fontName="Ubuntu" fontHeight="12"/>
-          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Fdr2jcMfEfGQzOCeEX9J6w" points="[60, -1, -3452, 7]$[3452, -8, -60, 0]"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_Fdr2jcMfEfGQzOCeEX9J6w" points="[60, -4, -3399, 174]$[3399, -175, -60, 3]"/>
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FdsdgMMfEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_FdsdgcMfEfGQzOCeEX9J6w" id="(0.5,0.5)"/>
         </edges>
@@ -4148,6 +4148,9 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_HQCsQMMcEfGQzOCeEX9J6w" name="BienNommerWD1" tooltipText="BienNommerWD1" outgoingEdges="_FNnFAMMdEfGQzOCeEX9J6w" incomingEdges="_FaupGsMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/True_bienNommer.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/True_bienNommer.simplepdl#//@processElements.0"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" uid="_HQCsQcMcEfGQzOCeEX9J6w" labelSize="12" labelPosition="node" color="114,73,110">
         <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
@@ -4156,6 +4159,9 @@
     <ownedDiagramElements xmi:type="diagram:DNode" uid="_HQDTUMMcEfGQzOCeEX9J6w" name="BienNommerWD2" tooltipText="BienNommerWD2" outgoingEdges="_FNnFBcMdEfGQzOCeEX9J6w" incomingEdges="_FNnFAMMdEfGQzOCeEX9J6w _FNnsEsMdEfGQzOCeEX9J6w _FavQIMMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/True_bienNommer.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/True_bienNommer.simplepdl#//@processElements.1"/>
+      <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
+      <arrangeConstraints>KEEP_SIZE</arrangeConstraints>
+      <arrangeConstraints>KEEP_RATIO</arrangeConstraints>
       <ownedStyle xmi:type="diagram:Square" uid="_HQDTUcMcEfGQzOCeEX9J6w" labelSize="12" labelPosition="node" color="114,73,110">
         <description xmi:type="style:SquareDescription" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']/@style"/>
       </ownedStyle>
@@ -4199,7 +4205,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_HQGWoMMcEfGQzOCeEX9J6w" name="BienNommer" tooltipText="BienNommer" outgoingEdges="_FNoTIsMdEfGQzOCeEX9J6w" incomingEdges="_FavQL8MfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_HQGWoMMcEfGQzOCeEX9J6w" name="DoublonWDP" tooltipText="DoublonWDP" outgoingEdges="_FNoTIsMdEfGQzOCeEX9J6w" incomingEdges="_FavQL8MfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDP.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDP.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Square" uid="_HQGWocMcEfGQzOCeEX9J6w" labelSize="12" labelPosition="node" color="114,73,110">
@@ -4223,7 +4229,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_HQKoEsMcEfGQzOCeEX9J6w" name="BienNommer" tooltipText="BienNommer" outgoingEdges="_FNrWecMdEfGQzOCeEX9J6w" incomingEdges="_Fav3MMMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_HQKoEsMcEfGQzOCeEX9J6w" name="DoublonWDR" tooltipText="DoublonWDR" outgoingEdges="_FNrWecMdEfGQzOCeEX9J6w" incomingEdges="_Fav3MMMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDR.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_complexeWDR.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Square" uid="_HQLPIMMcEfGQzOCeEX9J6w" labelSize="12" labelPosition="node" color="114,73,110">
@@ -4295,7 +4301,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_HQRVysMcEfGQzOCeEX9J6w" name="BienNommerWD1" tooltipText="BienNommerWD1" outgoingEdges="_FNyrPsMdEfGQzOCeEX9J6w" incomingEdges="_FaweT8MfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_HQRVysMcEfGQzOCeEX9J6w" name="DoublonWD" tooltipText="DoublonWD" outgoingEdges="_FNyrPsMdEfGQzOCeEX9J6w" incomingEdges="_FaweT8MfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWD.simplepdl#//@processElements.0"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWD.simplepdl#//@processElements.0"/>
       <ownedStyle xmi:type="diagram:Square" uid="_HQRVy8McEfGQzOCeEX9J6w" labelSize="12" labelPosition="node" color="114,73,110">
@@ -4303,7 +4309,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='WDNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_HQR80MMcEfGQzOCeEX9J6w" name="BienNommerWD1" tooltipText="BienNommerWD1" outgoingEdges="_FNzSQMMdEfGQzOCeEX9J6w" incomingEdges="_FNyrPsMdEfGQzOCeEX9J6w _FNz5VMMdEfGQzOCeEX9J6w _FaxFUsMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_HQR80MMcEfGQzOCeEX9J6w" name="DoublonWD" tooltipText="DoublonWD" outgoingEdges="_FNzSQMMdEfGQzOCeEX9J6w" incomingEdges="_FNyrPsMdEfGQzOCeEX9J6w _FNz5VMMdEfGQzOCeEX9J6w _FaxFUsMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWD.simplepdl#//@processElements.1"/>
       <semanticElements xmi:type="simplePDL:WorkDefinition" href="syntaxe_exemple/doublon_simpleWD.simplepdl#//@processElements.1"/>
       <ownedStyle xmi:type="diagram:Square" uid="_HQR80cMcEfGQzOCeEX9J6w" labelSize="12" labelPosition="node" color="114,73,110">
@@ -4772,7 +4778,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='GDNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meIf8sMcEfGQzOCeEX9J6w" name="BienNommerR1" tooltipText="BienNommerR1" outgoingEdges="_FaupEMMfEfGQzOCeEX9J6w _FaupFcMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meIf8sMcEfGQzOCeEX9J6w" name="mal nommer_R1" tooltipText="mal nommer_R1" outgoingEdges="_FaupEMMfEfGQzOCeEX9J6w _FaupFcMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:Ressource" href="syntaxe_exemple/False_bienNommer.simplepdl#//@processElements.7"/>
       <semanticElements xmi:type="simplePDL:Ressource" href="syntaxe_exemple/False_bienNommer.simplepdl#//@processElements.7"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -4794,7 +4800,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='RNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meJuEcMcEfGQzOCeEX9J6w" name="BienNommer" tooltipText="BienNommer" outgoingEdges="_FavQJcMfEfGQzOCeEX9J6w _FavQKsMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meJuEcMcEfGQzOCeEX9J6w" name="DoublonPR" tooltipText="DoublonPR" outgoingEdges="_FavQJcMfEfGQzOCeEX9J6w _FavQKsMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:Ressource" href="syntaxe_exemple/doublon_complexePR.simplepdl#//@processElements.7"/>
       <semanticElements xmi:type="simplePDL:Ressource" href="syntaxe_exemple/doublon_complexePR.simplepdl#//@processElements.7"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -4816,7 +4822,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='RNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meJuE8McEfGQzOCeEX9J6w" name="BienNommer" tooltipText="BienNommer" outgoingEdges="_Fav3MMMfEfGQzOCeEX9J6w _Fav3NcMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meJuE8McEfGQzOCeEX9J6w" name="DoublonWDR" tooltipText="DoublonWDR" outgoingEdges="_Fav3MMMfEfGQzOCeEX9J6w _Fav3NcMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:Ressource" href="syntaxe_exemple/doublon_complexeWDR.simplepdl#//@processElements.7"/>
       <semanticElements xmi:type="simplePDL:Ressource" href="syntaxe_exemple/doublon_complexeWDR.simplepdl#//@processElements.7"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -4827,7 +4833,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='RNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meKVIMMcEfGQzOCeEX9J6w" name="BienNommerR1" tooltipText="BienNommerR1" outgoingEdges="_Fav3OsMfEfGQzOCeEX9J6w _FaweQMMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meKVIMMcEfGQzOCeEX9J6w" name="DoublonR" tooltipText="DoublonR" outgoingEdges="_Fav3OsMfEfGQzOCeEX9J6w _FaweQMMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:Ressource" href="syntaxe_exemple/doublon_simpleR.simplepdl#//@processElements.7"/>
       <semanticElements xmi:type="simplePDL:Ressource" href="syntaxe_exemple/doublon_simpleR.simplepdl#//@processElements.7"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -4838,7 +4844,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='RNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meKVIcMcEfGQzOCeEX9J6w" name="BienNommerR1" tooltipText="BienNommerR1" width="12" height="12" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meKVIcMcEfGQzOCeEX9J6w" name="DoublonR" tooltipText="DoublonR" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:Ressource" href="syntaxe_exemple/doublon_simpleR.simplepdl#//@processElements.8"/>
       <semanticElements xmi:type="simplePDL:Ressource" href="syntaxe_exemple/doublon_simpleR.simplepdl#//@processElements.8"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -4884,7 +4890,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='RNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meLjQcMcEfGQzOCeEX9J6w" name="BienNommerR1" tooltipText="BienNommerR1" outgoingEdges="_FaxFa8MfEfGQzOCeEX9J6w _FaxFcMMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meLjQcMcEfGQzOCeEX9J6w" name="QuantiteNeg" tooltipText="QuantiteNeg" outgoingEdges="_FaxFa8MfEfGQzOCeEX9J6w _FaxFcMMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:Ressource" href="syntaxe_exemple/quantite_negative_R.simplepdl#//@processElements.7"/>
       <semanticElements xmi:type="simplePDL:Ressource" href="syntaxe_exemple/quantite_negative_R.simplepdl#//@processElements.7"/>
       <ownedStyle xmi:type="diagram:Square" uid="_qKe15MMcEfGQzOCeEX9J6w" labelSize="12" labelPosition="node" color="77,137,20">
@@ -4900,7 +4906,7 @@
       </ownedStyle>
       <actualMapping xmi:type="description_1:NodeMapping" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']/@ownedRepresentations[name='ProcessDiagram']/@defaultLayer/@nodeMappings[name='RNode']"/>
     </ownedDiagramElements>
-    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meLjQ8McEfGQzOCeEX9J6w" name="BienNommerR1" tooltipText="BienNommerR1" outgoingEdges="_FaxsZMMfEfGQzOCeEX9J6w _FaxsacMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
+    <ownedDiagramElements xmi:type="diagram:DNode" uid="_meLjQ8McEfGQzOCeEX9J6w" name="QuantiteNulle" tooltipText="QuantiteNulle" outgoingEdges="_FaxsZMMfEfGQzOCeEX9J6w _FaxsacMfEfGQzOCeEX9J6w" width="12" height="12" resizeKind="NSEW">
       <target xmi:type="simplePDL:Ressource" href="syntaxe_exemple/quantite_nulle_R.simplepdl#//@processElements.7"/>
       <semanticElements xmi:type="simplePDL:Ressource" href="syntaxe_exemple/quantite_nulle_R.simplepdl#//@processElements.7"/>
       <ownedStyle xmi:type="diagram:Square" uid="_qKe16MMcEfGQzOCeEX9J6w" labelSize="12" labelPosition="node" color="77,137,20">

@@ -55,6 +55,7 @@ public class TempsItemProvider extends ItemProviderAdapter implements IEditingDo
 
 			addTempsMinimumPropertyDescriptor(object);
 			addTempsMaximumPropertyDescriptor(object);
+			addEstBornePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -89,6 +90,21 @@ public class TempsItemProvider extends ItemProviderAdapter implements IEditingDo
 								"_UI_Temps_type"),
 						PetriPackage.Literals.TEMPS__TEMPS_MAXIMUM, true, false, false,
 						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Est Borne feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addEstBornePropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Temps_estBorne_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Temps_estBorne_feature", "_UI_Temps_type"),
+						PetriPackage.Literals.TEMPS__EST_BORNE, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -138,6 +154,7 @@ public class TempsItemProvider extends ItemProviderAdapter implements IEditingDo
 		switch (notification.getFeatureID(Temps.class)) {
 		case PetriPackage.TEMPS__TEMPS_MINIMUM:
 		case PetriPackage.TEMPS__TEMPS_MAXIMUM:
+		case PetriPackage.TEMPS__EST_BORNE:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}

@@ -13,6 +13,7 @@ import fr.n7.petri.Temps;
 import fr.n7.petri.Transition;
 import fr.n7.petri.util.PetriSwitch;
 
+
 /**
  * Réalise la validation d'un EObject issu de SimplePDL (en théorie, d'un process).
  * Cet classe visite le modèle et utilise les caseXXX pour rediriger l'algo vers la
@@ -70,7 +71,7 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 	 */
 	@Override
 	public Boolean caseReseauPetri(fr.n7.petri.ReseauPetri object) {
-		// Contraintes sur process
+		// Contraintes sur le nom
 		this.result.recordIfFailed(
 				object.getNom() != null && object.getNom().matches(IDENT_REGEX), 
 				object, 
@@ -107,6 +108,30 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 	 */
 	@Override
 	public Boolean casePlace(Place object) {
+		// Contraintes sur le nom
+		this.result.recordIfFailed(
+				object.getNom() != null && object.getNom().matches(IDENT_REGEX), 
+				object, 
+				"Le nom de la place ne respecte pas les conventions Java");
+		//Non Duplication des noms
+		/**
+		this.result.recordIfFailed(
+				object.getParent().getComposants().stream()
+				.filter(p -> p.eClass().getClassifierID() == SimplePDLPackage.WORK_DEFINITION)
+				.allMatch(pe -> !((WorkDefinition)pe).getNom().equals(object.getNom()) || pe.equals(object)), 
+				object, 
+				"Le nom de la WorkDefinition est le même qu'une autre WorkDefinition");
+		this.result.recordIfFailed(
+				object.getParent().getComposants().stream()
+				.filter(p -> p.eClass().getClassifierID() == SimplePDLPackage.RESSOURCE)
+				.allMatch(pe -> !((Ressource)pe).getNom().equals(object.getNom())), 
+				object, 
+				"Le nom de la WorkDefinition est le même que celui d'une Ressource");
+		this.result.recordIfFailed(
+				!object.getNom().equals(object.getParent().getNom()), 
+						object, 
+				"Le nom de la WorkDefinition est le même que celui du Process");
+		*/
 		return null;
 	}
 	
@@ -118,7 +143,11 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 	 */
 	@Override
 	public Boolean caseTransition(Transition object) {
-		
+		// Contraintes sur le nom
+		this.result.recordIfFailed(
+				object.getNom() != null && object.getNom().matches(IDENT_REGEX), 
+				object, 
+				"Le nom de la transition ne respecte pas les conventions Java.");
 		// Visite
 		if (object.getIntervalleTemps() != null) {
 			this.doSwitch(object.getIntervalleTemps());
@@ -127,18 +156,23 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 	}
 	
 	/**
-	 * Méthode appelée lorsque l'objet visité est une ArcPondere.
+	 * Méthode appelée lorsque l'objet visité est un ArcPondere.
 	 * @param object élément visité
 	 * @return résultat de validation (null ici, ce qui permet de poursuivre la visite
 	 * vers les classes parentes, le cas échéant)
 	 */
 	@Override
 	public Boolean caseArcPondere(ArcPondere object) {
+		// Contraintes sur la podération
+		this.result.recordIfFailed(
+				object.getPonderation() <= 0, 
+				object, 
+				"La pondération de l'arc est négative ou nulle, ce qui est impossible.");
 		return null;
 	}
 	
 	/**
-	 * Méthode appelée lorsque l'objet visité est une ArcPondereEntrant.
+	 * Méthode appelée lorsque l'objet visité est un ArcPondereEntrant.
 	 * @param object élément visité
 	 * @return résultat de validation (null ici, ce qui permet de poursuivre la visite
 	 * vers les classes parentes, le cas échéant)
@@ -149,7 +183,7 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 	}
 	
 	/**
-	 * Méthode appelée lorsque l'objet visité est une ArcPondereSortant.
+	 * Méthode appelée lorsque l'objet visité est un ArcPondereSortant.
 	 * @param object élément visité
 	 * @return résultat de validation (null ici, ce qui permet de poursuivre la visite
 	 * vers les classes parentes, le cas échéant)
@@ -160,7 +194,7 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 	}
 	
 	/**
-	 * Méthode appelée lorsque l'objet visité est une ArcPondere.
+	 * Méthode appelée lorsque l'objet visité est un ArcLectureSeule.
 	 * @param object élément visité
 	 * @return résultat de validation (null ici, ce qui permet de poursuivre la visite
 	 * vers les classes parentes, le cas échéant)
@@ -171,13 +205,23 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 	}
 	
 	/**
-	 * Méthode appelée lorsque l'objet visité est une ArcPondere.
+	 * Méthode appelée lorsque l'objet visité est un intervalle de Temps.
 	 * @param object élément visité
 	 * @return résultat de validation (null ici, ce qui permet de poursuivre la visite
 	 * vers les classes parentes, le cas échéant)
 	 */
 	@Override
 	public Boolean caseTemps(Temps object) {
+		// Contraintes sur le temps minimum
+		this.result.recordIfFailed(
+				object.getTempsMinimum() < 0, 
+				object, 
+				"Le temps minimum est négatif, ce qui est impossible.");
+		// Contraintes sur la podération
+		this.result.recordIfFailed(
+				object.getTempsMaximum() <= 0, 
+				object, 
+				"Le temps maximum est négatif, ce qui est impossible.");
 		return null;
 	}
 	

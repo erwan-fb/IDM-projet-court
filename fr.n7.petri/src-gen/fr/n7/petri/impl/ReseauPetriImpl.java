@@ -18,8 +18,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentWithInverseEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -94,8 +93,8 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 	@Override
 	public EList<Composant> getComposants() {
 		if (composants == null) {
-			composants = new EObjectContainmentEList<Composant>(Composant.class, this,
-					PetriPackage.RESEAU_PETRI__COMPOSANTS);
+			composants = new EObjectContainmentWithInverseEList<Composant>(Composant.class, this,
+					PetriPackage.RESEAU_PETRI__COMPOSANTS, PetriPackage.COMPOSANT__PARENT);
 		}
 		return composants;
 	}
@@ -121,6 +120,21 @@ public class ReseauPetriImpl extends MinimalEObjectImpl.Container implements Res
 		nom = newNom;
 		if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.RESEAU_PETRI__NOM, oldNom, nom));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@SuppressWarnings("unchecked")
+	@Override
+	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case PetriPackage.RESEAU_PETRI__COMPOSANTS:
+			return ((InternalEList<InternalEObject>) (InternalEList<?>) getComposants()).basicAdd(otherEnd, msgs);
+		}
+		return super.eInverseAdd(otherEnd, featureID, msgs);
 	}
 
 	/**

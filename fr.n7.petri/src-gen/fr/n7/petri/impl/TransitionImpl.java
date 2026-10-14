@@ -5,9 +5,9 @@ package fr.n7.petri.impl;
 import fr.n7.petri.ArcPondereEntrant;
 import fr.n7.petri.ArcPondereSortant;
 import fr.n7.petri.PetriPackage;
+import fr.n7.petri.ReseauPetri;
 import fr.n7.petri.Temps;
 import fr.n7.petri.Transition;
-
 import java.util.Collection;
 import org.eclipse.emf.common.notify.Notification;
 
@@ -19,6 +19,7 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 import org.eclipse.emf.ecore.util.EObjectWithInverseResolvingEList;
+import org.eclipse.emf.ecore.util.EcoreUtil;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -29,6 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link fr.n7.petri.impl.TransitionImpl#getParent <em>Parent</em>}</li>
  *   <li>{@link fr.n7.petri.impl.TransitionImpl#getNom <em>Nom</em>}</li>
  *   <li>{@link fr.n7.petri.impl.TransitionImpl#getIntervalleTemps <em>Intervalle Temps</em>}</li>
  *   <li>{@link fr.n7.petri.impl.TransitionImpl#getArcsEntrants <em>Arcs Entrants</em>}</li>
@@ -59,7 +61,7 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	protected String nom = NOM_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getIntervalleTemps() <em>Intervalle Temps</em>}' reference.
+	 * The cached value of the '{@link #getIntervalleTemps() <em>Intervalle Temps</em>}' containment reference.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getIntervalleTemps()
@@ -113,6 +115,53 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * @generated
 	 */
 	@Override
+	public ReseauPetri getParent() {
+		if (eContainerFeatureID() != PetriPackage.TRANSITION__PARENT)
+			return null;
+		return (ReseauPetri) eInternalContainer();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public NotificationChain basicSetParent(ReseauPetri newParent, NotificationChain msgs) {
+		msgs = eBasicSetContainer((InternalEObject) newParent, PetriPackage.TRANSITION__PARENT, msgs);
+		return msgs;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public void setParent(ReseauPetri newParent) {
+		if (newParent != eInternalContainer()
+				|| (eContainerFeatureID() != PetriPackage.TRANSITION__PARENT && newParent != null)) {
+			if (EcoreUtil.isAncestor(this, newParent))
+				throw new IllegalArgumentException("Recursive containment not allowed for " + toString());
+			NotificationChain msgs = null;
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			if (newParent != null)
+				msgs = ((InternalEObject) newParent).eInverseAdd(this, PetriPackage.RESEAU_PETRI__COMPOSANTS,
+						ReseauPetri.class, msgs);
+			msgs = basicSetParent(newParent, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.TRANSITION__PARENT, newParent,
+					newParent));
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public String getNom() {
 		return nom;
 	}
@@ -137,15 +186,6 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 */
 	@Override
 	public Temps getIntervalleTemps() {
-		if (intervalleTemps != null && intervalleTemps.eIsProxy()) {
-			InternalEObject oldIntervalleTemps = (InternalEObject) intervalleTemps;
-			intervalleTemps = (Temps) eResolveProxy(oldIntervalleTemps);
-			if (intervalleTemps != oldIntervalleTemps) {
-				if (eNotificationRequired())
-					eNotify(new ENotificationImpl(this, Notification.RESOLVE, PetriPackage.TRANSITION__INTERVALLE_TEMPS,
-							oldIntervalleTemps, intervalleTemps));
-			}
-		}
 		return intervalleTemps;
 	}
 
@@ -154,8 +194,18 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public Temps basicGetIntervalleTemps() {
-		return intervalleTemps;
+	public NotificationChain basicSetIntervalleTemps(Temps newIntervalleTemps, NotificationChain msgs) {
+		Temps oldIntervalleTemps = intervalleTemps;
+		intervalleTemps = newIntervalleTemps;
+		if (eNotificationRequired()) {
+			ENotificationImpl notification = new ENotificationImpl(this, Notification.SET,
+					PetriPackage.TRANSITION__INTERVALLE_TEMPS, oldIntervalleTemps, newIntervalleTemps);
+			if (msgs == null)
+				msgs = notification;
+			else
+				msgs.add(notification);
+		}
+		return msgs;
 	}
 
 	/**
@@ -165,11 +215,20 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 */
 	@Override
 	public void setIntervalleTemps(Temps newIntervalleTemps) {
-		Temps oldIntervalleTemps = intervalleTemps;
-		intervalleTemps = newIntervalleTemps;
-		if (eNotificationRequired())
+		if (newIntervalleTemps != intervalleTemps) {
+			NotificationChain msgs = null;
+			if (intervalleTemps != null)
+				msgs = ((InternalEObject) intervalleTemps).eInverseRemove(this,
+						EOPPOSITE_FEATURE_BASE - PetriPackage.TRANSITION__INTERVALLE_TEMPS, null, msgs);
+			if (newIntervalleTemps != null)
+				msgs = ((InternalEObject) newIntervalleTemps).eInverseAdd(this,
+						EOPPOSITE_FEATURE_BASE - PetriPackage.TRANSITION__INTERVALLE_TEMPS, null, msgs);
+			msgs = basicSetIntervalleTemps(newIntervalleTemps, msgs);
+			if (msgs != null)
+				msgs.dispatch();
+		} else if (eNotificationRequired())
 			eNotify(new ENotificationImpl(this, Notification.SET, PetriPackage.TRANSITION__INTERVALLE_TEMPS,
-					oldIntervalleTemps, intervalleTemps));
+					newIntervalleTemps, newIntervalleTemps));
 	}
 
 	/**
@@ -209,6 +268,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public NotificationChain eInverseAdd(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+		case PetriPackage.TRANSITION__PARENT:
+			if (eInternalContainer() != null)
+				msgs = eBasicRemoveFromContainer(msgs);
+			return basicSetParent((ReseauPetri) otherEnd, msgs);
 		case PetriPackage.TRANSITION__ARCS_ENTRANTS:
 			return ((InternalEList<InternalEObject>) (InternalEList<?>) getArcsEntrants()).basicAdd(otherEnd, msgs);
 		case PetriPackage.TRANSITION__ARCS_SORTANTS:
@@ -225,6 +288,10 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
+		case PetriPackage.TRANSITION__PARENT:
+			return basicSetParent(null, msgs);
+		case PetriPackage.TRANSITION__INTERVALLE_TEMPS:
+			return basicSetIntervalleTemps(null, msgs);
 		case PetriPackage.TRANSITION__ARCS_ENTRANTS:
 			return ((InternalEList<?>) getArcsEntrants()).basicRemove(otherEnd, msgs);
 		case PetriPackage.TRANSITION__ARCS_SORTANTS:
@@ -239,14 +306,29 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	 * @generated
 	 */
 	@Override
+	public NotificationChain eBasicRemoveFromContainerFeature(NotificationChain msgs) {
+		switch (eContainerFeatureID()) {
+		case PetriPackage.TRANSITION__PARENT:
+			return eInternalContainer().eInverseRemove(this, PetriPackage.RESEAU_PETRI__COMPOSANTS, ReseauPetri.class,
+					msgs);
+		}
+		return super.eBasicRemoveFromContainerFeature(msgs);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
+		case PetriPackage.TRANSITION__PARENT:
+			return getParent();
 		case PetriPackage.TRANSITION__NOM:
 			return getNom();
 		case PetriPackage.TRANSITION__INTERVALLE_TEMPS:
-			if (resolve)
-				return getIntervalleTemps();
-			return basicGetIntervalleTemps();
+			return getIntervalleTemps();
 		case PetriPackage.TRANSITION__ARCS_ENTRANTS:
 			return getArcsEntrants();
 		case PetriPackage.TRANSITION__ARCS_SORTANTS:
@@ -264,6 +346,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
+		case PetriPackage.TRANSITION__PARENT:
+			setParent((ReseauPetri) newValue);
+			return;
 		case PetriPackage.TRANSITION__NOM:
 			setNom((String) newValue);
 			return;
@@ -290,6 +375,9 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
+		case PetriPackage.TRANSITION__PARENT:
+			setParent((ReseauPetri) null);
+			return;
 		case PetriPackage.TRANSITION__NOM:
 			setNom(NOM_EDEFAULT);
 			return;
@@ -314,6 +402,8 @@ public class TransitionImpl extends MinimalEObjectImpl.Container implements Tran
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
+		case PetriPackage.TRANSITION__PARENT:
+			return getParent() != null;
 		case PetriPackage.TRANSITION__NOM:
 			return NOM_EDEFAULT == null ? nom != null : !NOM_EDEFAULT.equals(nom);
 		case PetriPackage.TRANSITION__INTERVALLE_TEMPS:

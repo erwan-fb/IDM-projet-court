@@ -13,7 +13,6 @@ import fr.n7.petri.Place;
 import fr.n7.petri.ReseauPetri;
 import fr.n7.petri.Temps;
 import fr.n7.petri.Transition;
-
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
@@ -193,6 +192,16 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 	@Override
 	public EClass getComposant() {
 		return composantEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public EReference getComposant_Parent() {
+		return (EReference) composantEClass.getEStructuralFeatures().get(0);
 	}
 
 	/**
@@ -401,6 +410,16 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 	 * @generated
 	 */
 	@Override
+	public EAttribute getTemps_EstBorne() {
+		return (EAttribute) tempsEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
 	public PetriFactory getPetriFactory() {
 		return (PetriFactory) getEFactoryInstance();
 	}
@@ -430,6 +449,7 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		createEAttribute(reseauPetriEClass, RESEAU_PETRI__NOM);
 
 		composantEClass = createEClass(COMPOSANT);
+		createEReference(composantEClass, COMPOSANT__PARENT);
 
 		placeEClass = createEClass(PLACE);
 		createEAttribute(placeEClass, PLACE__JETONS);
@@ -457,6 +477,7 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		tempsEClass = createEClass(TEMPS);
 		createEAttribute(tempsEClass, TEMPS__TEMPS_MINIMUM);
 		createEAttribute(tempsEClass, TEMPS__TEMPS_MAXIMUM);
+		createEAttribute(tempsEClass, TEMPS__EST_BORNE);
 	}
 
 	/**
@@ -498,14 +519,17 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		// Initialize classes, features, and operations; add parameters
 		initEClass(reseauPetriEClass, ReseauPetri.class, "ReseauPetri", !IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
-		initEReference(getReseauPetri_Composants(), this.getComposant(), null, "composants", null, 0, -1,
-				ReseauPetri.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+		initEReference(getReseauPetri_Composants(), this.getComposant(), this.getComposant_Parent(), "composants", null,
+				0, -1, ReseauPetri.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getReseauPetri_Nom(), ecorePackage.getEString(), "nom", null, 1, 1, ReseauPetri.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(composantEClass, Composant.class, "Composant", IS_ABSTRACT, IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getComposant_Parent(), this.getReseauPetri(), this.getReseauPetri_Composants(), "parent", null,
+				0, 1, Composant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(placeEClass, Place.class, "Place", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getPlace_Jetons(), ecorePackage.getEInt(), "jetons", null, 1, 1, Place.class, !IS_TRANSIENT,
@@ -518,7 +542,7 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		initEAttribute(getTransition_Nom(), ecorePackage.getEString(), "nom", null, 1, 1, Transition.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_IntervalleTemps(), this.getTemps(), null, "intervalleTemps", null, 0, 1,
-				Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES,
+				Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
 				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEReference(getTransition_ArcsEntrants(), this.getArcPondereEntrant(),
 				this.getArcPondereEntrant_Destination(), "arcsEntrants", null, 1, -1, Transition.class, !IS_TRANSIENT,
@@ -528,7 +552,7 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 				"arcsSortants", null, 1, -1, Transition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE,
 				!IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-		initEClass(arcPondereEClass, ArcPondere.class, "ArcPondere", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(arcPondereEClass, ArcPondere.class, "ArcPondere", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getArcPondere_Ponderation(), ecorePackage.getEInt(), "ponderation", null, 1, 1, ArcPondere.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -557,7 +581,9 @@ public class PetriPackageImpl extends EPackageImpl implements PetriPackage {
 		initEClass(tempsEClass, Temps.class, "Temps", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTemps_TempsMinimum(), ecorePackage.getEInt(), "tempsMinimum", null, 1, 1, Temps.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getTemps_TempsMaximum(), ecorePackage.getEInt(), "tempsMaximum", null, 0, 1, Temps.class,
+		initEAttribute(getTemps_TempsMaximum(), ecorePackage.getEInt(), "tempsMaximum", null, 1, 1, Temps.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getTemps_EstBorne(), ecorePackage.getEBoolean(), "estBorne", "true", 1, 1, Temps.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource

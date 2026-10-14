@@ -2,6 +2,7 @@
  */
 package fr.n7.petri.provider;
 
+import fr.n7.petri.PetriFactory;
 import fr.n7.petri.PetriPackage;
 import fr.n7.petri.Transition;
 
@@ -13,6 +14,7 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
+import org.eclipse.emf.ecore.EStructuralFeature;
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -54,7 +56,6 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 			super.getPropertyDescriptors(object);
 
 			addNomPropertyDescriptor(object);
-			addIntervalleTempsPropertyDescriptor(object);
 			addArcsEntrantsPropertyDescriptor(object);
 			addArcsSortantsPropertyDescriptor(object);
 		}
@@ -75,21 +76,6 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 								"_UI_Transition_type"),
 						PetriPackage.Literals.TRANSITION__NOM, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
-	}
-
-	/**
-	 * This adds a property descriptor for the Intervalle Temps feature.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected void addIntervalleTempsPropertyDescriptor(Object object) {
-		itemPropertyDescriptors
-				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Transition_intervalleTemps_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Transition_intervalleTemps_feature",
-								"_UI_Transition_type"),
-						PetriPackage.Literals.TRANSITION__INTERVALLE_TEMPS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -120,6 +106,36 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 						getString("_UI_PropertyDescriptor_description", "_UI_Transition_arcsSortants_feature",
 								"_UI_Transition_type"),
 						PetriPackage.Literals.TRANSITION__ARCS_SORTANTS, true, false, true, null, null, null));
+	}
+
+	/**
+	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
+	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
+	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
+		if (childrenFeatures == null) {
+			super.getChildrenFeatures(object);
+			childrenFeatures.add(PetriPackage.Literals.TRANSITION__INTERVALLE_TEMPS);
+		}
+		return childrenFeatures;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	protected EStructuralFeature getChildFeature(Object object, Object child) {
+		// Check the type of the specified child object and return the proper feature to use for
+		// adding (see {@link AddCommand}) it as a child.
+
+		return super.getChildFeature(object, child);
 	}
 
 	/**
@@ -171,6 +187,9 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 		case PetriPackage.TRANSITION__NOM:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
+		case PetriPackage.TRANSITION__INTERVALLE_TEMPS:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+			return;
 		}
 		super.notifyChanged(notification);
 	}
@@ -185,6 +204,9 @@ public class TransitionItemProvider extends ItemProviderAdapter implements IEdit
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
+
+		newChildDescriptors.add(createChildParameter(PetriPackage.Literals.TRANSITION__INTERVALLE_TEMPS,
+				PetriFactory.eINSTANCE.createTemps()));
 	}
 
 	/**
