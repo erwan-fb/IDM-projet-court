@@ -23,7 +23,7 @@ import fr.n7.simplePDL.util.SimplePDLSwitch;
  * base de comparaison à null). Ici le paramètre est un booléen mais en réalité on ne
  * s'en sert pas...
  * 
- * @author Guillaume Dupont
+ * @author Guillaume Dupont modifié par Maxence Chédor
  * @version 0.1
  */
 public class SimplePDLValidator extends SimplePDLSwitch<Boolean> {
@@ -74,6 +74,10 @@ public class SimplePDLValidator extends SimplePDLSwitch<Boolean> {
 				object.getName() != null && object.getName().matches(IDENT_REGEX), 
 				object, 
 				"Le nom du process ne respecte pas les conventions Java");
+		// Pas deux fois le meme nom
+		// est implémenteé par les autres objet, (un seul process donc le doublon se fait forcement avec les autre).
+		
+		//un seul process ? 
 		
 		// Visite
 		for (ProcessElement pe : object.getProcessElements()) {
@@ -103,17 +107,36 @@ public class SimplePDLValidator extends SimplePDLSwitch<Boolean> {
 	@Override
 	public Boolean caseWorkDefinition(WorkDefinition object) {
 		// Contraintes sur WD
+		// Nom bien formé
 		this.result.recordIfFailed(
-				object.getName() != null || object.getName().matches(IDENT_REGEX), 
+				object.getName() != null && object.getName().matches(IDENT_REGEX), 
 				object, 
 				"Le nom de l'activité ne respecte pas les conventions Java");
-		
+		/*
 		this.result.recordIfFailed(
 				object.getProcess().getProcessElements().stream()
 					.filter(p -> p.eClass().getClassifierID() == SimplePDLPackage.WORK_DEFINITION)
 					.allMatch(pe -> (pe.equals(object) || !((WorkDefinition) pe).getName().equals(object.getName()))),
 				object, 
 				"Le nom de l'activité (" + object.getName() + ") n'est pas unique");
+		*/
+		//Non Duplication des noms
+		this.result.recordIfFailed(
+				object.getProcess().getProcessElements().stream()
+					.filter(p -> p.eClass().getClassifierID() == SimplePDLPackage.WORK_DEFINITION)
+					.allMatch(pe -> !((WorkDefinition)pe).getName().equals(object.getName()) || pe.equals(object)), 
+				object, 
+				"Le nom de la WorkDefinition est le même qu'une autre WorkDefinition");
+		this.result.recordIfFailed(
+				object.getProcess().getProcessElements().stream()
+					.filter(p -> p.eClass().getClassifierID() == SimplePDLPackage.RESSOURCE)
+					.allMatch(pe -> !((Ressource)pe).getName().equals(object.getName())), 
+				object, 
+				"Le nom de la WorkDefinition est le même que celui d'une Ressource");
+		this.result.recordIfFailed(
+				!object.getName().equals(object.getProcess().getName()), 
+				object, 
+				"Le nom de la WorkDefinition est le même que celui du Process");
 		
 		
 		return null;
@@ -128,11 +151,13 @@ public class SimplePDLValidator extends SimplePDLSwitch<Boolean> {
 	@Override
 	public Boolean caseWorkSequence(WorkSequence object) {
 		// Contraintes sur WS
+		// predecesseur != successeur 
 		this.result.recordIfFailed(
 				!object.getPredecessor().equals(object.getSuccessor()), 
 				object,
 				"La dépendance relie l'activité " + object.getPredecessor().getName() + " à elle-même");
 		
+		// pas de doublons
 		this.result.recordIfFailed(
 				object.getPredecessor().getLinksToSuccessors().stream()
 					.filter(p -> (p.getSuccessor() == object.getSuccessor() && p!=object) )
@@ -150,6 +175,7 @@ public class SimplePDLValidator extends SimplePDLSwitch<Boolean> {
 	 */
 	@Override
 	public Boolean caseGuidance(Guidance object) {
+		//texte non vide
 		this.result.recordIfFailed(
 				object.getText() != null && !object.getText().equals(""), 
 				object, 
@@ -166,10 +192,33 @@ public class SimplePDLValidator extends SimplePDLSwitch<Boolean> {
 	 */
 	@Override
 	public Boolean caseRessource(Ressource object) {
+		//nom bien formé
 		this.result.recordIfFailed(
-				object.getName() != null || object.getName().matches(IDENT_REGEX), 
+				object.getName() != null && object.getName().matches(IDENT_REGEX), 
 				object, 
 				"Le nom de la Ressource ne respecte pas les conventions Java");
+		//quantité > 0
+		this.result.recordIfFailed(
+				object.getQuantityAvailable() > 0 , 
+				object, 
+				"La Quantité de ressource disponible est négative ou nulle");
+		// Pas deux fois le meme nom
+		this.result.recordIfFailed(
+				object.getProcess().getProcessElements().stream()
+					.filter(p -> p.eClass().getClassifierID() == SimplePDLPackage.RESSOURCE)
+					.allMatch(pe -> !((Ressource)pe).getName().equals(object.getName()) || pe.equals(object)), 
+				object, 
+				"Le nom de la Ressource est le même qu'une autre Ressource");
+		this.result.recordIfFailed(
+				object.getProcess().getProcessElements().stream()
+					.filter(p -> p.eClass().getClassifierID() == SimplePDLPackage.WORK_DEFINITION)
+					.allMatch(pe -> !((WorkDefinition)pe).getName().equals(object.getName())), 
+				object, 
+				"Le nom de la Ressource est le même que celui d'une WorkDefinition");
+		this.result.recordIfFailed(
+				!object.getName().equals(object.getProcess().getName()), 
+				object, 
+				"Le nom de la Ressource est le même que celui du Process");
 		return null;
 	}
 
@@ -181,6 +230,17 @@ public class SimplePDLValidator extends SimplePDLSwitch<Boolean> {
 	 */
 	@Override
 	public Boolean caseRessourceLink(RessourceLink object) {
+		// pas de doublon
+		this.result.recordIfFailed(
+				object.getWorkDefinitionAssociate().getLinkToRessource().stream()
+					.allMatch(p -> !(p.getRessourceNeeded() == object.getRessourceNeeded() && p!=object)),
+				object, 
+				"Il ne peut pas exister deux dépendances entre les deux même ressource et activitée.");
+		// quantité > 0
+		this.result.recordIfFailed(
+				object.getQuantity() > 0 , 
+				object, 
+				"La Quantité de ressource prise est négative ou nulle");
 		return null;
 	}
 	
