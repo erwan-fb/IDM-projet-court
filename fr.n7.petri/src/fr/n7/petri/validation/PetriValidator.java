@@ -8,6 +8,7 @@ import fr.n7.petri.ArcPondere;
 import fr.n7.petri.ArcPondereEntrant;
 import fr.n7.petri.ArcPondereSortant;
 import fr.n7.petri.Composant;
+import fr.n7.petri.PetriPackage;
 import fr.n7.petri.Place;
 import fr.n7.petri.Temps;
 import fr.n7.petri.Transition;
@@ -76,10 +77,21 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 				object.getNom() != null && object.getNom().matches(IDENT_REGEX), 
 				object, 
 				"Le nom du process ne respecte pas les conventions Java");
-		// Pas deux fois le meme nom
-		// est implémenteé par les autres objet, (un seul process donc le doublon se fait forcement avec les autre).
 		
-		//un seul process ? 
+		this.result.recordIfFailed(
+				object.getComposants().stream()
+				.filter(p -> p.eClass().getClassifierID() == PetriPackage.PLACE)
+				.allMatch(pe -> !((Place)pe).getNom().equals(object.getNom())), 
+				object, 
+				"Le nom de la ReseauPetri est le même que celui d'une Place");
+		this.result.recordIfFailed(
+				object.getComposants().stream()
+				.filter(p -> p.eClass().getClassifierID() == PetriPackage.TRANSITION)
+				.allMatch(pe -> !((Transition)pe).getNom().equals(object.getNom())), 
+				object, 
+				"Le nom de la ReseauPetri est le même que celui d'une Transition");
+		
+		//un seul process ? => oui
 		
 		// Visite
 		for (Composant pe : object.getComposants()) {
@@ -114,24 +126,29 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 				object, 
 				"Le nom de la place ne respecte pas les conventions Java");
 		//Non Duplication des noms
-		/**
+		
 		this.result.recordIfFailed(
 				object.getParent().getComposants().stream()
-				.filter(p -> p.eClass().getClassifierID() == SimplePDLPackage.WORK_DEFINITION)
-				.allMatch(pe -> !((WorkDefinition)pe).getNom().equals(object.getNom()) || pe.equals(object)), 
+				.filter(p -> p.eClass().getClassifierID() == PetriPackage.PLACE)
+				.allMatch(pe -> !((Place)pe).getNom().equals(object.getNom()) || pe.equals(object)), 
 				object, 
-				"Le nom de la WorkDefinition est le même qu'une autre WorkDefinition");
+				"Le nom de la Place est le même qu'une autre Place");
 		this.result.recordIfFailed(
 				object.getParent().getComposants().stream()
-				.filter(p -> p.eClass().getClassifierID() == SimplePDLPackage.RESSOURCE)
-				.allMatch(pe -> !((Ressource)pe).getNom().equals(object.getNom())), 
+				.filter(p -> p.eClass().getClassifierID() == PetriPackage.TRANSITION)
+				.allMatch(pe -> !((Transition)pe).getNom().equals(object.getNom())), 
 				object, 
-				"Le nom de la WorkDefinition est le même que celui d'une Ressource");
+				"Le nom de la Place est le même que celui d'une Transition");
 		this.result.recordIfFailed(
 				!object.getNom().equals(object.getParent().getNom()), 
-						object, 
-				"Le nom de la WorkDefinition est le même que celui du Process");
-		*/
+				object, 
+				"Le nom de la Place est le même que celui du Resaux de Petri");
+		// Contraintes sur les jetons
+		this.result.recordIfFailed(
+				object.getJetons() >=0 , 
+				object, 
+				"Le nombre de jeton est négatif");
+		
 		return null;
 	}
 	
@@ -148,6 +165,25 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 				object.getNom() != null && object.getNom().matches(IDENT_REGEX), 
 				object, 
 				"Le nom de la transition ne respecte pas les conventions Java.");
+		//Non Duplication des noms
+		this.result.recordIfFailed(
+				object.getParent().getComposants().stream()
+				.filter(p -> p.eClass().getClassifierID() == PetriPackage.TRANSITION)
+				.allMatch(pe -> !((Transition)pe).getNom().equals(object.getNom()) || pe.equals(object)), 
+				object, 
+				"Le nom de la Transition est le même qu'une autre Transition");
+		this.result.recordIfFailed(
+				object.getParent().getComposants().stream()
+				.filter(p -> p.eClass().getClassifierID() == PetriPackage.PLACE)
+				.allMatch(pe -> !((Place)pe).getNom().equals(object.getNom())), 
+				object, 
+				"Le nom de la Transition est le même que celui d'une Place");
+		this.result.recordIfFailed(
+				!object.getNom().equals(object.getParent().getNom()), 
+				object, 
+				"Le nom de la Transition est le même que celui du Resaux de Petri");
+		
+		
 		// Visite
 		if (object.getIntervalleTemps() != null) {
 			this.doSwitch(object.getIntervalleTemps());
@@ -165,7 +201,7 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 	public Boolean caseArcPondere(ArcPondere object) {
 		// Contraintes sur la podération
 		this.result.recordIfFailed(
-				object.getPonderation() <= 0, 
+				object.getPonderation() > 0, 
 				object, 
 				"La pondération de l'arc est négative ou nulle, ce qui est impossible.");
 		return null;
@@ -214,14 +250,18 @@ public class PetriValidator extends PetriSwitch<Boolean> {
 	public Boolean caseTemps(Temps object) {
 		// Contraintes sur le temps minimum
 		this.result.recordIfFailed(
-				object.getTempsMinimum() < 0, 
+				object.getTempsMinimum() >= 0, 
 				object, 
 				"Le temps minimum est négatif, ce qui est impossible.");
 		// Contraintes sur la podération
 		this.result.recordIfFailed(
-				object.getTempsMaximum() <= 0, 
+				object.isEstBorne() && object.getTempsMaximum() > 0, 
 				object, 
-				"Le temps maximum est négatif, ce qui est impossible.");
+				"Le temps maximum est négatif ou null, ce qui est impossible.");
+		this.result.recordIfFailed(
+				object.getTempsMaximum() <= 0 && !object.isEstBorne(), 
+				object, 
+				"Un temps maximum est defini mais le temps est marqué comme non borné");
 		return null;
 	}
 	
