@@ -1,0 +1,67 @@
+-- @path simplePDL=/fr.n7.simplePDL/model/simplePDL.ecore
+-- @path petri=/fr.n7.petri/model/petri.ecore
+
+module Converter;
+create OUT : petri from IN : simplePDL;
+
+rule Process {
+	from 	process : simplePDL!Process
+	
+	to 		reseau  : petri!ReseauPetri(nom <- process.name)
+}
+
+helper context simplePDL!ProcessElement
+def: getProcess() : simplePDL!Process =
+	simplePDL!Process.allInstances()->select(x | x.processElements->includes(self));
+
+rule WorkDefinition { 
+	from 	workDefinition : simplePDL!WorkDefinition
+	
+	to 		placeIdle : petri!Place(parent <- workDefinition.getProcess(), jetons <- 1, nom <- workDefinition.name + '_idle'),
+			placeStarted : petri!Place(parent <- workDefinition.getProcess(), jetons <- 0, nom <- workDefinition.name + '_started'),
+			placeRunning : petri!Place(parent <- workDefinition.getProcess(), jetons <- 0, nom <- workDefinition.name + '_running'),
+			placeEnded : petri!Place(parent <- workDefinition.getProcess(), jetons <- 0, nom <- workDefinition.name + '_ended'),
+			
+			transitionStart : petri!Transition(parent <- workDefinition.getProcess(), nom <- workDefinition.name + '_start'),
+			transitionEnd : petri!Transition(parent <- workDefinition.getProcess(), nom <- workDefinition.name + '_end'),
+			
+			arcIdleToStart : petri!ArcPondereEntrant(parent <- workDefinition.getProcess(), ponderation <- 1, source <- placeIdle, destination <- transitionStart),
+			arcStartToStarted : petri!ArcPondereSortant(parent <- workDefinition.getProcess(), ponderation <- 1, source <- transitionStart, destination <- placeStarted),
+			arcStartToRunning : petri!ArcPondereSortant(parent <- workDefinition.getProcess(), ponderation <- 1, source <- transitionStart, destination <- placeRunning),
+			arcRunningToEnd : petri!ArcPondereEntrant(parent <- workDefinition.getProcess(), ponderation <- 1, source <- placeRunning, destination <- transitionEnd),
+			arcEndtoEnded : petri!ArcPondereSortant(parent <- workDefinition.getProcess(), ponderation <- 1, source <- transitionEnd, destination <- placeEnded)
+}
+
+rule WorkSequence {
+	from 	workSequence : simplePDL!WorkSequence
+	
+	to 		arc : petri!ArcLectureSeule(ponderation <- 1,
+				parent <- workSequence.getProcess(),
+				source <- thisModule.resolveTemp(workSequence.predecessor, workSequence.name + (if workSequence.linkType = #startToStart or workSequence.linkType = #startToFinish then '_started' else '_ended' endif)),
+				destination <- thisModule.resolveTemp(workSequence.successor, workSequence.name + (if workSequence.linkType = #startToStart or workSequence.linkType = #finishToStart then '_start' else '_end' endif))
+			)
+}
+
+rule Ressource {
+	from 	ressource : simplePDL!Ressource
+	
+	to 		ressourcePlace : petri!Place(parent <- ressource.getProcess(), jetons <- ressource.quantityAvailable, nom <- ressource.name)
+}
+
+rule RessourceLink {
+	from 	ressourceLink : simplePDL!RessourceLink
+	
+	to 		arcGive : petri!ArcPondereEntrant(
+				parent <- ressourceLink.getProcess(),
+				ponderation <- ressourceLink.quantity,
+				source <- ressourceLink.ressourceNeeded,
+				destination <- thisModule.resolveTemp(ressourceLink.workDefinitionAssociate, 'transitionStart')
+			),
+			
+			arcRetrieve : petri!ArcPondereSortant(
+				parent <- ressourceLink.getProcess(),
+				ponderation <- ressourceLink.quantity,
+				source <- thisModule.resolveTemp(ressourceLink.workDefinitionAssociate, 'transitionEnd'),
+				destination <- ressourceLink.ressourceNeeded
+			)
+}

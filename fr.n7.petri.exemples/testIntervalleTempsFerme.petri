@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<petri:ReseauPetri xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:petri="http://petri" nom="testIntervalleTempsFerme">
+  <composants xsi:type="petri:Place" jetons="1" nom="entree"/>
+  <composants xsi:type="petri:Transition" nom="timedTransition" arcsEntrants="//@composants.3" arcsSortants="//@composants.4">
+    <intervalleTemps tempsMinimum="1" tempsMaximum="0"/>
+  </composants>
+  <composants xsi:type="petri:Place" nom="sortie"/>
+  <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.2" destination="//@composants.1"/>
+  <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.1" destination="//@composants.2"/>
+</petri:ReseauPetri>

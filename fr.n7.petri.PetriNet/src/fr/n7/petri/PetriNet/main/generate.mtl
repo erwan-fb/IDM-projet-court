@@ -1,0 +1,36 @@
+[comment encoding = UTF-8 /]
+[module generate('http://petri')/]
+
+[template public generatePetri(reseauPetri : petri::ReseauPetri)]
+	
+	[comment @main /]
+	[file (reseauPetri.nom.concat('.net'), false, 'UTF-8')]
+		[comment On commence par ajouter les places/]
+		[let places : OrderedSet(petri::Place) = reseauPetri.getPlaces()]
+			[for (place : petri::Place | places)]
+['pl'/] [place.nom /] ([place.jetons /])
+			[/for]	
+		[/let]
+		
+		[let transitions : OrderedSet(petri::Transition) = reseauPetri.getTransitions()]
+    		[for (transition : petri::Transition | transitions)]
+['tr'/] [transition.nom/] [if transition.intervalleTemps = null][else]['['/][transition.intervalleTemps.tempsMinimum/],[if transition.intervalleTemps.tempsMaximum = null]w['['/][else][transition.intervalleTemps.tempsMaximum/][']'/][/if][/if] [for (a : petri::ArcPondereEntrant | transition.arcsEntrants)][a.source.nom/][if a.oclIsTypeOf(petri::ArcLectureSeule)]?[a.ponderation/][else][if a.ponderation > 1]*[a.ponderation/][/if][/if] [/for]-> [for (a : petri::ArcPondereSortant| transition.arcsSortants)][a.destination.nom/][if a.ponderation > 1]*[a.ponderation/][/if] [/for]
+        	[/for]
+    	[/let]
+	[/file]
+	
+[/template]
+
+[query public getPlaces(r : petri::ReseauPetri) : OrderedSet(petri::Place) =
+	r.composants
+		->select(e | e.oclIsTypeOf(petri::Place))
+		->collect(e | e.oclAsType(petri::Place))
+		->asOrderedSet()
+/]
+
+[query public getTransitions(r : petri::ReseauPetri) : OrderedSet(petri::Transition) =
+	r.composants
+		->select(e | e.oclIsTypeOf(petri::Transition))
+		->collect(e | e.oclAsType(petri::Transition))
+		->asOrderedSet()
+/]

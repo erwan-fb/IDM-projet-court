@@ -1,0 +1,8 @@
+process p {
+	res c : 10;
+	res d : 25;
+	wd a uses 1 c, 3 d; % 1234
+	wd b;
+	ws s : a --s2s-> b; % abd
+	% def
+}
