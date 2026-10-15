@@ -31,3 +31,7 @@ plugins/
 
 # ignore macos .DS_Store generated files
 **/.DS_Store
+
+#pour eviter les chemins en dur
+generate.xml
+.classpath
