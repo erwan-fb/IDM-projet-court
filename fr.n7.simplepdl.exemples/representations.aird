@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:description="http://www.eclipse.org/sirius/description/1.1.0" xmlns:description_1="http://www.eclipse.org/sirius/diagram/description/1.1.0" xmlns:diagram="http://www.eclipse.org/sirius/diagram/1.1.0" xmlns:notation="http://www.eclipse.org/gmf/runtime/1.0.3/notation" xmlns:simplePDL="http://simplepdl" xmlns:style="http://www.eclipse.org/sirius/diagram/description/style/1.1.0" xmlns:viewpoint="http://www.eclipse.org/sirius/1.1.0" xsi:schemaLocation="http://www.eclipse.org/sirius/description/1.1.0 http://www.eclipse.org/sirius/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description http://www.eclipse.org/sirius/diagram/description/style/1.1.0 http://www.eclipse.org/sirius/diagram/1.1.0#//description/style">
-  <viewpoint:DAnalysis uid="_3V0DQMJiEfG749C1pDMu-g" selectedViews="_fS4ZQMJjEfG749C1pDMu-g" version="15.2.0.202303281325">
+  <viewpoint:DAnalysis uid="_3V0DQMJiEfG749C1pDMu-g" selectedViews="_fS4ZQMJjEfG749C1pDMu-g" version="15.4.1.202403191723">
     <semanticResources>autres_exemples.simplepdl</semanticResources>
     <semanticResources>syntaxe_exemple/False_bienNommer.simplepdl</semanticResources>
     <semanticResources>syntaxe_exemple/True_bienNommer.simplepdl</semanticResources>
@@ -23,6 +23,7 @@
     <semanticResources>tests/SuperSimple.simplepdl</semanticResources>
     <semanticResources>tests/TestRessource.simplepdl</semanticResources>
     <semanticResources>tests/ignored/Bread.simplepdl</semanticResources>
+    <semanticResources>tests/Bread.simplepdl</semanticResources>
     <ownedViews xmi:type="viewpoint:DView" uid="_fS4ZQMJjEfG749C1pDMu-g">
       <viewpoint xmi:type="description:Viewpoint" href="platform:/resource/fr.n7.simplePDL.design/description/simplePDL.odesign#//@ownedViewpoints[name='simplePDLViewpoint']"/>
       <ownedRepresentationDescriptors xmi:type="viewpoint:DRepresentationDescriptor" uid="_iuN3sMJjEfG749C1pDMu-g" name="Recette_diagrame" repPath="#_itpP8MJjEfG749C1pDMu-g" changeId="1791386886115">

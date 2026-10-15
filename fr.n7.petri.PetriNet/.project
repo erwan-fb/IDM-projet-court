@@ -43,13 +43,13 @@
 		</buildCommand>
 	</buildSpec>
 	<natures>
+		<nature>org.eclipse.acceleo.ide.ui.acceleoNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>org.eclipse.pde.PluginNature</nature>
-		<nature>org.eclipse.acceleo.ide.ui.acceleoNature</nature>
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1791383516776</id>
+			<id>1791984335333</id>
 			<name></name>
 			<type>30</type>
 			<matcher>

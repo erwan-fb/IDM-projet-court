@@ -1,0 +1,49 @@
+grammar fr.n7.simplePDL.TextSimplePDL with org.eclipse.xtext.common.Terminals
+
+generate textSimplePDL "http://www.n7.fr/simplePDL/TextSimplePDL"
+
+Process returns Process:
+	'process' name=ID '{'
+		(processElements += SyntaxElement)*
+	'}'
+;
+
+SyntaxElement returns SyntaxElement:
+	(Guidance | ProcessElement) '\n'
+;
+
+ProcessElement returns ProcessElement:
+	(WorkDefinition | WorkSequence | Ressource) ';'
+;
+
+WorkDefinition returns WorkDefinition:
+	'wd' name=ID ('uses' linkToRessource+=RessourceLink (',' linkToRessource+=RessourceLink)*)?
+;
+
+WorkSequence returns WorkSequence:
+	'ws' name=ID ':' predecessor=[WorkDefinition] '--' linkType=WorkSequenceType '->' sucessor=[WorkDefinition] ?
+;
+
+enum WorkSequenceType:
+	startToStart='s2s' | startToFinish='s2f' | finishToStart='f2s' | finishToFinish='f2f'
+;
+
+Ressource returns Ressource:
+	'res' name=ID ':' quantity=INT
+;
+
+RessourceLink returns RessourceLink:
+	quantity=INT ressourceNeeded=[Ressource]
+;
+
+Guidance returns Guidance:
+	GuidedProcessElement | ('%' text=COMMENT_BODY)
+;
+
+GuidedProcessElement returns GuidedProcessElement:
+	element=ProcessElement '%' text=COMMENT_BODY
+;
+
+terminal COMMENT_BODY:
+	!('\n'|'\r')*
+;

@@ -1,0 +1,36 @@
+digraph Recette {
+	Melanger
+	Petrir1
+	Cuire
+	Laisser_reposer1
+	Petrir2
+	Laisser_reposer2
+	Laisser_refroidir
+	Vendre
+	Ajouter_la_farine
+	Ajouter_l_eau
+	Ajouter_le_levain
+	Pre_chauffer_le_four
+	Farine [label="Farine : 1000"]
+	Eau [label="Eau : 1000"]
+	Levain [label="Levain : 1"]
+	Robot [label="Robot : 1"]
+	Four [label="Four : 1"]
+	Melanger -> Petrir1 [arrowhead=vee label=finishToStart]
+	Petrir1 -> Laisser_reposer1 [arrowhead=vee label=startToFinish]
+	Laisser_reposer1 -> Petrir2 [arrowhead=vee label=startToFinish]
+	Petrir2 -> Laisser_reposer2 [arrowhead=vee label=finishToStart]
+	Laisser_reposer2 -> Cuire [arrowhead=vee label=finishToStart]
+	Cuire -> Laisser_refroidir [arrowhead=vee label=finishToStart]
+	Laisser_refroidir -> Vendre [arrowhead=vee label=startToStart]
+	Pre_chauffer_le_four -> Laisser_reposer2 [arrowhead=vee label=finishToFinish]
+	Pre_chauffer_le_four -> Cuire [arrowhead=vee label=finishToStart]
+	Farine -> Melanger [arrowhead=vee label=1000 style=dashed]
+	Eau -> Melanger [arrowhead=vee label=1000 style=dashed]
+	Farine -> Melanger [arrowhead=vee label=1 style=dashed]
+	Robot -> Melanger [arrowhead=vee label=1 style=dashed]
+	Robot -> Petrir1 [arrowhead=vee label=1 style=dashed]
+	Robot -> Petrir2 [arrowhead=vee label=1 style=dashed]
+	Four -> Cuire [arrowhead=vee label=1 style=dashed]
+	Four -> Pre_chauffer_le_four [arrowhead=vee label=1 style=dashed]
+}
