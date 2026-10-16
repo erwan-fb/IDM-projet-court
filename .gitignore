@@ -33,5 +33,5 @@ plugins/
 **/.DS_Store
 
 #pour eviter les chemins en dur
-**/generate.xml
-**/.classpath
+**/**/generate.xml
+**/**/.classpath
