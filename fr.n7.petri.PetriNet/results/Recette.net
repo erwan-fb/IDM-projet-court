@@ -34,10 +34,10 @@ pl Ajouter_la_farine_idle (1)
 pl Ajouter_la_farine_started (0)
 pl Ajouter_la_farine_running (0)
 pl Ajouter_la_farine_ended (0)
-pl Ajouter_l'eau_idle (1)
-pl Ajouter_l'eau_started (0)
-pl Ajouter_l'eau_running (0)
-pl Ajouter_l'eau_ended (0)
+pl Ajouter_l_eau_idle (1)
+pl Ajouter_l_eau_started (0)
+pl Ajouter_l_eau_running (0)
+pl Ajouter_l_eau_ended (0)
 pl Ajouter_le_levain_idle (1)
 pl Ajouter_le_levain_started (0)
 pl Ajouter_le_levain_running (0)
@@ -70,8 +70,8 @@ tr Vendre_start  Vendre_idle Laisser_refroidir_started?1 -> Vendre_started Vendr
 tr Vendre_end  Vendre_running -> Vendre_ended 
 tr Ajouter_la_farine_start  Ajouter_la_farine_idle -> Ajouter_la_farine_started Ajouter_la_farine_running 
 tr Ajouter_la_farine_end  Ajouter_la_farine_running -> Ajouter_la_farine_ended 
-tr Ajouter_l'eau_start  Ajouter_l'eau_idle -> Ajouter_l'eau_started Ajouter_l'eau_running 
-tr Ajouter_l'eau_end  Ajouter_l'eau_running -> Ajouter_l'eau_ended 
+tr Ajouter_l_eau_start  Ajouter_l_eau_idle -> Ajouter_l_eau_started Ajouter_l_eau_running 
+tr Ajouter_l_eau_end  Ajouter_l_eau_running -> Ajouter_l_eau_ended 
 tr Ajouter_le_levain_start  Ajouter_le_levain_idle -> Ajouter_le_levain_started Ajouter_le_levain_running 
 tr Ajouter_le_levain_end  Ajouter_le_levain_running -> Ajouter_le_levain_ended 
 tr Pre_chauffer_le_four_start  Pre_chauffer_le_four_idle Four -> Pre_chauffer_le_four_started Pre_chauffer_le_four_running 

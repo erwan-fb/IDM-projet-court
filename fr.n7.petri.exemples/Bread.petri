@@ -99,12 +99,12 @@
   <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.92" destination="//@composants.90"/>
   <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.90" destination="//@composants.93"/>
   <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.93" destination="//@composants.91"/>
-  <composants xsi:type="petri:Place" jetons="1" nom="Ajouter_l'eau_idle"/>
-  <composants xsi:type="petri:Place" nom="Ajouter_l'eau_started"/>
-  <composants xsi:type="petri:Place" nom="Ajouter_l'eau_running"/>
-  <composants xsi:type="petri:Place" nom="Ajouter_l'eau_ended"/>
-  <composants xsi:type="petri:Transition" nom="Ajouter_l'eau_start" arcsEntrants="//@composants.105" arcsSortants="//@composants.106 //@composants.107"/>
-  <composants xsi:type="petri:Transition" nom="Ajouter_l'eau_end" arcsEntrants="//@composants.108" arcsSortants="//@composants.109"/>
+  <composants xsi:type="petri:Place" jetons="1" nom="Ajouter_l_eau_idle"/>
+  <composants xsi:type="petri:Place" nom="Ajouter_l_eau_started"/>
+  <composants xsi:type="petri:Place" nom="Ajouter_l_eau_running"/>
+  <composants xsi:type="petri:Place" nom="Ajouter_l_eau_ended"/>
+  <composants xsi:type="petri:Transition" nom="Ajouter_l_eau_start" arcsEntrants="//@composants.105" arcsSortants="//@composants.106 //@composants.107"/>
+  <composants xsi:type="petri:Transition" nom="Ajouter_l_eau_end" arcsEntrants="//@composants.108" arcsSortants="//@composants.109"/>
   <composants xsi:type="petri:ArcPondereEntrant" ponderation="1" source="//@composants.99" destination="//@composants.103"/>
   <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.103" destination="//@composants.100"/>
   <composants xsi:type="petri:ArcPondereSortant" ponderation="1" source="//@composants.103" destination="//@composants.101"/>

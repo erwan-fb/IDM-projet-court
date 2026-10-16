@@ -1,0 +1,60 @@
+[comment encoding = UTF-8 /]
+[module verifPetri('http://simplepdl')]
+
+
+[template public generateSeltVerifPetri(aProcess : Process)]
+[comment @main/]
+[file (aProcess.name + '.ltl', false, 'UTF-8')]
+# une activité est toujours soit non commencée ou commencée
+# ie toujours ((-i) et s) ou (i et (-s))
+	
+[for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
+[started(wd) + ';'/]
+[/for]
+
+# une activité est toujours soit commencée soit running soit finie (Etat unique)
+# ie toujours (i et (-s) et (-e)) ou ((-i) et s et (-e)) et ((-i) et (-s) et e)
+	
+[for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
+[uniqueEtat(wd) + ';'/]
+[/for]
+
+[/file]
+[/template]
+
+[query public getWorkDefinition(p : simplePDL::Process) : OrderedSet(simplePDL::WorkDefinition) =
+	p.processElements
+		->select(e | e.oclIsTypeOf(simplePDL::WorkDefinition))
+		->collect(e | e.oclAsType(simplePDL::WorkDefinition))
+		->asOrderedSet()
+/]
+
+[query public getTransitions(r : petri::ReseauPetri) : OrderedSet(petri::Transition) =
+	r.composants
+		->select(e | e.oclIsTypeOf(petri::Transition))
+		->collect(e | e.oclAsType(petri::Transition))
+		->asOrderedSet()
+/]
+
+[query public getNameIdle(wd : simplePDL::WorkDefinition) : String =
+	wd.name  + '_idle'
+/]
+[query public getNameStarted(wd : simplePDL::WorkDefinition) : String =
+	wd.name  + '_started'
+/]
+[query public getNameRuning(wd : simplePDL::WorkDefinition) : String =
+	wd.name  + '_running'
+/]
+[query public getNameEnded(wd : simplePDL::WorkDefinition) : String =
+	wd.name  + '_ended'
+/]
+
+
+[query public started(wd : simplePDL::WorkDefinition) : String =
+	'[] (' + getNameIdle(wd) + ' /\\ (-' + getNameStarted(wd) + ')) \\/ ((-' + getNameIdle(wd) + ') \\/ ' + getNameStarted(wd) + ')' 
+/]
+[query public uniqueEtat(wd : simplePDL::WorkDefinition) : String =
+	'[] (' + getNameIdle(wd) + ' /\\ (-' + getNameRuning(wd) + ') /\\ (-' + getNameEnded(wd) + '))' +
+	 ' \\/ ((-' + getNameIdle(wd) + ') /\\ ' + getNameRuning(wd) + ' /\\ (-' + getNameEnded(wd) + '))' +
+	 ' \\/ ((-' + getNameIdle(wd) + ') /\\ (-' + getNameRuning(wd) + ') /\\ ' + getNameEnded(wd) + ')'
+/]
