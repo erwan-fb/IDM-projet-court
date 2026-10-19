@@ -1,0 +1,10 @@
+# une activité est toujours soit non commencée ou commencée
+# ie toujours ((-i) et s) ou (i et (-s))
+	
+[] (test_idle /\ (-test_started)) \/ ((-test_idle) \/ test_started);
+
+# une activité est toujours soit commencée soit running soit finie (Etat unique)
+# ie toujours (i et (-s) et (-e)) ou ((-i) et s et (-e)) et ((-i) et (-s) et e)
+	
+[] (test_idle /\ (-test_running) /\ (-test_ended)) \/ ((-test_idle) /\ test_running /\ (-test_ended)) \/ ((-test_idle) /\ (-test_running) /\ test_ended);
+

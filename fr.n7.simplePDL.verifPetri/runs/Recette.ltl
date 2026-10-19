@@ -1,0 +1,32 @@
+# une activité est toujours soit non commencée ou commencée
+# ie toujours ((-i) et s) ou (i et (-s))
+	
+[] (Melanger_idle /\ (-Melanger_started)) \/ ((-Melanger_idle) \/ Melanger_started);
+[] (Petrir1_idle /\ (-Petrir1_started)) \/ ((-Petrir1_idle) \/ Petrir1_started);
+[] (Cuire_idle /\ (-Cuire_started)) \/ ((-Cuire_idle) \/ Cuire_started);
+[] (Laisser_reposer1_idle /\ (-Laisser_reposer1_started)) \/ ((-Laisser_reposer1_idle) \/ Laisser_reposer1_started);
+[] (Petrir2_idle /\ (-Petrir2_started)) \/ ((-Petrir2_idle) \/ Petrir2_started);
+[] (Laisser_reposer2_idle /\ (-Laisser_reposer2_started)) \/ ((-Laisser_reposer2_idle) \/ Laisser_reposer2_started);
+[] (Laisser_refroidir_idle /\ (-Laisser_refroidir_started)) \/ ((-Laisser_refroidir_idle) \/ Laisser_refroidir_started);
+[] (Vendre_idle /\ (-Vendre_started)) \/ ((-Vendre_idle) \/ Vendre_started);
+[] (Ajouter_la_farine_idle /\ (-Ajouter_la_farine_started)) \/ ((-Ajouter_la_farine_idle) \/ Ajouter_la_farine_started);
+[] (Ajouter_l_eau_idle /\ (-Ajouter_l_eau_started)) \/ ((-Ajouter_l_eau_idle) \/ Ajouter_l_eau_started);
+[] (Ajouter_le_levain_idle /\ (-Ajouter_le_levain_started)) \/ ((-Ajouter_le_levain_idle) \/ Ajouter_le_levain_started);
+[] (Pre_chauffer_le_four_idle /\ (-Pre_chauffer_le_four_started)) \/ ((-Pre_chauffer_le_four_idle) \/ Pre_chauffer_le_four_started);
+
+# une activité est toujours soit commencée soit running soit finie (Etat unique)
+# ie toujours (i et (-s) et (-e)) ou ((-i) et s et (-e)) et ((-i) et (-s) et e)
+	
+[] (Melanger_idle /\ (-Melanger_running) /\ (-Melanger_ended)) \/ ((-Melanger_idle) /\ Melanger_running /\ (-Melanger_ended)) \/ ((-Melanger_idle) /\ (-Melanger_running) /\ Melanger_ended);
+[] (Petrir1_idle /\ (-Petrir1_running) /\ (-Petrir1_ended)) \/ ((-Petrir1_idle) /\ Petrir1_running /\ (-Petrir1_ended)) \/ ((-Petrir1_idle) /\ (-Petrir1_running) /\ Petrir1_ended);
+[] (Cuire_idle /\ (-Cuire_running) /\ (-Cuire_ended)) \/ ((-Cuire_idle) /\ Cuire_running /\ (-Cuire_ended)) \/ ((-Cuire_idle) /\ (-Cuire_running) /\ Cuire_ended);
+[] (Laisser_reposer1_idle /\ (-Laisser_reposer1_running) /\ (-Laisser_reposer1_ended)) \/ ((-Laisser_reposer1_idle) /\ Laisser_reposer1_running /\ (-Laisser_reposer1_ended)) \/ ((-Laisser_reposer1_idle) /\ (-Laisser_reposer1_running) /\ Laisser_reposer1_ended);
+[] (Petrir2_idle /\ (-Petrir2_running) /\ (-Petrir2_ended)) \/ ((-Petrir2_idle) /\ Petrir2_running /\ (-Petrir2_ended)) \/ ((-Petrir2_idle) /\ (-Petrir2_running) /\ Petrir2_ended);
+[] (Laisser_reposer2_idle /\ (-Laisser_reposer2_running) /\ (-Laisser_reposer2_ended)) \/ ((-Laisser_reposer2_idle) /\ Laisser_reposer2_running /\ (-Laisser_reposer2_ended)) \/ ((-Laisser_reposer2_idle) /\ (-Laisser_reposer2_running) /\ Laisser_reposer2_ended);
+[] (Laisser_refroidir_idle /\ (-Laisser_refroidir_running) /\ (-Laisser_refroidir_ended)) \/ ((-Laisser_refroidir_idle) /\ Laisser_refroidir_running /\ (-Laisser_refroidir_ended)) \/ ((-Laisser_refroidir_idle) /\ (-Laisser_refroidir_running) /\ Laisser_refroidir_ended);
+[] (Vendre_idle /\ (-Vendre_running) /\ (-Vendre_ended)) \/ ((-Vendre_idle) /\ Vendre_running /\ (-Vendre_ended)) \/ ((-Vendre_idle) /\ (-Vendre_running) /\ Vendre_ended);
+[] (Ajouter_la_farine_idle /\ (-Ajouter_la_farine_running) /\ (-Ajouter_la_farine_ended)) \/ ((-Ajouter_la_farine_idle) /\ Ajouter_la_farine_running /\ (-Ajouter_la_farine_ended)) \/ ((-Ajouter_la_farine_idle) /\ (-Ajouter_la_farine_running) /\ Ajouter_la_farine_ended);
+[] (Ajouter_l_eau_idle /\ (-Ajouter_l_eau_running) /\ (-Ajouter_l_eau_ended)) \/ ((-Ajouter_l_eau_idle) /\ Ajouter_l_eau_running /\ (-Ajouter_l_eau_ended)) \/ ((-Ajouter_l_eau_idle) /\ (-Ajouter_l_eau_running) /\ Ajouter_l_eau_ended);
+[] (Ajouter_le_levain_idle /\ (-Ajouter_le_levain_running) /\ (-Ajouter_le_levain_ended)) \/ ((-Ajouter_le_levain_idle) /\ Ajouter_le_levain_running /\ (-Ajouter_le_levain_ended)) \/ ((-Ajouter_le_levain_idle) /\ (-Ajouter_le_levain_running) /\ Ajouter_le_levain_ended);
+[] (Pre_chauffer_le_four_idle /\ (-Pre_chauffer_le_four_running) /\ (-Pre_chauffer_le_four_ended)) \/ ((-Pre_chauffer_le_four_idle) /\ Pre_chauffer_le_four_running /\ (-Pre_chauffer_le_four_ended)) \/ ((-Pre_chauffer_le_four_idle) /\ (-Pre_chauffer_le_four_running) /\ Pre_chauffer_le_four_ended);
+

@@ -31,6 +31,7 @@ public class SimplePDLValidator extends SimplePDLSwitch<Boolean> {
 	 * Expression régulière qui correspond à un identifiant bien formé.
 	 */
 	private static final String IDENT_REGEX = "^[A-Za-z_][A-Za-z0-9_]*$";
+	private static final String STRING_LINE_REGEX = "^[^\n\t]*$";
 	
 	/**
 	 * Résultat de la validation (état interne réinitialisé à chaque nouvelle validation).
@@ -180,6 +181,11 @@ public class SimplePDLValidator extends SimplePDLSwitch<Boolean> {
 				object.getText() != null && !object.getText().equals(""), 
 				object, 
 				"Une Guidance ne doit pas avoir un texte vide.");
+		//texte sans retour à la ligne
+		this.result.recordIfFailed(
+				object.getText() != null && object.getText().matches(STRING_LINE_REGEX), 
+				object, 
+				"Une Guidance ne doit pas doit pas contenir de retour à la ligne.");
 		return null;
 	}
 	

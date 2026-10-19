@@ -2,9 +2,7 @@ import java.io.File;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
-
-import fr.n7.simplePDL.toPetri.Converter;
+import fr.n7.simplePDL.toPetri.*;
 
 public class Launcher {
 
