@@ -6,6 +6,7 @@
 [comment @main/]
 [file (aProcess.name + '.ltl', false, 'UTF-8')]
 # une activité est toujours soit non commencée ou commencée
+# ie jamais il existe i et s
 # ie toujours ((-i) et s) ou (i et (-s))
 	
 [for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
@@ -13,7 +14,8 @@
 [/for]
 
 # une activité est toujours soit commencée soit running soit finie (Etat unique)
-# ie toujours (i et (-s) et (-e)) ou ((-i) et s et (-e)) et ((-i) et (-s) et e)
+# ie jamais il existe (i et r) ou (i et e) ou (r et e)
+# ie toujours (i et (-r) et (-e)) ou ((-i) et r et (-e)) et ((-i) et (-r) et e)
 	
 [for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
 [uniqueEtat(wd) + ';'/]
@@ -51,10 +53,10 @@
 
 
 [query public started(wd : simplePDL::WorkDefinition) : String =
-	'[] (' + getNameIdle(wd) + ' /\\ (-' + getNameStarted(wd) + ')) \\/ ((-' + getNameIdle(wd) + ') \\/ ' + getNameStarted(wd) + ')' 
+	'- <> (' + getNameIdle(wd) + ' /\\ ' + getNameStarted(wd) + ')'
 /]
 [query public uniqueEtat(wd : simplePDL::WorkDefinition) : String =
-	'[] (' + getNameIdle(wd) + ' /\\ (-' + getNameRuning(wd) + ') /\\ (-' + getNameEnded(wd) + '))' +
-	 ' \\/ ((-' + getNameIdle(wd) + ') /\\ ' + getNameRuning(wd) + ' /\\ (-' + getNameEnded(wd) + '))' +
-	 ' \\/ ((-' + getNameIdle(wd) + ') /\\ (-' + getNameRuning(wd) + ') /\\ ' + getNameEnded(wd) + ')'
+	'- <> ((' + getNameIdle(wd) + ' /\\ ' + getNameRuning(wd) + ') ' +
+	 ' \\/ (' + getNameIdle(wd) + ' /\\ ' + getNameEnded(wd) + ') ' +
+	 ' \\/ (' + getNameEnded(wd) + ' /\\ ' + getNameRuning(wd) + '))'
 /]

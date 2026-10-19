@@ -1,0 +1,47 @@
+grammar n7.fr.SimplePDLText with org.eclipse.xtext.common.Terminals
+import 'http://www.eclipse.org/emf/2002/Ecore'
+
+generate simplePDLText "http://www.fr.n7/SimplePDLText"
+
+Process returns Process:
+	'process' name=ID ':'
+		(EOL+ processElements += SyntaxElement)*
+		EOL*
+;
+
+SyntaxElement returns SyntaxElement:
+	(ProcessElement | Guidance)
+;
+
+ProcessElement returns ProcessElement:
+	(WorkDefinition | WorkSequence | Ressource)
+;
+
+WorkDefinition returns WorkDefinition:
+	'work' name=ID ('uses' linkToRessource+=RessourceLink (',' linkToRessource+=RessourceLink)*)?
+;
+
+WorkSequence returns WorkSequence:
+	'rule' ':' predecessorState=StateType predecessor=[WorkDefinition] 'to' successorState=StateType successor=[WorkDefinition]
+;
+
+enum StateType:
+	start='start' | finish='finish'
+;
+
+Ressource returns Ressource:
+	quantity=INT name=ID 'available' 
+;
+
+RessourceLink returns RessourceLink:
+	quantity=INT ressourceNeeded=[Ressource]
+;
+
+Guidance returns Guidance:
+	(element=ProcessElement)? text=COMMENT_BODY
+;
+
+@Override
+terminal WS : ' ' | '\t' ;
+terminal COMMENT_BODY returns EString : '(' (!')')* ')' ;
+terminal EOL : '\n'|'\r' ;

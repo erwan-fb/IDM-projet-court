@@ -1,0 +1,59 @@
+-- @nsURI simplePDLText=http://www.fr.n7/SimplePDLText
+-- @nsURI simplePDL=http://simplepdl
+
+module converter;
+create OUT : simplePDL from IN : simplePDLText;
+
+rule Process {
+	from 	processIN : simplePDLText!Process
+	to 		processOUT : simplePDL!Process(
+				name <- processIN.name, 
+				processElements <-
+					processIN.processElements.union(
+					simplePDLText!RessourceLink.allInstances().union(
+					simplePDLText!WorkSequence.allInstances()
+				)))
+}
+
+rule WorkDefinition {
+	from 	workDefinitionIN : simplePDLText!WorkDefinition
+	to		workDefinitionOUT : simplePDL!WorkDefinition(name <- workDefinitionIN.name, linkToRessource <- workDefinitionIN.linkToRessource)
+}
+
+rule WorkSequence {
+	from 	workSequenceIN : simplePDLText!WorkSequence
+	to 		workSequenceOUT : simplePDL!WorkSequence(
+				predecessor <- workSequenceIN.predecessor,
+				successor <- workSequenceIN.successor,
+				linkType <- (
+					if workSequenceIN.predecessorState = #start then 
+						if workSequenceIN.successorState = #start then
+							#startToStart
+						else
+							#startToFinish
+						endif
+					else
+						if workSequenceIN.successorState = #start then
+							#finishToStart
+						else 
+							#finishToFinish
+						endif
+					endif
+				)
+			)
+}
+
+rule Ressource {
+	from 	ressourceIN : simplePDLText!Ressource
+	to 		ressourceOUT : simplePDL!Ressource(name <- ressourceIN.name, quantityAvailable <- ressourceIN.quantity)
+}
+
+rule RessourceLink {
+	from 	ressourceLinkIN : simplePDLText!RessourceLink
+	to 		ressourceLinkOUT : simplePDL!RessourceLink(ressourceNeeded <- ressourceLinkIN.ressourceNeeded, quantity <- ressourceLinkIN.quantity)
+}
+
+rule Guidance {
+	from 	guidanceIN : simplePDLText!Guidance
+	to 		guidanceOUT : simplePDL!Guidance(text <- guidanceIN.text.substring(2, guidanceIN.text.size()-1), element <- guidanceIN.element)
+}
