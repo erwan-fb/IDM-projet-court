@@ -21,6 +21,36 @@
 [uniqueEtat(wd) + ';'/]
 [/for]
 
+# une activité commencée est toujours commencée
+# ie toujours (s => toujours s)
+	
+[for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
+[pasRetourS(wd) + ';'/]
+[/for]
+
+# ie toujours (r => toujours (r \/ e))
+[for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
+[pasRetourR(wd) + ';'/]
+[/for]
+
+# une activité fini est toujours fini
+# ie toujours (s => toujours s)
+	
+[for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
+[pasRetourE(wd) + ';'/]
+[/for]
+
+# une activité terminer à commencer un jour
+# ie toujours (((un jour i) => (un jour e)) \/ (- <> e))
+	
+[for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
+[commencerUnJour(wd) + ';'/]
+[/for]
+
+# une activité terminer à commencer un jour
+# ie un jour (i /\ i /\ ... /\ i)
+[allNonCommencer(aProcess) + ';'/]
+
 [/file]
 [/template]
 
@@ -59,4 +89,22 @@
 	'- <> ((' + getNameIdle(wd) + ' /\\ ' + getNameRuning(wd) + ') ' +
 	 ' \\/ (' + getNameIdle(wd) + ' /\\ ' + getNameEnded(wd) + ') ' +
 	 ' \\/ (' + getNameEnded(wd) + ' /\\ ' + getNameRuning(wd) + '))'
+/]
+[query public pasRetourR(wd : simplePDL::WorkDefinition) : String =
+	'[] (' + getNameRuning(wd) + ' => [] ('
+	 + getNameEnded(wd) + ' \\/ ' + getNameRuning(wd) + '))'
+/]
+[query public pasRetourS(wd : simplePDL::WorkDefinition) : String =
+	'[] (' + getNameStarted(wd) + ' => [] ' + getNameStarted(wd) + ') '
+/]
+[query public pasRetourE(wd : simplePDL::WorkDefinition) : String =
+	'[] (' + getNameEnded(wd) + ' => [] ' + getNameEnded(wd) + ') '
+/]
+
+[query public commencerUnJour(wd : simplePDL::WorkDefinition) : String =
+	'[] (((<> ' + getNameIdle(wd) + ') => (<> ' + getNameEnded(wd) +
+	')) \\/ (- <> '  + getNameEnded(wd) + ')) '
+/]
+[query public allNonCommencer(p : simplePDL::Process) : String =
+	'<> (' + getWorkDefinition(p)->collect(e| getNameIdle(e))->sep(' /\\ ') + ')'
 /]
