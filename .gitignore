@@ -33,14 +33,6 @@ plugins/
 .DS_Store
 
 #pour eviter les chemins en dur
-<<<<<<< HEAD
-**/**/generate.xml
-**/**/.classpath
-fr.n7.petri.PetriNet/tasks/generate.xml
-=======
 generate.xml
 .classpath
 
-*.__trace
-*.xtendbin
->>>>>>> b3928703fc36f80365223a86e4aa86bc31221449
