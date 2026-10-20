@@ -21,6 +21,38 @@
 [uniqueEtat(wd) + ';'/]
 [/for]
 
+# une activité commencée est toujours commencée
+# ie toujours (s => toujours s)
+	
+[for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
+[pasRetourS(wd) + ';'/]
+[/for]
+
+# ie toujours (r => toujours (r \/ e))
+[for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
+[pasRetourR(wd) + ';'/]
+[/for]
+
+# une activité fini est toujours fini
+# ie toujours (s => toujours s)
+	
+[for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
+[pasRetourE(wd) + ';'/]
+[/for]
+
+# une activité terminé a commencé un jour
+# ie toujours (((un jour i) => (un jour e)) \/ (- <> e))
+	
+[for (wd : simplePDL::WorkDefinition | getWorkDefinition(aProcess))]
+[commencerUnJour(wd) + ';'/]
+[/for]
+
+# initialement aucune tache n'a commencé
+# ie un jour ( (i /\ ... /\ i) /\ (-e /\ ... /\ -e) /\ (-s /\ ... /\ -s) /\ (-r /\ ... /\ -r) /\ (res /\ ... /\ res))
+[allNonCommencer(aProcess) + ';'/]
+
+# total ressource constant
+
 [/file]
 [/template]
 
@@ -38,6 +70,13 @@
 		->asOrderedSet()
 /]
 
+[query public getRessource(p : simplePDL::Process) : OrderedSet(simplePDL::Ressource) =
+	p.processElements
+		->select(e | e.oclIsTypeOf(simplePDL::Ressource))
+		->collect(e | e.oclAsType(simplePDL::Ressource))
+		->asOrderedSet()
+/]
+
 [query public getNameIdle(wd : simplePDL::WorkDefinition) : String =
 	wd.name  + '_idle'
 /]
@@ -50,6 +89,12 @@
 [query public getNameEnded(wd : simplePDL::WorkDefinition) : String =
 	wd.name  + '_ended'
 /]
+[query public getNameRessource(r : simplePDL::Ressource) : String =
+	r.name
+/]
+[query public getQuantityRessourceStr(r : simplePDL::Ressource) : String =
+	r.quantityAvailable.toString()
+/]
 
 
 [query public started(wd : simplePDL::WorkDefinition) : String =
@@ -59,4 +104,35 @@
 	'- <> ((' + getNameIdle(wd) + ' /\\ ' + getNameRuning(wd) + ') ' +
 	 ' \\/ (' + getNameIdle(wd) + ' /\\ ' + getNameEnded(wd) + ') ' +
 	 ' \\/ (' + getNameEnded(wd) + ' /\\ ' + getNameRuning(wd) + '))'
+/]
+[query public pasRetourR(wd : simplePDL::WorkDefinition) : String =
+	'[] (' + getNameRuning(wd) + ' => [] ('
+	 + getNameEnded(wd) + ' \\/ ' + getNameRuning(wd) + '))'
+/]
+[query public pasRetourS(wd : simplePDL::WorkDefinition) : String =
+	'[] (' + getNameStarted(wd) + ' => [] ' + getNameStarted(wd) + ') '
+/]
+[query public pasRetourE(wd : simplePDL::WorkDefinition) : String =
+	'[] (' + getNameEnded(wd) + ' => [] ' + getNameEnded(wd) + ') '
+/]
+
+[query public commencerUnJour(wd : simplePDL::WorkDefinition) : String =
+	'[] (((<> ' + getNameIdle(wd) + ') => (<> ' + getNameEnded(wd) +
+	')) \\/ (- <> '  + getNameEnded(wd) + ')) '
+/]
+[query public allNonCommencer(p : simplePDL::Process) : String =
+	if getRessource(p)->notEmpty() then
+		'<> ((' + getWorkDefinition(p)->collect(e| getNameIdle(e))->sep(' /\\ ') + ') \n\t'
+		+ '/\\ ( ' + getWorkDefinition(p)->collect(e| '(- '+getNameStarted(e)+')')->sep(' /\\ ') + ') \n\t'
+		+ '/\\ ( ' + getWorkDefinition(p)->collect(e| '(- '+getNameRuning(e)+')')->sep(' /\\ ') + ') \n\t'
+		+ '/\\ ( ' + getWorkDefinition(p)->collect(e| '(- '+getNameEnded(e)+')')->sep(' /\\ ') + ') \n\t'
+		+ '/\\ ( ' + getRessource(p)->collect(r| '( '+getNameRessource(r)+' = '+getQuantityRessourceStr(r)+' )')->sep(' /\\ ') + ')'
+		+ ')'
+	else
+		'<> ((' + getWorkDefinition(p)->collect(e| getNameIdle(e))->sep(' /\\ ') + ') \n\t'
+		+ '/\\ ( ' + getWorkDefinition(p)->collect(e| '(- '+getNameStarted(e)+')')->sep(' /\\ ') + ') \n\t'
+		+ '/\\ ( ' + getWorkDefinition(p)->collect(e| '(- '+getNameRuning(e)+')')->sep(' /\\ ') + ') \n\t'
+		+ '/\\ ( ' + getWorkDefinition(p)->collect(e| '(- '+getNameEnded(e)+')')->sep(' /\\ ') + ')'
+		+ ')'
+	endif
 /]

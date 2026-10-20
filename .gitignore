@@ -36,5 +36,3 @@ plugins/
 generate.xml
 .classpath
 
-*.__trace
-*.xtendbin

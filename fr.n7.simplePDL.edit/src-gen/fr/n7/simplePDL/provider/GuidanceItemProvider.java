@@ -132,21 +132,21 @@ public class GuidanceItemProvider extends ItemProviderAdapter implements IEditin
 		if (element == null) {
 			elementLabel = "";
 		} else if (element instanceof WorkDefinition) {
-			elementLabel = radicalLabel + "[" + ((WorkDefinition) element).getName();
+			elementLabel = radicalLabel + "[" + ((WorkDefinition) element).getName() + "]";
 		} else if (element instanceof Ressource) {
-			elementLabel = radicalLabel + "[" + ((Ressource) element).getName();
+			elementLabel = radicalLabel + "[" + ((Ressource) element).getName() + "]";
 		} else if (element instanceof WorkSequence) {
-			elementLabel = radicalLabel + "a [WorkSequence";
+			elementLabel = radicalLabel + "a [WorkSequence]";
 		} else if (element instanceof Guidance) {
-			elementLabel = radicalLabel + "an other [Guidance";
+			elementLabel = radicalLabel + "an other [Guidance]";
 		} else if (element instanceof RessourceLink) {
-			elementLabel = radicalLabel + "a [RessourceLink";
+			elementLabel = radicalLabel + "a [RessourceLink]";
 		} else {
 			throw new RuntimeException("Type Impossible");
 		}
 
 		return label == null || label.length() == 0 ? getString("_UI_Guidance_type")
-				: getString("_UI_Guidance_type") + elementLabel + "] whith text = \"" + label + "\"";
+				: getString("_UI_Guidance_type") + elementLabel + " whith text = \"" + label + "\"";
 	}
 
 	/**
