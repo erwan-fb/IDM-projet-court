@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<simplePDL:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplePDL="http://simplepdl" name="p">
+  <processElements xsi:type="simplePDL:Ressource" name="computers" quantityAvailable="20"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToSuccessors="//@processElements.6" name="c"/>
+  <processElements xsi:type="simplePDL:WorkDefinition" linksToPredecessors="//@processElements.6" linkToRessource="//@processElements.5" name="b"/>
+  <processElements xsi:type="simplePDL:Guidance" element="//@processElements.6" text="aaa"/>
+  <processElements xsi:type="simplePDL:Guidance" text="addj"/>
+  <processElements xsi:type="simplePDL:RessourceLink" ressourceNeeded="//@processElements.0" quantity="10" workDefinitionAssociate="//@processElements.2"/>
+  <processElements xsi:type="simplePDL:WorkSequence" predecessor="//@processElements.1" successor="//@processElements.2"/>
+</simplePDL:Process>
