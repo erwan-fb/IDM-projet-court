@@ -132,12 +132,18 @@ public class TempsItemProvider extends ItemProviderAdapter implements IEditingDo
 	 * This returns the label text for the adapted class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @generated
+	 * @generated NOT
 	 */
 	@Override
 	public String getText(Object object) {
-		Temps temps = (Temps) object;
-		return getString("_UI_Temps_type") + " " + temps.getTempsMinimum();
+		Temps temps = (Temps) object; 
+		String max;
+		if (!temps.isEstBorne()) {
+			max = "w[";
+		} else {
+			max = temps.getTempsMaximum()+"]";
+		}
+		return getString("_UI_Temps_type") + " : [" + temps.getTempsMinimum() + ", " + max ;
 	}
 
 	/**
