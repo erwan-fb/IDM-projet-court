@@ -1,0 +1,221 @@
+ArcLectureSeuleItemProvider
+/**
+ * This returns the label text for the adapted class.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * @generated NOT
+ */
+@Override
+public String getText(Object object) {
+  ArcLectureSeule arcLectureSeule = (ArcLectureSeule) object;
+  return getString("_UI_ArcPondere_type") + " ("
+      + (arcLectureSeule.getSource() == null ? "?" : arcLectureSeule.getSource().getNom()) + ")@---"
+      + arcLectureSeule.getPonderation() + "---> ["
+      + (arcLectureSeule.getDestination() == null ? "?" : arcLectureSeule.getDestination().getNom()) + "]";
+}
+
+ArcPondereEntrantItemProvider
+/**
+ * This returns the label text for the adapted class.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * @generated NOT
+ */
+@Override
+public String getText(Object object) {
+  ArcPondereEntrant arcPondereEntrant = (ArcPondereEntrant) object;
+  return getString("_UI_ArcPondere_type") + " ("
+      + (arcPondereEntrant.getSource() == null ? "?" : arcPondereEntrant.getSource().getNom()) + ") ---"
+      + arcPondereEntrant.getPonderation() + "---> ["
+      + (arcPondereEntrant.getDestination() == null ? "?" : arcPondereEntrant.getDestination().getNom())
+      + "]";
+}
+
+ArcPondereSortantItemProvider
+/**
+* This returns the label text for the adapted class.
+* <!-- begin-user-doc -->
+* <!-- end-user-doc -->
+* @generated NOT
+*/
+@Override
+public String getText(Object object) {
+ ArcPondereSortant arcPondereSortant = (ArcPondereSortant) object;
+ return getString("_UI_ArcPondere_type") + " ["
+     + (arcPondereSortant.getSource() == null ? "?" : arcPondereSortant.getSource().getNom()) + "] ---"
+     + arcPondereSortant.getPonderation() + "---> ("
+     + (arcPondereSortant.getDestination() == null ? "?" : arcPondereSortant.getDestination().getNom())
+     + ")";
+}
+
+PlaceItemProvider
+/**
+ * This returns the label text for the adapted class.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * 
+ * @generated NOT
+ */
+@Override
+public String getText(Object object) {
+  Place place = (Place) object;
+  return getString("_UI_Place_type") + " " + place.getNom() + " (" + place.getJetons() + ")";
+}
+
+GuidanceItemProvider
+/**
+ * This returns the label text for the adapted class.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * @generated NOT
+ */
+@Override
+public String getText(Object object) {
+  String label = ((Guidance) object).getText();
+  ProcessElement element = ((Guidance) object).getElement();
+
+  String radicalLabel = " linked to ";
+  String elementLabel;
+  if (element == null) {
+    elementLabel = "";
+  } else if (element instanceof WorkDefinition) {
+    elementLabel = radicalLabel + "[" + ((WorkDefinition) element).getName();
+  } else if (element instanceof Ressource) {
+    elementLabel = radicalLabel + "[" + ((Ressource) element).getName();
+  } else if (element instanceof WorkSequence) {
+    elementLabel = radicalLabel + "a [WorkSequence";
+  } else if (element instanceof Guidance) {
+    elementLabel = radicalLabel + "an other [Guidance";
+  } else if (element instanceof RessourceLink) {
+    elementLabel = radicalLabel + "a [RessourceLink";
+  } else {
+    throw new RuntimeException("Type Impossible");
+  }
+
+  return label == null || label.length() == 0 ? getString("_UI_Guidance_type")
+      : getString("_UI_Guidance_type") + elementLabel + "] whith text = \"" + label + "\"";
+}
+
+/**
+ * This handles model notifications by calling {@link #updateChildren} to update any cached
+ * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * @generated NOT
+ */
+@Override
+public void notifyChanged(Notification notification) {
+  updateChildren(notification);
+
+  switch (notification.getFeatureID(Guidance.class)) {
+  case SimplePDLPackage.GUIDANCE__ELEMENT:
+  case SimplePDLPackage.GUIDANCE__TEXT:
+    fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+    return;
+  }
+  super.notifyChanged(notification);
+}
+
+RessourceLinkItemProvider
+/**
+ * This returns the label text for the adapted class.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * @generated NOT
+ */
+@Override
+public String getText(Object object) {
+  RessourceLink ressourceLink = (RessourceLink) object;
+  WorkDefinition requester = ressourceLink.getWorkDefinitionAssociate();
+  Ressource ressource = ressourceLink.getRessourceNeeded();
+  String nameRequester = (requester == null ? "?" : requester.getName());
+  String nameRessource = (ressource == null ? "?" : ressource.getName());
+  return getString("_UI_RessourceLink_type") + " " + nameRessource + " --" + ressourceLink.getQuantity() + "--> "
+      + nameRequester;
+}
+
+WorkDefinitionItemProvider
+/**
+ * This handles model notifications by calling {@link #updateChildren} to update any cached
+ * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * @generated NOT
+ */
+@Override
+public void notifyChanged(Notification notification) {
+  updateChildren(notification);
+
+  WorkDefinition workDefinition = (WorkDefinition) notification.getNotifier();
+  List<WorkSequence> predecessors = workDefinition.getLinksToPredecessors();
+  List<WorkSequence> successors = workDefinition.getLinksToSuccessors();
+  List<RessourceLink> ressources = workDefinition.getLinkToRessource();
+
+  switch (notification.getFeatureID(WorkDefinition.class)) {
+  case SimplePDLPackage.WORK_DEFINITION__NAME:
+
+    if (predecessors != null && !predecessors.isEmpty()) {
+      for (WorkSequence workSequence : predecessors) {
+        workSequence.eNotify(new ENotificationImpl((InternalEObject) workSequence, Notification.SET,
+            SimplePDLPackage.WORK_SEQUENCE__PREDECESSOR, notification.getOldValue(),
+            notification.getNewValue()));
+      }
+    }
+    if (successors != null && !successors.isEmpty()) {
+      for (WorkSequence workSequence : successors) {
+        workSequence.eNotify(new ENotificationImpl((InternalEObject) workSequence, Notification.SET,
+            SimplePDLPackage.WORK_SEQUENCE__PREDECESSOR, notification.getOldValue(),
+            notification.getNewValue()));
+      }
+    }
+    if (ressources != null && !ressources.isEmpty()) {
+      for (RessourceLink link : ressources) {
+        link.eNotify(new ENotificationImpl((InternalEObject) link, Notification.SET,
+            SimplePDLPackage.WORK_SEQUENCE__PREDECESSOR, notification.getOldValue(),
+            notification.getNewValue()));
+      }
+    }
+    fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+    return;
+  }
+  super.notifyChanged(notification);
+}
+
+WorkSequenceItemProvider
+/**
+ * This returns the label text for the adapted class.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * @generated NOT
+ */
+@Override
+public String getText(Object object) {
+  WorkSequence ws = (WorkSequence) object;
+  WorkSequenceType labelValue = ws.getLinkType();
+  String label = "--" + (labelValue == null ? "?" : labelValue.toString()) + "-->";
+  String previous = ws.getPredecessor() == null ? "?" : ws.getPredecessor().getName();
+  String next = ws.getSuccessor() == null ? "?" : ws.getSuccessor().getName();
+  return label == null || label.length() == 0 ? getString("_UI_WorkSequence_type")
+      : getString("_UI_WorkSequence_type") + " " + previous + " " + label + " " + next;
+}
+
+/**
+ * This handles model notifications by calling {@link #updateChildren} to update any cached
+ * children and by creating a viewer notification, which it passes to {@link #fireNotifyChanged}.
+ * <!-- begin-user-doc -->
+ * <!-- end-user-doc -->
+ * @generated NOT
+ */
+@Override
+public void notifyChanged(Notification notification) {
+  updateChildren(notification);
+
+  switch (notification.getFeatureID(WorkSequence.class)) {
+  case SimplePDLPackage.WORK_SEQUENCE__LINK_TYPE:
+  case SimplePDLPackage.WORK_SEQUENCE__PREDECESSOR:
+  case SimplePDLPackage.WORK_SEQUENCE__SUCCESSOR:
+    fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
+    return;
+  }
+  super.notifyChanged(notification);
+}

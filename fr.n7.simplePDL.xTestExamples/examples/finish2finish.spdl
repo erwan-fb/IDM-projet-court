@@ -1,0 +1,4 @@
+process finish2finish:
+	work a
+	work b
+	a finishes before b finishes

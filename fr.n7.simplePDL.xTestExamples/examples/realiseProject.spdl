@@ -1,0 +1,45 @@
+process realizeProject:
+	(This the actual but highly simplified process of creating this project)
+	2 computer are available
+	
+	(We will consider the people involved as ressources since they can't do 2 at the same time)
+	1 Erwan is available
+	1 Maxence is available
+	
+	work creatingProject
+	work creatingFeatureMaxence uses 1 computer, 1 Maxence
+	work creatingFeatureErwan uses 1 computer, 1 Erwan
+	work pushing
+	work pulling
+	work fixingEclipse
+	work mergingEverything uses 1 computer and 1 Erwan
+	work bugfixing uses 1 computer and 1 Erwan
+	work verifyEverything uses 1 Erwan, 1 Maxence and 2 computer
+	work lastFixes uses 1 Erwan, 2 Maxence and 2 computer
+	work presenting uses 1 computer, 1 Maxence and 1 Erwan (The step I may currently be doing at this point)
+	
+	(Step 1 : create the project)
+	creatingProject finishes before creatingFeatureMaxence starts
+	creatingProject finishes before creatingFeatureErwan starts
+	
+	(Step 2 : making features)
+	creatingFeatureMaxence starts before pushing starts
+	creatingFeatureErwan starts before pulling starts
+	
+	(Step 3 : use git to put everything in common)
+	pushing starts before pulling starts (Maxence pushes then Erwan pulls)
+	pulling finishes before fixingEclipse starts 
+	pulling finishes before mergingEverything starts
+	fixingEclipse finishes before mergingEverything finishes
+	
+	(Step 4 : finishing fixing and verify if everything is done according to the notation)
+	lastFixes finishes before presenting starts
+	verifyEverything finishes before presenting starts
+	verifyEverything starts before lastFixes starts
+	mergingEverything starts before lastFixes starts
+	
+	
+	
+	
+	
+	

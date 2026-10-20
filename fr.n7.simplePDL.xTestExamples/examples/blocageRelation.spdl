@@ -1,0 +1,6 @@
+process blocageRelation:
+	1 ressource is available
+	work a uses 1 ressource
+	work b uses 1 ressource
+	a starts before b starts
+	b finishes before a finishes

@@ -1,0 +1,9 @@
+process banana_unused:
+	1 banana is available
+	20 computer and 10 water_bottle are available
+	work c
+	work b uses 100 computer, 1 water_bottle (because it needs that much)
+	c finishes before b starts (yes, b requires c running in order to run)
+	(this is a global comment)
+	(and the banana is still unused)
+	

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplePDLText:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplePDLText="http://www.fr.n7/SimplePDLText" name="realizeProject">
+  <processElements xsi:type="simplePDLText:Guidance" text="(This the actual but highly simplified process of creating this project)"/>
+  <processElements xsi:type="simplePDLText:RessourceSet">
+    <ressources quantity="2" name="computer"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:Guidance" text="(We will consider the people involved as ressources since they can't do 2 at the same time)"/>
+  <processElements xsi:type="simplePDLText:RessourceSet">
+    <ressources quantity="1" name="Erwan"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:RessourceSet">
+    <ressources quantity="1" name="Maxence"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="creatingProject"/>
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="creatingFeatureMaxence">
+    <linkToRessource quantity="1" ressourceNeeded="//@processElements.1/@ressources.0"/>
+    <linkToRessource quantity="1" ressourceNeeded="//@processElements.4/@ressources.0"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="creatingFeatureErwan">
+    <linkToRessource quantity="1" ressourceNeeded="//@processElements.1/@ressources.0"/>
+    <linkToRessource quantity="1" ressourceNeeded="//@processElements.3/@ressources.0"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="pushing"/>
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="pulling"/>
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="fixingEclipse"/>
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="mergingEverything">
+    <linkToRessource quantity="1" ressourceNeeded="//@processElements.1/@ressources.0"/>
+    <linkToRessource quantity="1" ressourceNeeded="//@processElements.3/@ressources.0"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="bugfixing">
+    <linkToRessource quantity="1" ressourceNeeded="//@processElements.1/@ressources.0"/>
+    <linkToRessource quantity="1" ressourceNeeded="//@processElements.3/@ressources.0"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="verifyEverything">
+    <linkToRessource quantity="1" ressourceNeeded="//@processElements.3/@ressources.0"/>
+    <linkToRessource quantity="1" ressourceNeeded="//@processElements.4/@ressources.0"/>
+    <linkToRessource quantity="2" ressourceNeeded="//@processElements.1/@ressources.0"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="lastFixes">
+    <linkToRessource quantity="1" ressourceNeeded="//@processElements.3/@ressources.0"/>
+    <linkToRessource quantity="2" ressourceNeeded="//@processElements.4/@ressources.0"/>
+    <linkToRessource quantity="2" ressourceNeeded="//@processElements.1/@ressources.0"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:Guidance" text="(The step I may currently be doing at this point)">
+    <element xsi:type="simplePDLText:WorkDefinition" name="presenting">
+      <linkToRessource quantity="1" ressourceNeeded="//@processElements.1/@ressources.0"/>
+      <linkToRessource quantity="1" ressourceNeeded="//@processElements.4/@ressources.0"/>
+      <linkToRessource quantity="1" ressourceNeeded="//@processElements.3/@ressources.0"/>
+    </element>
+  </processElements>
+  <processElements xsi:type="simplePDLText:Guidance" text="(Step 1 : create the project)"/>
+  <processElements xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.5" predecessorState="finishes" successor="//@processElements.6"/>
+  <processElements xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.5" predecessorState="finishes" successor="//@processElements.7"/>
+  <processElements xsi:type="simplePDLText:Guidance" text="(Step 2 : making features)"/>
+  <processElements xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.6" successor="//@processElements.8"/>
+  <processElements xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.7" successor="//@processElements.9"/>
+  <processElements xsi:type="simplePDLText:Guidance" text="(Step 3 : use git to put everything in common)"/>
+  <processElements xsi:type="simplePDLText:Guidance" text="(Maxence pushes then Erwan pulls)">
+    <element xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.8" successor="//@processElements.9"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.9" predecessorState="finishes" successor="//@processElements.10"/>
+  <processElements xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.9" predecessorState="finishes" successor="//@processElements.11"/>
+  <processElements xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.10" predecessorState="finishes" successor="//@processElements.11" successorState="finishes"/>
+  <processElements xsi:type="simplePDLText:Guidance" text="(Step 4 : finishing fixing and verify if everything is done according to the notation)"/>
+  <processElements xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.14" predecessorState="finishes" successor="//@processElements.15/@element"/>
+  <processElements xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.13" predecessorState="finishes" successor="//@processElements.15/@element"/>
+  <processElements xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.13" successor="//@processElements.14"/>
+  <processElements xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.11" successor="//@processElements.14"/>
+</simplePDLText:Process>

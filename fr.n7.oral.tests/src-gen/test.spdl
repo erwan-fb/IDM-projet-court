@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplePDLText:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplePDLText="http://www.fr.n7/SimplePDLText" name="banana_unused">
+  <processElements xsi:type="simplePDLText:RessourceSet">
+    <ressources quantity="1" name="banana"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:RessourceSet">
+    <ressources quantity="20" name="computer"/>
+    <ressources quantity="10" name="water_bottle"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="c"/>
+  <processElements xsi:type="simplePDLText:Guidance" text="(because it needs that much)">
+    <element xsi:type="simplePDLText:WorkDefinition" name="b">
+      <linkToRessource quantity="100" ressourceNeeded="//@processElements.1/@ressources.0"/>
+      <linkToRessource quantity="1" ressourceNeeded="//@processElements.1/@ressources.1"/>
+    </element>
+  </processElements>
+  <processElements xsi:type="simplePDLText:Guidance" text="(yes, b requires c running in order to run)">
+    <element xsi:type="simplePDLText:WorkSequence" predecessor="//@processElements.2" predecessorState="finishes" successor="//@processElements.3/@element"/>
+  </processElements>
+  <processElements xsi:type="simplePDLText:Guidance" text="(this is a global comment)"/>
+  <processElements xsi:type="simplePDLText:Guidance" text="(and the banana is still unused)"/>
+</simplePDLText:Process>

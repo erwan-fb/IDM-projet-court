@@ -1,0 +1,5 @@
+process blocageRelation:
+	work a
+	work b
+	a starts before b starts
+	b starts before a starts

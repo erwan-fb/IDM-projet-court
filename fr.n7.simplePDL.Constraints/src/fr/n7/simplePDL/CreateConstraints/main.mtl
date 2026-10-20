@@ -1,0 +1,21 @@
+[comment encoding = UTF-8 /]
+[module main('http://simplepdl')/]
+
+[template public generate(process : simplePDL::Process)]
+	
+	[comment @main /]
+	[file (process.name.concat('_conditions_fin.ltl'), false, 'UTF-8')]
+		[let workDefinitions : OrderedSet(simplePDL::WorkDefinition) = process.getWorkDefinitions()]
+['['/][']'/]<>([for (workDefinition : simplePDL::WorkDefinition | workDefinitions)][if workDefinition = workDefinitions->first()][workDefinition.name + '_ended'/][else] /\ [workDefinition.name + '_ended'/][/if][/for])
+<>([for (workDefinition : simplePDL::WorkDefinition | workDefinitions)][if workDefinition = workDefinitions->first()][workDefinition.name + '_ended'/][else] /\ [workDefinition.name + '_ended'/][/if][/for])
+		[/let]
+	[/file]
+	
+[/template]
+
+[query public getWorkDefinitions(r : simplePDL::Process) : OrderedSet(simplePDL::WorkDefinition) =
+	r.processElements
+		->select(e | e.oclIsTypeOf(simplePDL::WorkDefinition))
+		->collect(e | e.oclAsType(simplePDL::WorkDefinition))
+		->asOrderedSet()
+/]

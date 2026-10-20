@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplePDLText:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplePDLText="http://www.fr.n7/SimplePDLText" name="SuperSimple">
+  <processElements xsi:type="simplePDLText:WorkDefinition" name="w"/>
+</simplePDLText:Process>

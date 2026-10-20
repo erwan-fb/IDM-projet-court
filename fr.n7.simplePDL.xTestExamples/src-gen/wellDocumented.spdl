@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="ASCII"?>
+<simplePDLText:Process xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:simplePDLText="http://www.fr.n7/SimplePDLText" name="weelDocumented">
+  <processElements xsi:type="simplePDLText:Guidance" text="(this process is just an example of how this works)"/>
+  <processElements xsi:type="simplePDLText:Guidance" text="(things are objects that are not defined yet)">
+    <element xsi:type="simplePDLText:RessourceSet">
+      <ressources quantity="10" name="things"/>
+    </element>
+  </processElements>
+  <processElements xsi:type="simplePDLText:Guidance" text="(yeah that's a lot)">
+    <element xsi:type="simplePDLText:WorkDefinition" name="a">
+      <linkToRessource quantity="5" ressourceNeeded="//@processElements.1/@element/@ressources.0"/>
+    </element>
+  </processElements>
+</simplePDLText:Process>
